@@ -1,6 +1,6 @@
 {
   "name": "@border-collie-ui/atomic",
-  "version": "1.5.16",
+  "version": "1.5.17",
   "description": "uibasic",
   "keywords": [],
   "author": "yuejs <yuejs.org@gmail.com>",
@@ -32,9 +32,9 @@
   "homepage": "https://github.com/yuejs/c3#readme",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
+    "@border-collie-ui/animation": "workspace:^1.5.12",
+    "@border-collie-ui/css": "workspace:^1.5.11",
     "@c3/dom": "^1.2.6",
-    "@border-collie-ui/animation": "workspace:^1.5.11",
-    "@border-collie-ui/css": "workspace:^1.5.10",
     "classnames": "^2.3.2",
     "csstype": "^3.1.1"
   },
