@@ -1,0 +1,36 @@
+{
+  "name": "@border-collie-ui/ct-floating-ui",
+  "version": "1.5.16",
+  "description": "awesesome",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c && pnpm type",
+    "buildOnly": "vite build",
+    "clean": "rm -rf dist  ",
+    "reset": "pnpm clean && rm -rf node_modules && pnpm install",
+    "type": "tsc --project . --paths null --emitDeclarationOnly --declaration",
+    "watchtype": "tsc --project . --watch"
+  },
+  "types": "./dist/index.d.ts",
+  "keywords": [],
+  "author": "yuejs.org@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@floating-ui/react-dom-interactions": "^0.11.0",
+    "@border-collie-ui/animation": "workspace:^1.5.11",
+    "@border-collie-ui/atomic": "workspace:^1.5.16",
+    "@border-collie-ui/css": "workspace:^1.5.10",
+    "@border-collie-ui/layout": "workspace:^1.5.15",
+    "classnames": "^2.3.2"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./css": "./dist/index.css"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

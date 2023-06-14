@@ -1,0 +1,46 @@
+# pack-refs with: peeled fully-peeled sorted 
+be1aa06a4a43d01ba23c7b93d3923f83a4f84363 refs/remotes/origin/main
+06c4e409e702828c0f07f55d7e992621087cc16b refs/tags/@cui/animation@1.5.4
+^36dfa5f2a4316d1243cbc84141fa7fdc745895d0
+cf1eeaa123eb75bf0de552c18cd71cfd2c34db5f refs/tags/@cui/atomic@1.5.4
+^36dfa5f2a4316d1243cbc84141fa7fdc745895d0
+02c003e557edda6591d38701cc3da38a2bc91bc1 refs/tags/@cui/css@1.5.4
+^36dfa5f2a4316d1243cbc84141fa7fdc745895d0
+5fc5166c350a19129f398d95ae9653fb004b7d22 refs/tags/@cui/ct-floating-ui@1.5.4
+^36dfa5f2a4316d1243cbc84141fa7fdc745895d0
+aaf818152742b942e2d56d6b964e780119512729 refs/tags/@cui/ct-long-list@1.5.4
+^36dfa5f2a4316d1243cbc84141fa7fdc745895d0
+7c8b1f9091c19dca981766942b89a630e0c2f6dd refs/tags/@cui/ct-modal@1.5.4
+^36dfa5f2a4316d1243cbc84141fa7fdc745895d0
+181f4ddc4afd2b1d1fffdc5adbb226f2f7b50855 refs/tags/@cui/ct-nav@1.5.4
+^36dfa5f2a4316d1243cbc84141fa7fdc745895d0
+8974cb3ca55725712172a0c9464ada0ba61bea6d refs/tags/@cui/ct-page@1.5.4
+^36dfa5f2a4316d1243cbc84141fa7fdc745895d0
+85320a612dedc4d739d11e88f33f7da770e9c46b refs/tags/@cui/form@1.5.4
+^36dfa5f2a4316d1243cbc84141fa7fdc745895d0
+7a851dc021b4b3cbc74bb773938733fb193bddd3 refs/tags/@cui/layout@1.5.4
+^36dfa5f2a4316d1243cbc84141fa7fdc745895d0
+1c9d81882995309ad2e5b823871be089d7ceac93 refs/tags/@cui/responsive@1.5.4
+^36dfa5f2a4316d1243cbc84141fa7fdc745895d0
+51a49cb479c6932ebe20b55e4f631e7885921229 refs/tags/@u-ui/animation@1.5.5
+^be1aa06a4a43d01ba23c7b93d3923f83a4f84363
+30df93a2a46078ca3aa733120faefcb3ba9f44d5 refs/tags/@u-ui/atomic@1.5.5
+^be1aa06a4a43d01ba23c7b93d3923f83a4f84363
+6db69696d8d824d4c7489d02083aaf78f51a943c refs/tags/@u-ui/css@1.5.5
+^be1aa06a4a43d01ba23c7b93d3923f83a4f84363
+dbcd85eeb1c4f849ce1c001e4845b39f0ba52743 refs/tags/@u-ui/ct-floating-ui@1.5.5
+^be1aa06a4a43d01ba23c7b93d3923f83a4f84363
+a3e3f8c9ebfb63aa3d22390802f2fa1d7c213bed refs/tags/@u-ui/ct-long-list@1.5.5
+^be1aa06a4a43d01ba23c7b93d3923f83a4f84363
+1ee70323d7e1873934a1107f06aa69e59518f1a0 refs/tags/@u-ui/ct-modal@1.5.5
+^be1aa06a4a43d01ba23c7b93d3923f83a4f84363
+4bdb55e96ba480adf1b7c8bb9c3cab60a7bd832b refs/tags/@u-ui/ct-nav@1.5.5
+^be1aa06a4a43d01ba23c7b93d3923f83a4f84363
+58b94b84c6ee5ef9b1288e351a0a67a776b85f8a refs/tags/@u-ui/ct-page@1.5.5
+^be1aa06a4a43d01ba23c7b93d3923f83a4f84363
+f6933d92a60100486f19073afe39f9abf7fc3e15 refs/tags/@u-ui/form@1.5.5
+^be1aa06a4a43d01ba23c7b93d3923f83a4f84363
+a1acc7b5cb211458d1e38100d392b38e0beb16e6 refs/tags/@u-ui/layout@1.5.5
+^be1aa06a4a43d01ba23c7b93d3923f83a4f84363
+80e7d6feadd2e4678c1d837aac2c926b98d3363e refs/tags/@u-ui/responsive@1.5.5
+^be1aa06a4a43d01ba23c7b93d3923f83a4f84363

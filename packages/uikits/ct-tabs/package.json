@@ -1,0 +1,34 @@
+{
+  "name": "@border-collie-ui/ct-tabs",
+  "version": "1.5.15",
+  "description": "awesesome",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c && pnpm type",
+    "buildOnly": "vite build",
+    "clean": "rm -rf dist  ",
+    "reset": "pnpm clean && rm -rf node_modules && pnpm install",
+    "type": "tsc --project . --paths null --emitDeclarationOnly --declaration",
+    "watchtype": "tsc --project . --watch"
+  },
+  "types": "./dist/index.d.ts",
+  "keywords": [],
+  "author": "yuejs.org@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@border-collie-ui/atomic": "workspace:^1.5.16",
+    "@border-collie-ui/css": "workspace:^1.5.10",
+    "@border-collie-ui/layout": "workspace:^1.5.15"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./css": "./dist/index.css"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
