@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.17](https://github.com/yuejs/c3/compare/@border-collie-ui/layout@1.5.16...@border-collie-ui/layout@1.5.17) (2023-06-22)
+
+**Note:** Version bump only for package @border-collie-ui/layout
+
 ## 1.5.16 (2023-06-14)
 
 ### Features

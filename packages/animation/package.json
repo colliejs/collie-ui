@@ -1,6 +1,6 @@
 {
   "name": "@border-collie-ui/animation",
-  "version": "1.5.12",
+  "version": "1.5.13",
   "description": "uibasic",
   "keywords": [],
   "author": "yuejs <yuejs.org@gmail.com>",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/yuejs/c3#readme",
   "dependencies": {
-    "@border-collie-ui/css": "workspace:^1.5.11",
+    "@border-collie-ui/css": "workspace:^1.5.13",
     "@types/animejs": "^3.1.7",
     "animejs": "^3.2.1",
     "classnames": "^2.3.2",

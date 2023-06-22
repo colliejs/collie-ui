@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.13](https://github.com/yuejs/c3/compare/@border-collie-ui/css@1.5.11...@border-collie-ui/css@1.5.13) (2023-06-22)
+
+**Note:** Version bump only for package @border-collie-ui/css
+
 ## 1.5.11 (2023-06-14)
 
 ### Features

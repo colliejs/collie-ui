@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.17](https://github.com/border-collie-js/border-collie-ui/compare/@border-collie-ui/ct-tabs@1.5.16...@border-collie-ui/ct-tabs@1.5.17) (2023-06-22)
+
+**Note:** Version bump only for package @border-collie-ui/ct-tabs
+
 ## 1.5.16 (2023-06-14)
 
 ### Features

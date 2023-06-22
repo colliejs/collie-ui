@@ -1,6 +1,6 @@
 {
   "name": "@border-collie-ui/layout",
-  "version": "1.5.16",
+  "version": "1.5.17",
   "description": "uibasic",
   "keywords": [],
   "author": "yuejs <yuejs.org@gmail.com>",
@@ -31,8 +31,8 @@
   },
   "homepage": "https://github.com/yuejs/c3#readme",
   "dependencies": {
-    "@border-collie-ui/atomic": "workspace:^1.5.17",
-    "@border-collie-ui/css": "workspace:^1.5.11",
+    "@border-collie-ui/atomic": "workspace:^1.5.18",
+    "@border-collie-ui/css": "workspace:^1.5.13",
     "@border-collie-ui/responsive": "workspace:^1.5.10",
     "@c3/types": "^1.1.0",
     "@stitches/react": "^1.2.8",

@@ -1,6 +1,6 @@
 {
   "name": "@border-collie-ui/form",
-  "version": "1.5.17",
+  "version": "1.5.18",
   "description": "form",
   "keywords": [],
   "author": "yuejs <yuejs.org@gmail.com>",
@@ -32,10 +32,10 @@
   "homepage": "https://github.com/yuejs/c3#readme",
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
-    "@border-collie-ui/atomic": "workspace:^1.5.17",
+    "@border-collie-ui/atomic": "workspace:^1.5.18",
     "@border-collie-ui/css": "workspace:^",
     "@border-collie-ui/ct-floating-ui": "workspace:^",
-    "@border-collie-ui/layout": "workspace:^1.5.16",
+    "@border-collie-ui/layout": "workspace:^1.5.17",
     "classnames": "^2.3.2"
   },
   "devDependencies": {
