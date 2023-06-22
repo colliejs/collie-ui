@@ -6,7 +6,7 @@ import {
   RenderItem,
   Row,
 } from "@border-collie-ui/layout";
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { anti } from "./util";
 import { styled } from "@border-collie-js/react";
 import "@border-collie-ui/layout/css";
@@ -16,10 +16,10 @@ const StyledContentList = styled(List, {
 });
 
 //===========================================================
-// Nav
+// BaseTab
 //===========================================================
 export type TabItemType<T extends BaseListItemType<T>> = {
-  id: string;
+  id: string | number;
   active: boolean;
   renderItem?: RenderItem<T>;
   renderContent?: RenderItem<T>;
@@ -31,11 +31,11 @@ export type TabProps<T extends TabItemType<T>> = {
   direction: "row" | "column";
   data: TabConfig<T>;
   updateData: (config: TabConfig<T>) => void;
-  renderItem: RenderItem<T>;
+  renderItem?: RenderItem<T>;
   renderContent?: RenderItem<T>;
 };
 
-export const BaseTabs = <T extends TabItemType<T>>(props: TabProps<T>) => {
+export const BaseTab = <T extends TabItemType<T>>(props: TabProps<T>) => {
   const {
     data,
     updateData,
@@ -77,4 +77,20 @@ export const BaseTabs = <T extends TabItemType<T>>(props: TabProps<T>) => {
       {content}
     </Layout>
   );
+};
+
+//===========================================================
+// TabControlled
+//===========================================================
+export type BaseTabControlledProps<T extends TabItemType<T>> = Omit<
+  TabProps<T>,
+  "updateData" | "data"
+> & { initialData: T[] };
+
+export const BaseTabControlled = <T extends TabItemType<T>>(
+  props: BaseTabControlledProps<T>
+) => {
+  const { initialData, ...restProps } = props;
+  const [data, setData] = useState(initialData);
+  return <BaseTab data={data} updateData={setData} {...restProps}></BaseTab>;
 };
