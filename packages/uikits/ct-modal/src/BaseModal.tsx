@@ -1,5 +1,5 @@
-import { Fixed, Stack } from "@border-collie-ui/layout";
-import { mask as _mask } from "@border-collie-ui/css";
+import { Fixed, Stack } from "@collie-ui/layout";
+import { mask as _mask } from "@collie-ui/css";
 import { styled } from "@border-collie-js/react";
 import React, { useEffect } from "react";
 import { AnimationStatus } from "./Modal";

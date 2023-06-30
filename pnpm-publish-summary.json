@@ -1,32 +1,36 @@
 {
 	"publishedPackages": [
 		{
-			"name": "@border-collie-ui/atomic",
-			"version": "1.5.16"
+			"name": "@collie-ui/css",
+			"version": "1.5.13"
 		},
 		{
-			"name": "@border-collie-ui/layout",
-			"version": "1.5.15"
+			"name": "@collie-ui/animation",
+			"version": "1.5.13"
 		},
 		{
-			"name": "@border-collie-ui/ct-floating-ui",
-			"version": "1.5.16"
+			"name": "@collie-ui/atomic",
+			"version": "1.5.18"
 		},
 		{
-			"name": "@border-collie-ui/ct-modal",
-			"version": "1.5.16"
+			"name": "@collie-ui/layout",
+			"version": "1.5.17"
 		},
 		{
-			"name": "@border-collie-ui/ct-page",
-			"version": "1.5.15"
+			"name": "@collie-ui/ct-floating-ui",
+			"version": "1.5.18"
 		},
 		{
-			"name": "@border-collie-ui/ct-tabs",
-			"version": "1.5.15"
+			"name": "@collie-ui/ct-modal",
+			"version": "1.5.18"
 		},
 		{
-			"name": "@border-collie-ui/form",
-			"version": "1.5.16"
+			"name": "@collie-ui/ct-tabs",
+			"version": "1.5.17"
+		},
+		{
+			"name": "@collie-ui/form",
+			"version": "1.5.18"
 		}
 	]
 }

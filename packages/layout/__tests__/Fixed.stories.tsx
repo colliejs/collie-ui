@@ -1,5 +1,5 @@
 import { mock } from "@c3/test";
-import { flexCenter } from "@border-collie-ui/css";
+import { flexCenter } from "@collie-ui/css";
 import React from "react";
 import { Fixed } from "../src/Fixed";
 export default {

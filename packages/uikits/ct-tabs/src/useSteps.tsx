@@ -1,5 +1,5 @@
 import { useExclusive } from "@c3/react";
-import { BaseListItemType } from "@border-collie-ui/layout";
+import { BaseListItemType } from "@collie-ui/layout";
 import { useCallback, useMemo } from "react";
 
 export type useStepOption<T extends BaseListItemType<T>> = {

@@ -1,5 +1,5 @@
 import { styled } from "@border-collie-js/react";
-import { Row } from "@border-collie-ui/layout";
+import { Row } from "@collie-ui/layout";
 import React, { ForwardRefRenderFunction } from "react";
 
 export type InputProps = {

@@ -1,6 +1,6 @@
 import { isEmpty } from "@c3/utils";
-import { Text } from "@border-collie-ui/atomic";
-import { BaseListItemType, List } from "@border-collie-ui/layout";
+import { Text } from "@collie-ui/atomic";
+import { BaseListItemType, List } from "@collie-ui/layout";
 import React, { useState } from "react";
 import { Input } from "../Input";
 

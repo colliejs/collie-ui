@@ -1,5 +1,5 @@
 import { mock } from "@c3/test";
-import { absXYCenter } from "@border-collie-ui/css";
+import { absXYCenter } from "@collie-ui/css";
 import { Box } from "../src/Box";
 import { Text } from "../../atomic/src/Text";
 import { Image } from "../../atomic/src/Image";

@@ -1,5 +1,5 @@
 import { Text } from "../../../atomic/src";
-import { absXYCenter, flexCenter, pseudoArrow } from "@border-collie-ui/css";
+import { absXYCenter, flexCenter, pseudoArrow } from "@collie-ui/css";
 import { Col, Row } from "../../../layout/src";
 import { useState } from "react";
 import { FloatingText, TextWithTooltip, Tooltip } from "../src";

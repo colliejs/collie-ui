@@ -5,9 +5,9 @@ import {
   textEllipse,
   flexCenter,
   pseudoArrow,
-} from "@border-collie-ui/css";
+} from "@collie-ui/css";
 import { styled } from "@border-collie-js/react";
-import { Text } from "@border-collie-ui/atomic";
+import { Text } from "@collie-ui/atomic";
 import { useIsOverflow } from "@c3/react";
 
 //============================================================================

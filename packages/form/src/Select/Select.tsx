@@ -1,4 +1,4 @@
-import { Dropdown } from "@border-collie-ui/ct-floating-ui";
+import { Dropdown } from "@collie-ui/ct-floating-ui";
 import React from "react";
 
 export type SelectProps<T> = {

@@ -1,6 +1,6 @@
 {
-  "name": "@border-collie-ui/ct-floating-ui",
-  "version": "1.5.18",
+  "name": "@collie-ui/ct-floating-ui",
+  "version": "1.0.0",
   "description": "awesesome",
   "type": "module",
   "scripts": {
@@ -16,11 +16,11 @@
   "author": "yuejs.org@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "@border-collie-ui/animation": "workspace:^1.5.13",
-    "@border-collie-ui/atomic": "workspace:^1.5.18",
-    "@border-collie-ui/css": "workspace:^1.5.13",
-    "@border-collie-ui/layout": "workspace:^1.5.17",
-    "@floating-ui/react-dom-interactions": "^0.11.0",
+    "@collie-ui/animation": "workspace:^",
+    "@collie-ui/atomic": "workspace:^",
+    "@collie-ui/css": "workspace:^",
+    "@collie-ui/layout": "workspace:^",
+    "@floating-ui/react-dom-interactions": "^0.13.3",
     "classnames": "^2.3.2"
   },
   "exports": {

@@ -5,11 +5,11 @@ import {
   List,
   RenderItem,
   Row,
-} from "@border-collie-ui/layout";
+} from "@collie-ui/layout";
 import React, { useMemo, useState } from "react";
 import { anti } from "./util";
 import { styled } from "@border-collie-js/react";
-import "@border-collie-ui/layout/css";
+import "@collie-ui/layout/css";
 
 const StyledContentList = styled(List, {
   "&>:not([data-active=true])": { display: "none" },

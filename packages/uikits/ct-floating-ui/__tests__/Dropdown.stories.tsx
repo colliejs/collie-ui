@@ -1,5 +1,5 @@
 import { mock } from "@c3/test";
-import { absXYCenter } from "@border-collie-ui/css";
+import { absXYCenter } from "@collie-ui/css";
 import { Row } from "../../../layout/src";
 import { Button, Link } from "../../../atomic/src";
 import { Dropdown } from "../src";

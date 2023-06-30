@@ -1,5 +1,5 @@
 import { useGId, usePrev } from "@c3/react";
-import { zoom } from "@border-collie-ui/animation";
+import { zoom } from "@collie-ui/animation";
 import {
   useFloating,
   useClick,
@@ -15,7 +15,7 @@ import {
   type OffsetOptions,
 } from "@floating-ui/react";
 import React, { useEffect, useState } from "react";
-import { supportIndivideTransform } from "@border-collie-ui/css";
+import { supportIndivideTransform } from "@collie-ui/css";
 import { toArray } from "@c3/utils";
 
 //===========================================================

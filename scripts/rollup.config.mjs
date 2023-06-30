@@ -6,7 +6,7 @@ import replace from "@rollup/plugin-replace";
 import strip from "@rollup/plugin-strip";
 import path from "path";
 import { fileURLToPath } from "url";
-import yueRollup from "@border-collie-js/rollup";
+import collieRollup from "@colliejs/rollup";
 import { createRequire } from "module";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -42,7 +42,7 @@ const config = {
       jsnext: true,
       extensions: extensions,
     }),
-    yueRollup({ include: /src\/*/ }),
+    collieRollup({ include: /src\/*/ }),
     commonjs(),
     json(),
     babel({ babelHelpers: "bundled", extensions, configFile: babelConfigFile }),
@@ -65,7 +65,7 @@ const config = {
     /@c3\//,
     /@babel\//,
     /@rollup\//,
-    /@border-collie-ui\//,
+    /@collie-ui\//,
 
     /node:*/,
     "ethers",

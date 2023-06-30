@@ -1,7 +1,7 @@
 // import { mock } from '@c3/test';
 import { rand } from "@c3/utils";
 // import { Image } from "../../atomic/src/Image";
-import { Image } from "@border-collie-ui/atomic";
+import { Image } from "@collie-ui/atomic";
 import _ from "lodash";
 import React from "react";
 import { GridControlled } from "../src/Grid";

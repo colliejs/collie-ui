@@ -1,6 +1,6 @@
 {
-  "name": "@border-collie-ui/css",
-  "version": "1.5.13",
+  "name": "@collie-ui/css",
+  "version": "1.0.0",
   "description": "Unstyled UI CSS",
   "keywords": [],
   "author": "yuejs <yuejs.org@gmail.com>",

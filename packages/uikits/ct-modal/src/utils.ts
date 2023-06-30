@@ -1,5 +1,5 @@
 import { assert } from "@c3/utils";
-import { AnimeInstance, fades, zoom } from "@border-collie-ui/animation";
+import { AnimeInstance, fades, zoom } from "@collie-ui/animation";
 
 export const animate = async (
   visible: boolean,

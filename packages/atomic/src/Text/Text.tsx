@@ -1,4 +1,4 @@
-import { textGradient } from "@border-collie-ui/css";
+import { textGradient } from "@collie-ui/css";
 import { styled } from "@border-collie-js/react";
 import { Atomic } from "../Atomic";
 

@@ -1,4 +1,4 @@
-// import { Button } from "@border-collie-ui/atomic"; //TODO:为什么这样引入button就渲染不对
+// import { Button } from "@collie-ui/atomic"; //TODO:为什么这样引入button就渲染不对
 import { abs } from "../../../css/src/layout";
 import { Box } from "../../../layout/src";
 import { styled } from "@border-collie-js/react";

@@ -2,7 +2,7 @@ import { Text } from "../../../atomic/src";
 import React from "react";
 import { useState } from "react";
 import { MenuConfig, TabItemType, BaseTabs } from "../src/BaseTabs";
-import "@border-collie-ui/atomic/css";
+import "@collie-ui/atomic/css";
 
 export default {
   component: BaseTabs,
