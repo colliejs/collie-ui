@@ -56,7 +56,7 @@
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/plugin-transform-modules-commonjs": "^7.21.5",
-    "@colliejs/react": "^0.0.85",
+    "@colliejs/react": "^1.0.1",
     "@c3/types": "^1.1.3",
     "@changesets/cli": "^2.26.1",
     "@jest/types": "^28.1.3",
