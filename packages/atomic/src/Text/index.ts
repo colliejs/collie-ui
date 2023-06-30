@@ -1,5 +1,5 @@
 export * from "./Text";
-import { styled } from "@border-collie-js/react";
+import { styled } from "@colliejs/react";
 import { Text } from "./Text";
 
 export const Title = styled(Text, {}, { as: "h1" });

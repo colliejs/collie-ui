@@ -1,5 +1,5 @@
 import { Placement } from "@c3/types";
-import { CSSProperties, CSSPropertiesComplex } from "@border-collie-js/core";
+import { CSSProperties, CSSPropertiesComplex } from "@colliejs/core";
 import { getPopoverPos } from "./layout";
 
 // //===========================================================

@@ -1,4 +1,4 @@
-# `@border-collie-ui/animation`
+# `@collie-ui/animation`
 
 > TODO: description
 

@@ -1,4 +1,4 @@
-import { CSSProperties, CSSPropertiesComplex } from "@border-collie-js/core";
+import { CSSProperties, CSSPropertiesComplex } from "@colliejs/core";
 
 export const pseudoElement = (
   pse: string,

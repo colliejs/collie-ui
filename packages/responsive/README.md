@@ -1,4 +1,4 @@
-# `@border-collie-ui/responsive`
+# `@collie-ui/responsive`
 
 > TODO: description
 

@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { CSSPropertiesComplex } from "@border-collie-js/core";
+import { CSSPropertiesComplex } from "@colliejs/core";
 
 export const rgap = (gap: CSSProperties["gap"]): CSSPropertiesComplex => ({
   "& > :where(:not(:last-child))": {

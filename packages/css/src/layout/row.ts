@@ -1,4 +1,4 @@
-import { CSSProperties } from "@border-collie-js/core";
+import { CSSProperties } from "@colliejs/core";
 
 export const row = (
   fx: CSSProperties["justifyContent"] = "flex-start",

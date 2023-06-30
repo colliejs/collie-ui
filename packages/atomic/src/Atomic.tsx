@@ -1,4 +1,4 @@
-import { styled } from "@border-collie-js/react";
+import { styled } from "@colliejs/react";
 import { HTMLAttributes } from "react";
 
 export const Atomic = styled<HTMLAttributes<HTMLDivElement>, "div">("div", {

@@ -1,4 +1,4 @@
-# `@border-collie-ui/atomic`
+# `@collie-ui/atomic`
 
 > TODO: description
 

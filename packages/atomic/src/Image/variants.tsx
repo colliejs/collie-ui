@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "@border-collie-js/react";
+import { styled } from "@colliejs/react";
 import { Image } from "./Image";
 
 export const Icon = styled(Image, { objectFit: "contain" });

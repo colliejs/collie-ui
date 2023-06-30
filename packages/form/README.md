@@ -1,4 +1,4 @@
-# `@border-collie-ui/form`
+# `@collie-ui/form`
 
 > TODO: description
 

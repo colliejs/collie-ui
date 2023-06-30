@@ -1,6 +1,6 @@
-import { CSSPropertiesComplex } from "@border-collie-js/core";
+import { CSSPropertiesComplex } from "@colliejs/core";
 import { Direction } from "@c3/types";
-import { CSSProperties } from "@border-collie-js/core";
+import { CSSProperties } from "@colliejs/core";
 import { getPopoverPos } from "./layout/placement";
 
 export const arrow = (

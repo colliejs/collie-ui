@@ -1,4 +1,4 @@
-import { CSSProperties } from "@border-collie-js/core";
+import { CSSProperties } from "@colliejs/core";
 import { IPosition, xCenter, xyCenter, yCenter } from "./abs";
 
 export const fixed = (pos: IPosition): CSSProperties => ({

@@ -8,7 +8,7 @@ import {
 } from "@collie-ui/layout";
 import React, { useMemo, useState } from "react";
 import { anti } from "./util";
-import { styled } from "@border-collie-js/react";
+import { styled } from "@colliejs/react";
 import "@collie-ui/layout/css";
 
 const StyledContentList = styled(List, {

@@ -1,5 +1,5 @@
 import { Atomic } from "../Atomic";
-import { styled } from "@border-collie-js/react";
+import { styled } from "@colliejs/react";
 
 export const Link = styled(
   Atomic,

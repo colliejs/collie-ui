@@ -1,4 +1,4 @@
-import { CSSProperties } from "@border-collie-js/core";
+import { CSSProperties } from "@colliejs/core";
 
 export interface IYPosition {
   top?: CSSProperties["top"];

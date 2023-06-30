@@ -1,5 +1,5 @@
 import { toArray } from "@c3/utils";
-import { CSSProperties, CSSPropertiesComplex } from "@border-collie-js/core";
+import { CSSProperties, CSSPropertiesComplex } from "@colliejs/core";
 export const nCol = (
   _num: number | number[],
   _cellWidth: CSSProperties["width"],

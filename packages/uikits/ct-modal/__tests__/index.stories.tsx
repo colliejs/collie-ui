@@ -1,7 +1,7 @@
 // import { Button } from "@collie-ui/atomic"; //TODO:为什么这样引入button就渲染不对
 import { abs } from "../../../css/src/layout";
 import { Box } from "../../../layout/src";
-import { styled } from "@border-collie-js/react";
+import { styled } from "@colliejs/react";
 import React from "react";
 import { Button } from "../../../atomic/src/Button";
 import { StyledMask as _Mask } from "../src/BaseModal";

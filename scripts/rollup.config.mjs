@@ -61,7 +61,7 @@ const config = {
     "resolve",
     "dayjs",
     "@metamask/detect-provider",
-    /@border-collie-js\//,
+    /@colliejs\//,
     /@c3\//,
     /@babel\//,
     /@rollup\//,

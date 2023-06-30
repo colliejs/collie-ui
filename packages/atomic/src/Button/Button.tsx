@@ -1,5 +1,5 @@
 import { LoadingOutlined } from "@ant-design/icons";
-import { styled } from "@border-collie-js/react";
+import { styled } from "@colliejs/react";
 import _ from "lodash";
 import React, { ButtonHTMLAttributes, useCallback, useMemo } from "react";
 import { Atomic } from "../Atomic";

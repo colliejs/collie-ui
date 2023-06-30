@@ -1,4 +1,4 @@
-import { CSSProperties } from "@border-collie-js/core";
+import { CSSProperties } from "@colliejs/core";
 
 export const col = (
   fx: CSSProperties["alignItems"] = "flex-start",

@@ -1,6 +1,6 @@
 const glob = require("glob");
 const path = require("path");
-const yue = require("@border-collie-js/vite");
+const yue = require("@colliejs/vite");
 const { mergeConfig } = require("vite");
 
 const getStories = () =>

@@ -21,10 +21,10 @@ importers:
       "@babel/preset-typescript":
         specifier: ^7.21.5
         version: 7.22.5(@babel/core@7.22.5)
-      "@border-collie-js/rollup":
+      "@colliejs/rollup":
         specifier: ^0.0.89
         version: 0.0.89
-      "@border-collie-js/vite":
+      "@colliejs/vite":
         specifier: ^0.0.90
         version: 0.0.90
       "@c3/dbg":
@@ -97,7 +97,7 @@ importers:
       "@babel/plugin-transform-modules-commonjs":
         specifier: ^7.21.5
         version: 7.22.5(@babel/core@7.22.5)
-      "@border-collie-js/react":
+      "@colliejs/react":
         specifier: ^0.0.85
         version: 0.0.85
       "@c3/types":
@@ -2569,51 +2569,51 @@ packages:
         integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==,
       }
 
-  /@border-collie-js/core@0.0.36:
+  /@colliejs/core@0.0.36:
     resolution:
       {
         integrity: sha512-n486NGq9hZrt/4icnb+gis1gmPnN9Pe1O/RPyN+GtfoXAg59NrsYLVQu9nmbANn7FdElWq+UN1CPKEs1HtGGMQ==,
       }
 
-  /@border-collie-js/react@0.0.85:
+  /@colliejs/react@0.0.85:
     resolution:
       {
         integrity: sha512-Guucg9Cmx1OyGsnZpqDJWFwgBuYgJwo+gpucdiYgRKndvHiCzZrNZLEzNzngGAMe3ev9j4IO7kJCotULtsScug==,
       }
     dependencies:
-      "@border-collie-js/core": 0.0.36
-      "@border-collie-js/transform": 0.0.71
+      "@colliejs/core": 0.0.36
+      "@colliejs/transform": 0.0.71
 
-  /@border-collie-js/rollup@0.0.89:
+  /@colliejs/rollup@0.0.89:
     resolution:
       {
         integrity: sha512-mI1ZN3RYbifygGP7nN8jlDcV46KLjCsY3NzklAH61lTBZo1PlKUgoKdVY5/5r88VCIM4TaNryjnzl+p/CpHCVQ==,
       }
     dependencies:
-      "@border-collie-js/core": 0.0.36
-      "@border-collie-js/react": 0.0.85
-      "@border-collie-js/transform": 0.0.71
+      "@colliejs/core": 0.0.36
+      "@colliejs/react": 0.0.85
+      "@colliejs/transform": 0.0.71
     dev: false
 
-  /@border-collie-js/transform@0.0.71:
+  /@colliejs/transform@0.0.71:
     resolution:
       {
         integrity: sha512-Doodun3/4dETsxETFW/ThID+lIU6LmggiDQ3TKUkuRuPTNZu3Dt1P/Pvct0n7tUrilBKZzZPk04SP5WiW6wyqg==,
       }
     dependencies:
-      "@border-collie-js/core": 0.0.36
+      "@colliejs/core": 0.0.36
       "@types/jest": 29.5.2
       lodash-es: 4.17.21
 
-  /@border-collie-js/vite@0.0.90:
+  /@colliejs/vite@0.0.90:
     resolution:
       {
         integrity: sha512-1xKsV3jMSkYNy6yHpsgnHjoiWhAxTglLXO289nqxT/ljZPlelcs1YAy0Ke+y5o8CdBUqi7MXwH84NkbYohM6Eg==,
       }
     dependencies:
-      "@border-collie-js/core": 0.0.36
-      "@border-collie-js/react": 0.0.85
-      "@border-collie-js/transform": 0.0.71
+      "@colliejs/core": 0.0.36
+      "@colliejs/react": 0.0.85
+      "@colliejs/transform": 0.0.71
     dev: false
 
   /@c3/dbg@1.1.3:

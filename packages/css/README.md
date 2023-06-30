@@ -1,11 +1,11 @@
-# `@border-collie-ui/css`
+# `@collie-ui/css`
 
 > TODO: description
 
 ## Usage
 
 ```
-import css from '@border-collie-ui/css';
+import css from '@collie-ui/css';
 
 ```
 

@@ -6,7 +6,7 @@ import {
   flexCenter,
   pseudoArrow,
 } from "@collie-ui/css";
-import { styled } from "@border-collie-js/react";
+import { styled } from "@colliejs/react";
 import { Text } from "@collie-ui/atomic";
 import { useIsOverflow } from "@c3/react";
 

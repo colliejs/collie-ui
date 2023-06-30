@@ -1,5 +1,5 @@
 import { textGradient } from "@collie-ui/css";
-import { styled } from "@border-collie-js/react";
+import { styled } from "@colliejs/react";
 import { Atomic } from "../Atomic";
 
 export const Text = styled(

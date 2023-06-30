@@ -1,5 +1,5 @@
 import { Box } from "./Box";
-import { styled } from "@border-collie-js/react";
+import { styled } from "@colliejs/react";
 
 export const Relative = styled(
   Box,

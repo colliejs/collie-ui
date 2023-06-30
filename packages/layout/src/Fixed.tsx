@@ -1,4 +1,4 @@
-import { styled } from "@border-collie-js/react";
+import { styled } from "@colliejs/react";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Box } from "./Box";
