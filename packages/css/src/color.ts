@@ -15,4 +15,4 @@ export const colors = {
     10: "hsla(0,0%,10%,1)",
     0: "hsla(0,0%,0%,1)",
   },
-};
+} as const;
