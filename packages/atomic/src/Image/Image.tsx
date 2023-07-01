@@ -1,12 +1,13 @@
 import { styled } from "@colliejs/react";
-import { Atomic } from "../Atomic";
 import React from "react";
+import { Atomic } from "../Atomic";
 import { useImageLoadingStatus } from "./useImageLoadingStatus";
 export const StyledImage = styled(
   Atomic,
   {
-    objectFit: "contain",
     objectPosition: "center",
+    w: "100%",
+    h: "100%",
     flexShrink: 0,
     maxWidth: "100%",
     variants: {
@@ -30,15 +31,13 @@ export const StyledImage = styled(
   { as: "img" }
 );
 
-const ImageContainer = styled(
+const StyledImageContainer = styled(
   Atomic,
   {
     display: "inline-block",
     overflow: "hidden",
-    maxWidth: "100%",
-    w: "max-content",
   },
-  { as: "u-img" }
+  { as: "u-img-container" }
 );
 
 //===========================================================
@@ -50,7 +49,7 @@ export type ImageProps = React.ComponentProps<typeof StyledImage> & {
 };
 export const Image = React.forwardRef<HTMLImageElement, ImageProps>(
   (props, ref) => {
-    const { shape, fallback, loading, className, src, ...restProps } = props;
+    const { fallback, loading, className, src, ...restProps } = props;
     const status = useImageLoadingStatus(src);
 
     const child =
@@ -61,17 +60,15 @@ export const Image = React.forwardRef<HTMLImageElement, ImageProps>(
       ) : (
         <StyledImage src={src} {...restProps} />
       );
-
     return (
-      <ImageContainer
+      <StyledImageContainer
         status={status}
-        shape={shape}
         ref={ref}
         className={className}
       >
         {child}
-      </ImageContainer>
+      </StyledImageContainer>
     );
   }
 );
-Image.displayName = "UImage";
+Image.displayName = "Image";

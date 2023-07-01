@@ -16,7 +16,7 @@ export const _Image = () => (
         w: 100,
         aspectRatio: "1",
       }}
-    ></Image>
+    />
     <Image
       src={mock.getRandomPic()}
       css={{
@@ -27,12 +27,12 @@ export const _Image = () => (
   </Row>
 );
 
-export const RoundButton = () => {
+export const RoundImage = () => {
   return (
     <Image
       src={mock.getRandomPic()}
-      shape="round"
-      css={{ w: 200, h: 40, border: "1px solid blue" }}
+      round
+      css={{ w: 200, h: 40, img: { border: "1px solid blue" } }}
     />
   );
 };

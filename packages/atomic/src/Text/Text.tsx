@@ -21,7 +21,7 @@ export const Text = styled(
           textDecoration: "underline",
         },
       },
-      "line-through": {
+      del: {
         true: {
           textDecoration: "line-through",
         },
