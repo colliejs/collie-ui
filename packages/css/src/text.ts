@@ -1,19 +1,13 @@
 import { CSSProperties } from "react";
 
-export const textGradient = (value: string) => ({
-  backgroundImage: `linear-gradient(${value})`,
+export const textGradient = (gradientColor: string) => ({
+  backgroundImage: gradientColor,
   backgroundClip: "text",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
 });
 
-export const typo = ({
-  fontSize,
-  fontWeight,
-  lineHeight,
-  fontFamily,
-  letterSpacing,
-}: any): any => {
+export const typo = ({ fontSize, fontWeight, lineHeight, fontFamily, letterSpacing }: any): any => {
   //TODO: type
   return {
     fontSize,
@@ -24,9 +18,7 @@ export const typo = ({
   };
 };
 
-export const textEllipse = (
-  value: CSSProperties["maxWidth"]
-): CSSProperties => ({
+export const textEllipse = (value: CSSProperties["maxWidth"]): CSSProperties => ({
   maxWidth: value,
   overflow: "hidden",
   textOverflow: "ellipsis",

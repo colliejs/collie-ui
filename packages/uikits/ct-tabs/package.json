@@ -14,7 +14,7 @@
   },
   "types": "./dist/index.d.ts",
   "keywords": [],
-  "author": "yuejs.org@gmail.com",
+  "author": "colliedog1001@gmail.com",
   "license": "MIT",
   "dependencies": {
     "@collie-ui/atomic": "workspace:^",

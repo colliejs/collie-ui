@@ -1,12 +1,10 @@
+import React from "react";
 import { Box, Row, Stack } from "../../layout";
 
 import { flexCenter } from "../src";
 import { getPopoverPos } from "../src/layout";
 
-export default {
-  compoennt: () => <div>xx</div>,
-  title: "css/placement",
-};
+export default { title: "css/placement" };
 const boxStyle = {
   background: "pink",
   ...flexCenter,
@@ -26,10 +24,12 @@ const stackBoxStyle = {
 export const Placement = () => {
   return (
     <Row css={{ gap: 30 }}>
-      <Stack css={stackBoxStyle} body={<Box css={boxStyle}></Box>}>
-        <Box css={{ ...innerBoxStyle, ...getPopoverPos("bottom") }}>bottom</Box>
+      <Stack css={stackBoxStyle} body={<Box></Box>}>
+        <Box css={{ ...innerBoxStyle, ...getPopoverPos("bottom") }}>
+          bottom
+        </Box>
       </Stack>
-      <Stack css={stackBoxStyle} body={<Box css={boxStyle}></Box>}>
+      <Stack css={stackBoxStyle} body={<Box></Box>}>
         <Box
           css={{
             ...innerBoxStyle,

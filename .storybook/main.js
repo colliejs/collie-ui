@@ -2,6 +2,7 @@ const glob = require("glob");
 const path = require("path");
 const yue = require("@colliejs/vite");
 const { mergeConfig } = require("vite");
+const { collieConfig } = require("../collie-config.mjs");
 
 const getStories = () =>
   glob.sync(`packages/**/*.stories.@(js|jsx|ts|tsx|mdx)`, {
@@ -13,7 +14,7 @@ const getStories = () =>
  * @see https://storybook.js.org/docs/react/configure/overview
  */
 module.exports = {
-  stories: async (list) => [...getStories().map((e) => `../${e}`)],
+  stories: async list => [...getStories().map(e => `../${e}`)],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -35,8 +36,10 @@ module.exports = {
         yue({
           index: path.resolve(__dirname, "../index.ts"),
           exclude: /dist\//,
+          styledConfig: collieConfig,
         }),
       ],
+      externals: ["ethers"],
     });
   },
 };

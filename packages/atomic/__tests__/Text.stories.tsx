@@ -15,12 +15,13 @@ export const RoundText = () => {
     </Text>
   );
 };
-export const UnderlineFOO = () => {
+export const UnderlineText = () => {
   return (
     <div>
       <Text underline>Underline</Text>
       <Text bold>bold</Text>
       <Text italic>italic</Text>
+      <Text delete>delete</Text>
       <p style={{ textDecoration: "line-through" }}>xxx</p>
     </div>
   );
@@ -29,25 +30,25 @@ export const UnderlineFOO = () => {
 export const TextAsTitle = () => {
   return (
     <Title css={{ lineHeight: 1 }}>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat et ipsam
-      id culpa facere ea repudiandae dicta qui? Asperiores dolores nihil
-      provident magnam autem est ut quaerat eaque corporis odit.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat et
+      ipsam id culpa facere ea repudiandae dicta qui? Asperiores dolores
+      nihil provident magnam autem est ut quaerat eaque corporis odit.
     </Title>
   );
 };
-export const gradientText = () => {
+export const GradientText = () => {
   return (
     <Text
-      gradient="to right, red, #3f3"
+      gradient="linear-gradient(to right, red, yellow)"
       css={{
         w: 300,
         color: "green",
         typo: { fontSize: 20, fontWeight: 200 },
       }}
     >
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat et ipsam
-      id culpa facere ea repudiandae dicta qui? Asperiores dolores nihil
-      provident magnam autem est ut quaerat eaque corporis odit
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat et
+      ipsam id culpa facere ea repudiandae dicta qui? Asperiores dolores
+      nihil provident magnam autem est ut quaerat eaque corporis odit
     </Text>
   );
 };
@@ -58,9 +59,9 @@ export const OnelineText = () => (
       w: 300,
     }}
   >
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat et ipsam id
-    culpa facere ea repudiandae dicta qui? Asperiores dolores nihil provident
-    magnam autem est ut quaerat eaque corporis odit
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat et
+    ipsam id culpa facere ea repudiandae dicta qui? Asperiores dolores
+    nihil provident magnam autem est ut quaerat eaque corporis odit
   </Text>
 );
 export const TwoLineText = () => {
@@ -69,11 +70,13 @@ export const TwoLineText = () => {
       rows={2}
       css={{
         w: 300,
+        bc: "yellow",
+        fontSize: "$9",
       }}
     >
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat et ipsam
-      id culpa facere ea repudiandae dicta qui? Asperiores dolores nihil
-      provident magnam autem est ut quaerat eaque corporis odit
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat et
+      ipsam id culpa facere ea repudiandae dicta qui? Asperiores dolores
+      nihil provident magnam autem est ut quaerat eaque corporis odit
     </Text>
   );
 };

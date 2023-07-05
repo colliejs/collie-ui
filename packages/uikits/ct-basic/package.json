@@ -1,0 +1,34 @@
+{
+  "name": "@collie-ui/ct-basic",
+  "version": "1.0.0",
+  "description": "ct-basic",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c && pnpm type",
+    "buildOnly": "vite build",
+    "clean": "rm -rf dist  ",
+    "reset": "pnpm clean && rm -rf node_modules && pnpm install",
+    "type": "tsc --project . --paths null --emitDeclarationOnly --declaration",
+    "watchtype": "tsc --project . --watch"
+  },
+  "types": "./dist/index.d.ts",
+  "keywords": [],
+  "author": "colliedog1001@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@collie-ui/animation": "workspace:^",
+    "@collie-ui/atomic": "workspace:^",
+    "@collie-ui/css": "workspace:^",
+    "@collie-ui/layout": "workspace:^"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./css": "./dist/index.css"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

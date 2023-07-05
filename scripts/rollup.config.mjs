@@ -7,10 +7,9 @@ import strip from "@rollup/plugin-strip";
 import path from "path";
 import { fileURLToPath } from "url";
 import collieRollup from "@colliejs/rollup";
-import { createRequire } from "module";
+import { collieConfig } from "../collie-config.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const require = createRequire(import.meta.url);
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 const babelConfigFile = path.join(__dirname, "../babel.config.cjs");
@@ -42,7 +41,7 @@ const config = {
       jsnext: true,
       extensions: extensions,
     }),
-    collieRollup({ include: /src\/*/ }),
+    collieRollup({ include: /src\/*/, styledConfig: collieConfig }),
     commonjs(),
     json(),
     babel({ babelHelpers: "bundled", extensions, configFile: babelConfigFile }),
@@ -60,6 +59,7 @@ const config = {
     "npmlog",
     "resolve",
     "dayjs",
+    "ethers",
     "@metamask/detect-provider",
     /@colliejs\//,
     /@c3\//,

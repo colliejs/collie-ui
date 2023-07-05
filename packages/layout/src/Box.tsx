@@ -16,6 +16,6 @@ export const Box = styled(
       },
     },
   },
-  { as: "u-box" }
+  { as: "co-box" }
 );
 Box.displayName = "Box";
