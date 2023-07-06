@@ -11,7 +11,7 @@ export const Row = styled(
     justifyContent: "flex-start",
     variants: {
       gap: {
-        dynamic: (gap) => ({ ...rgap(gap) }),
+        dynamic: gap => ({ ...rgap(gap) }),
       },
       fx: {
         dynamic: (fx: string) => ({
@@ -25,5 +25,5 @@ export const Row = styled(
       },
     },
   },
-  { as: "u-row" }
+  { as: "co-row" }
 );

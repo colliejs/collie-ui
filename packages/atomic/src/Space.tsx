@@ -27,5 +27,5 @@ export const Space = styled(
       },
     },
   },
-  { as: "u-space" }
+  { as: "co-space" }
 );

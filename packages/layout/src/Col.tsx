@@ -12,21 +12,21 @@ export const Col = styled(
     variants: {
       gap: {
         //TODO:使用@supports来判断是否支持flex中使用gap属性
-        dynamic: (value) => ({
+        dynamic: value => ({
           gap: value,
         }),
       },
       fx: {
-        dynamic: (fx) => ({
+        dynamic: fx => ({
           alignItems: fx,
         }),
       },
       fy: {
-        dynamic: (fy) => ({
+        dynamic: fy => ({
           justifyContent: fy,
         }),
       },
     },
   },
-  { as: "u-col" }
+  { as: "co-col" }
 );

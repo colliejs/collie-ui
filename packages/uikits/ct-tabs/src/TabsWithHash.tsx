@@ -1,7 +1,7 @@
 import { useEventListener, useExclusive, useMount } from "@c3/react";
 import React from "react";
 import { useCallback } from "react";
-import { TabItemType, BaseTab, TabProps } from "./BaseTab";
+import { TabItemType, BaseTabs, TabProps } from "./BaseTabs";
 
 type TabsWithHashProps<T extends TabItemType<T>> = TabProps<T>;
 export const TabsWithHash = <T extends TabItemType<T>>(
@@ -19,5 +19,5 @@ export const TabsWithHash = <T extends TabItemType<T>>(
   useEventListener(window, "hashchange", switchToHash);
   useMount(switchToHash);
 
-  return <BaseTab {...props} />;
+  return <BaseTabs {...props} />;
 };

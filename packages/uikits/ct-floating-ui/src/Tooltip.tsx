@@ -14,9 +14,9 @@ import { useIsOverflow } from "@c3/react";
 // TooltipUncontrolled
 //============================================================================
 export type TooltipUncontrolledProps = Omit<FloatingProps, "trigger">;
-export const TooltipUncontrolled: React.FC<TooltipUncontrolledProps> = (
-  props
-) => {
+export const TooltipUncontrolled: React.FC<
+  TooltipUncontrolledProps
+> = props => {
   const { children, ...restProps } = props;
 
   if (!React.isValidElement(children)) {
@@ -36,7 +36,7 @@ export type TooltipProps = Omit<
   FloatingProps,
   "trigger" | "open" | "onOpenChange"
 >;
-export const Tooltip: React.FC<TooltipProps> = (props) => {
+export const Tooltip: React.FC<TooltipProps> = props => {
   const { children, ...restProps } = props;
   const [open, onOpenChange] = React.useState(false);
 
@@ -77,12 +77,14 @@ export type TextWithTooltipProps = {
   tooltipProps?: React.ComponentProps<typeof Tooltip>;
 } & React.ComponentProps<typeof Text>;
 
-export const TextWithTooltip: React.FC<TextWithTooltipProps> = (props) => {
+export const TextWithTooltip: React.FC<TextWithTooltipProps> = props => {
   const {
     children,
     tooltipProps: {
       floating = (
-        <FloatingText className="u-floating-text">{children}</FloatingText>
+        <FloatingText className="co-floating-text">
+          {children}
+        </FloatingText>
       ),
       placement = "top",
       ...restTooltipProps
@@ -98,7 +100,7 @@ export const TextWithTooltip: React.FC<TextWithTooltipProps> = (props) => {
 
   const text = (
     <Text
-      className="u-text"
+      className="co-text"
       style={{ ...textEllipse, display: "inline-block" }}
       {...restProps}
       ref={ref}
@@ -108,7 +110,11 @@ export const TextWithTooltip: React.FC<TextWithTooltipProps> = (props) => {
   );
 
   return isOverflow ? (
-    <Tooltip floating={floating} placement={placement} {...restTooltipProps}>
+    <Tooltip
+      floating={floating}
+      placement={placement}
+      {...restTooltipProps}
+    >
       {text}
     </Tooltip>
   ) : (

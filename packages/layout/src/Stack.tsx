@@ -18,7 +18,7 @@ export const StyledStack = styled(
       position: "absolute",
     },
   },
-  { as: "u-stack" }
+  { as: "co-stack" }
 );
 
 //===========================================================

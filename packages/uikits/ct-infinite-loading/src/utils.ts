@@ -8,7 +8,7 @@ export const animate = async (visible: boolean, mask: HTMLElement): Promise<Anim
   return Promise.all([
     fades[key]({ targets: mask }),
     zoom[`center-${key}`]({
-      targets: mask.querySelector("u-modal") as HTMLElement,
+      targets: mask.querySelector("co-modal") as HTMLElement,
     }),
   ]);
 };

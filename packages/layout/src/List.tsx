@@ -23,7 +23,7 @@ export const StyledList = styled(
       },
     },
   },
-  { as: "u-ul" }
+  { as: "co-ul" }
 );
 
 //============================================================================
@@ -31,7 +31,7 @@ export const StyledList = styled(
 //============================================================================
 type ListItemElementProps = {
   onClick: (e: React.MouseEvent) => void;
-  "data-active": boolean;
+  "data-state": "active" | "inactive";
 };
 
 export type RenderItem<T extends BaseListItemType<T>> = (
@@ -75,7 +75,7 @@ export const List = <T extends BaseListItemType<T>>(
 
   return (
     <StyledList onClick={onClick} direction={direction} {...restProps}>
-      {data.map((e) => {
+      {data.map(e => {
         const item = e.renderItem?.(e) || renderItem?.(e);
         if (!React.isValidElement(item)) {
           return item;
@@ -85,7 +85,7 @@ export const List = <T extends BaseListItemType<T>>(
             on(e.id);
             await item.props.onClick?.(event);
           },
-          "data-active": e.active,
+          "data-state": e.active ? "active" : "inactive",
           key: e.id,
         });
       })}

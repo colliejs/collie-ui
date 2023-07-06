@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Box } from "./Box";
 
-const StyledFixed = styled(Box, { position: "fixed" }, { as: "u-fixed" });
+const StyledFixed = styled(Box, { position: "fixed" }, { as: "co-fixed" });
 
 export const Fixed = React.forwardRef<
   unknown,

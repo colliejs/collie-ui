@@ -1,20 +1,16 @@
-import { Text } from "../../../atomic/src";
+import { Text } from "@collie-ui/atomic";
 import React from "react";
 import { useState } from "react";
-import { MenuConfig, TabItemType, BaseTabs } from "../src/BaseTabs";
-import "@collie-ui/atomic/css";
-
-export default {
-  component: BaseTabs,
-  title: "uikits/Nav",
-};
+import { TabItemType, TabConfig, BaseTabs, TabsControlled } from "../src";
+import "./index.css";
+export default { title: "uikits/c-tabs" };
 
 interface Item extends TabItemType<any> {
   title: string;
   to: string;
 }
 
-const config: MenuConfig<Item> = [
+const config: TabConfig<Item> = [
   {
     id: "1",
     title: "name1",
@@ -52,7 +48,7 @@ const SwitcherApp = (props: any): JSX.Element => {
       data={menuconfig}
       updateData={setMenuConfig}
       renderItem={(e: Item) => <Text>{e.title}</Text>}
-      css={{ "u-nav": { border: "1px solid red", gap: 10 } }}
+      css={{ "co-nav": { border: "1px solid red", gap: 10 } }}
       {...props}
     />
   );
@@ -60,8 +56,8 @@ const SwitcherApp = (props: any): JSX.Element => {
 //=====================================================================================================
 // HorizontalSwitcher
 //=====================================================================================================
-export const HoriontalSwitcher = () => (
-  <SwitcherApp direction="row"></SwitcherApp>
+export const TabsControlledTest = () => (
+  <TabsControlled initialData={config}></TabsControlled>
 );
 
 //=====================================================================================================

@@ -28,14 +28,17 @@ export const StyledGrid = styled(
       },
     },
   },
-  { as: "u-grid" }
+  { as: "co-grid" }
 );
 
 //===========================================================
 // Grid
 //===========================================================
-export type GridProps<T extends BaseListItemType<T>> = ListPropsWithoutRef<T>;
-export const Grid = <T extends BaseListItemType<T>>(props: GridProps<T>) => {
+export type GridProps<T extends BaseListItemType<T>> =
+  ListPropsWithoutRef<T>;
+export const Grid = <T extends BaseListItemType<T>>(
+  props: GridProps<T>
+) => {
   return <StyledGrid {...props}></StyledGrid>;
 };
 Grid.displayName = "Grid";
@@ -54,7 +57,11 @@ export const GridControlled = <T extends BaseListItemType<T>>(
   const { initialData, ...restProps } = props;
   const [data, setData] = useState(initialData);
   return (
-    <StyledGrid data={data} updateData={setData} {...restProps}></StyledGrid>
+    <StyledGrid
+      data={data}
+      updateData={setData}
+      {...restProps}
+    ></StyledGrid>
   );
 };
 GridControlled.displayName = "GridControlled";

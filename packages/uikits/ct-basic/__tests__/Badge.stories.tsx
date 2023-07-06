@@ -1,6 +1,6 @@
 import React from "react";
 import { Badge } from "../src/Badge";
-export default { title: "ct/Badge" };
+export default { title: "ct-basic/Badge" };
 
 export const Basic = () => {
   return (

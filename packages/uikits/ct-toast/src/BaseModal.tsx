@@ -26,7 +26,7 @@ export const StyledMask = styled(
     "&[data-visible=false]": { opacity: 0, pointerEvents: "none" },
     ..._mask,
   },
-  { as: "u-mask" }
+  { as: "co-mask" }
 );
 
 //===========================================================
@@ -47,13 +47,13 @@ export const BaseModal = React.forwardRef<
     children,
     ...restProps
   } = props;
-  const body = <_body.type {..._body.props} as="u-body" />;
+  const body = <_body.type {..._body.props} as="co-body" />;
   const dataVisibleAttr =
     animationStatus === "done" ? { "data-visible": visible } : {};
   return (
     <>
       <mask.type {...dataVisibleAttr} {...restProps} ref={ref}>
-        <Stack as="u-modal" body={body}>
+        <Stack as="co-modal" body={body}>
           {closeBtn}
           {okBtn}
           {cancelBtn}

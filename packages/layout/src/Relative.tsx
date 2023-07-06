@@ -4,5 +4,5 @@ import { styled } from "@colliejs/react";
 export const Relative = styled(
   Box,
   { position: "relative" },
-  { as: "u-relative" }
+  { as: "co-relative" }
 );

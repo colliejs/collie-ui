@@ -9,10 +9,10 @@ import {
 import React, { useMemo, useState } from "react";
 import { anti } from "./util";
 import { styled } from "@colliejs/react";
-import "@collie-ui/layout/css";
+// import "@collie-ui/layout/css";
 
 const StyledContentList = styled(List, {
-  "&>:not([data-active=true])": { display: "none" },
+  "&>[data-state='inactive']": { display: "none" },
 });
 
 //===========================================================
@@ -35,7 +35,7 @@ export type TabProps<T extends TabItemType<T>> = {
   renderContent?: RenderItem<T>;
 };
 
-export const BaseTab = <T extends TabItemType<T>>(props: TabProps<T>) => {
+export const BaseTabs = <T extends TabItemType<T>>(props: TabProps<T>) => {
   const {
     data,
     updateData,
@@ -48,7 +48,7 @@ export const BaseTab = <T extends TabItemType<T>>(props: TabProps<T>) => {
   const nav = useMemo(
     () => (
       <List
-        as="u-nav"
+        as="co-nav"
         data={data}
         direction={anti(direction)}
         renderItem={(e: T) => e.renderItem?.(e) || renderItem?.(e)}
@@ -72,7 +72,7 @@ export const BaseTab = <T extends TabItemType<T>>(props: TabProps<T>) => {
   }, [data, direction, renderContent]);
 
   return (
-    <Layout as="u-tabs" {...restProps}>
+    <Layout as="co-tabs" {...restProps}>
       {nav}
       {content}
     </Layout>
@@ -92,5 +92,7 @@ export const BaseTabControlled = <T extends TabItemType<T>>(
 ) => {
   const { initialData, ...restProps } = props;
   const [data, setData] = useState(initialData);
-  return <BaseTab data={data} updateData={setData} {...restProps}></BaseTab>;
+  return (
+    <BaseTabs data={data} updateData={setData} {...restProps}></BaseTabs>
+  );
 };

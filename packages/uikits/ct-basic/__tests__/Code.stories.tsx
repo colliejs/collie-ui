@@ -1,6 +1,6 @@
 import React from "react";
 import { Code } from "../src/Code";
-export default { title: "ct/Code" };
+export default { title: "ct-basic/Code" };
 export const Basic = () => {
   return (
     <div>

@@ -37,7 +37,7 @@ const StyledImageContainer = styled(
     display: "inline-block",
     overflow: "hidden",
   },
-  { as: "u-img-container" }
+  { as: "co-img-container" }
 );
 
 //===========================================================
