@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/yuejs/c3/compare/@collie-ui/css@1.0.5...@collie-ui/css@1.0.6) (2023-07-07)
+
+### Features
+
+- 0.1 ([b97672d](https://github.com/yuejs/c3/commit/b97672d7355db24fc8564651cbabeaa4114f3f04))
+
 ## [1.0.5](https://github.com/yuejs/c3/compare/@collie-ui/css@1.0.4...@collie-ui/css@1.0.5) (2023-07-01)
 
 **Note:** Version bump only for package @collie-ui/css
