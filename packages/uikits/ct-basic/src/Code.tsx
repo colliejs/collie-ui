@@ -1,5 +1,7 @@
 import { styled } from "@colliejs/react";
 
+type x = JSX.IntrinsicElements["code"];
+
 export const Code = styled("code", {
   fontFamily: "$mono",
   fontSize: "max(12px, 85%)",

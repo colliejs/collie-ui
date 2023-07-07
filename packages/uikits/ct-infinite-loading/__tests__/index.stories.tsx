@@ -1,9 +1,8 @@
-import { Text } from "../../../atomic/src";
 import { absXYCenter, flexCenter, pseudoArrow } from "@collie-ui/css";
-import { Col, Row } from "../../../layout/src";
 import { useState } from "react";
 import React from "react";
 import { InfiniteLoading } from "../src";
+import { Col } from "@collie-ui/layout";
 
 export default {
   component: InfiniteLoading,

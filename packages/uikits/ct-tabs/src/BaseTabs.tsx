@@ -9,7 +9,6 @@ import {
 import React, { useMemo, useState } from "react";
 import { anti } from "./util";
 import { styled } from "@colliejs/react";
-// import "@collie-ui/layout/css";
 
 const StyledContentList = styled(List, {
   "&>[data-state='inactive']": { display: "none" },

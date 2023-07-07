@@ -1,6 +1,5 @@
 import { Atomic } from "@collie-ui/atomic";
 import { styled } from "@colliejs/react";
-import "@collie-ui/atomic/css";
 
 export const Box = styled(
   Atomic,
