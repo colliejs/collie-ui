@@ -1,5 +1,5 @@
 // import React from "react";
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 // import { CaretSortIcon } from "@radix-ui/react-icons";
 
 // const SelectWrapper = styled("div", {

@@ -11,8 +11,13 @@ import { collieConfig } from "../collie-config.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const extensions = [".js", ".jsx", ".ts", ".tsx"];
+export const extensions = [".js", ".jsx", ".ts", ".tsx"];
 const babelConfigFile = path.join(__dirname, "../babel.config.cjs");
+export const babelPlugin = babel({
+  babelHelpers: "bundled",
+  extensions,
+  configFile: babelConfigFile,
+});
 
 /**
  * @type {import('rollup').RollupOptions}
@@ -44,7 +49,7 @@ const config = {
     collieRollup({ include: /src\/*/, styledConfig: collieConfig }),
     commonjs(),
     json(),
-    babel({ babelHelpers: "bundled", extensions, configFile: babelConfigFile }),
+    babelPlugin,
     strip({ include: /src\/.*\.[mc]?[jt]sx?$/ }),
   ],
   external: [
@@ -59,6 +64,7 @@ const config = {
     "npmlog",
     "resolve",
     "dayjs",
+    "dayjs/plugin/utc",
     "ethers",
     "@metamask/detect-provider",
     /@colliejs\//,

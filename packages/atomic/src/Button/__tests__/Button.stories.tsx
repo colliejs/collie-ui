@@ -4,7 +4,6 @@ import { Button } from "../Button";
 import { useButton } from "../useButton";
 import React from "react";
 export default {
-  component: Button,
   title: "atomic/Button",
 };
 const defaultStyle = {
@@ -25,7 +24,10 @@ export const BigButton = () => {
 export const RoundButton = () => {
   return (
     <div>
-      <Button shape="round" css={{ w: 100, h: 50, border: "1px solid red" }}>
+      <Button
+        shape="round"
+        css={{ w: 100, h: 50, border: "1px solid red" }}
+      >
         BigButton-1
       </Button>
     </div>

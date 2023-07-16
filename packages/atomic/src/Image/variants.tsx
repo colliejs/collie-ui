@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 import { Image } from "./Image";
 
 export const Icon = styled(Image, { objectFit: "contain" });

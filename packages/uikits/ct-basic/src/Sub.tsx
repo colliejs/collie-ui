@@ -1,4 +1,4 @@
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 
 export const Sub = styled("sub", {
   fontFeatureSettings: "\"subs\"",

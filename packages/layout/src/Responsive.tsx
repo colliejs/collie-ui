@@ -1,5 +1,5 @@
 import { Box } from "./Box";
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 
 /**
  * Responsive

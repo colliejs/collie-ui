@@ -1,8 +1,8 @@
 import { LoadingOutlined } from "@ant-design/icons";
-import { styled } from "@colliejs/react";
 import _ from "lodash";
-import React, { ButtonHTMLAttributes, useCallback, useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import { Atomic } from "../Atomic";
+import { styled } from "@collie-ui/common";
 
 export type ButtonProps = {
   loading?: boolean;

@@ -1,7 +1,8 @@
 import { mock } from "@c3/test";
 import { Image } from "../Image";
 import React from "react";
-import { Row } from "../../../../layout/src/Row";
+import { styled } from "@collie-ui/common";
+const Row = styled("div", { display: "flex" });
 
 export default {
   component: Image,

@@ -1,47 +1,55 @@
 import { textGradient } from "@collie-ui/css";
-import { styled } from "@colliejs/react";
-import { Atomic } from "../Atomic";
+import { styled } from "@collie-ui/common";
 
-export const Text = styled(
-  Atomic,
-  {
-    variants: {
+export const Text = styled("p", {
+  lineHeight: "$sm",
+  fontFamily: "$font-family",
+  variants: {
+    size: {
+      md: {
+        fontSize: "16px",
+      },
+      sm: {
+        fontSize: "14px",
+      },
+    },
+    weight: {
       bold: {
-        true: {
-          fontWeight: "bold",
-        },
+        fontWeight: 600,
       },
-      italic: {
-        true: {
-          fontStyle: "italic",
-        },
+      normal: {
+        fontWeight: 400,
       },
-      underline: {
-        true: {
-          textDecoration: "underline",
-        },
+    },
+    italic: {
+      true: {
+        fontStyle: "italic",
       },
-      delete: {
-        true: {
-          textDecoration: "line-through",
-        },
+    },
+    underline: {
+      true: {
+        textDecoration: "underline",
       },
-      gradient: {
-        dynamic(color: string) {
-          return textGradient(color);
-        },
+    },
+    delete: {
+      true: {
+        textDecoration: "line-through",
       },
-      rows: {
-        dynamic(rows) {
-          return {
-            display: "-webkit-box",
-            WebkitLineClamp: rows,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-          };
-        },
+    },
+    gradient: {
+      dynamic(color) {
+        return textGradient(color);
+      },
+    },
+    rows: {
+      dynamic(rows) {
+        return {
+          display: "-webkit-box",
+          WebkitLineClamp: rows,
+          WebkitBoxOrient: "vertical",
+          overflow: "hidden",
+        };
       },
     },
   },
-  { as: "p" }
-);
+});

@@ -1,4 +1,4 @@
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 import React from "react";
 import { Box } from "./Box";
 

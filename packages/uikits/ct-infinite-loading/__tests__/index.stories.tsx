@@ -1,14 +1,23 @@
-import { absXYCenter, flexCenter, pseudoArrow } from "@collie-ui/css";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import React from "react";
-import { InfiniteLoading } from "../src";
-import { Col } from "@collie-ui/layout";
+import { InfiniteLoading } from "../dist";
+import { Box, type BaseListItemType } from "@collie-ui/layout";
 
 export default {
-  component: InfiniteLoading,
   title: "uikits/ct-infinite-loading",
 };
+import "@collie-ui/atomic/css";
+import "@collie-ui/layout/css";
+import { InfiniteLoadingControlled } from "../src/InfiniteLoadingControlled";
 
-export const InfiniteoadingX = () => {
-  return <Col css={{ gap: 40 }}>sss</Col>;
+export const InfiniteoadingUncontrolledTest = () => {
+  return (
+    <InfiniteLoadingControlled
+      css={{ h: 300, border: "3px solid red", overflow: "auto" }}
+      renderItem={e => {
+        return <Box css={{ h: 100 }}>{e.title}</Box>;
+      }}
+
+    />
+  );
 };

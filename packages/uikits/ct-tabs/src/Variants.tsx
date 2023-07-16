@@ -1,10 +1,8 @@
+import { TabItemType, BaseTabs, TabProps } from "./BaseTabs";
 import {
-  TabItemType,
-  BaseTabs,
-  TabProps,
-  BaseTabControlled,
   BaseTabControlledProps,
-} from "./BaseTabs";
+  BaseTabControlled,
+} from "./BaseTabControlled";
 
 //===========================================================
 // Sidebar

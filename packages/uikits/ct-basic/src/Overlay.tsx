@@ -1,4 +1,4 @@
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 
 // export const overlayStyles = css({
 //   backgroundColor: "rgba(0, 0, 0, .15)",

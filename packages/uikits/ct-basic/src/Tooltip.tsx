@@ -1,5 +1,5 @@
 // import React from "react";
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 // import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 // import { Box } from "./Box";
 // import { Text } from "./Text";

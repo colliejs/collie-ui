@@ -1,5 +1,5 @@
 import { CSSProperties } from "@colliejs/core";
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 import { Box } from "./Box";
 
 export const Col = styled(

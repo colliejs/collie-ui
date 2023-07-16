@@ -1,20 +1,43 @@
 import React from "react";
-import { Text, Title } from "../src";
-
+import { Heading, Text, Title } from "..";
+import "../../dist/theme.css";
 export default {
   title: "atomic/Text",
 };
 
-//============================================================================
-// forward round attributes to Atomic
-//============================================================================
-export const RoundText = () => {
+//===========================================================
+// Heading
+//===========================================================
+
+export const HeadingX = () => {
   return (
-    <Text round css={{ border: "1px solid red" }}>
-      RoundText
-    </Text>
+    <div>
+      <Heading kind="h1Bold">h1Bold</Heading>
+      <Heading kind="h1Normal">h1Normal</Heading>
+      <Heading kind="h1Light">h1Light</Heading>
+      <Heading kind="h2Bold">h2Bold</Heading>
+      <Heading kind="h2Normal">h2Normal</Heading>
+      <Heading kind="h2Light">h2Light</Heading>
+      <Heading kind="h3Bold">h3Bold</Heading>
+      <Heading kind="h3Normal">h3Normal</Heading>
+      <Heading kind="h3Light">h3Light</Heading>
+
+      <Text weight="bold" size="sm">
+        bold--sm
+      </Text>
+      <Text weight="bold" size="md">
+        bold-md
+      </Text>
+      <Text weight="normal" size="sm">
+        normal-sm
+      </Text>
+      <Text weight="normal" size="md">
+        nomal-md
+      </Text>
+    </div>
   );
 };
+
 export const UnderlineText = () => {
   return (
     <div>
@@ -64,6 +87,9 @@ export const OnelineText = () => (
     nihil provident magnam autem est ut quaerat eaque corporis odit
   </Text>
 );
+type x = Parameters<typeof Text>[0]["rows"]
+// tyep x2 = DEBUG<Parameters<typeof Text>>
+// type x1=x['']
 export const TwoLineText = () => {
   return (
     <Text

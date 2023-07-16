@@ -1,4 +1,4 @@
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 
 // const pulse = keyframes({
 //   "0%": { opacity: 0 },

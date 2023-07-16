@@ -1,4 +1,4 @@
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 import { Atomic } from "@collie-ui/atomic";
 
 export const AppBar = styled("div", {

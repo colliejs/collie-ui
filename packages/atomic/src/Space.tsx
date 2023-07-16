@@ -1,4 +1,4 @@
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 import { Atomic } from "./Atomic";
 export type SpaceProps = {
   size: number;
@@ -12,12 +12,12 @@ export const Space = styled(
     variants: {
       size: {
         dynamic(size) {
-          return { w: size, h: size };
+          return { width: size, height: size };
         },
       },
       x: {
         dynamic(x) {
-          return { w: x, h: 1 };
+          return { w: x, height: 1 };
         },
       },
       y: {

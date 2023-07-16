@@ -2,6 +2,7 @@
 
 import { run } from "@scriptbot/cli";
 import { $ } from "zx";
+// import { collieConfig } from "@collie-ui/common";
 
 run({
   async release(option) {
@@ -12,5 +13,9 @@ run({
     await $`git commit -m "chore: release"`;
     await $`lerna version ${semver} --conventional-commits --no-commit-hooks -y`;
     await $`pnpm -r publish ----report-summary`;
+  },
+  async makeTheme() {
+    // await $`pnpm -r build`;
+    // await $`pnpm -r make-theme`;
   },
 });

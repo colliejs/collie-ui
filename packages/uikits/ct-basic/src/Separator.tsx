@@ -1,4 +1,4 @@
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 // import * as SeparatorPrimitive from "@radix-ui/react-separator";
 
 // export const Separator = styled(SeparatorPrimitive.Root, {

@@ -1,4 +1,4 @@
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 // import { Button } from "../components/Button";
 // import { TextField } from "./TextField";
 // import { Select } from "../components/Select";

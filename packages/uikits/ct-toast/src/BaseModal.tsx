@@ -1,6 +1,6 @@
 import { Fixed, Stack } from "@collie-ui/layout";
 import { mask as _mask } from "@collie-ui/css";
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 import React, { useEffect } from "react";
 import { AnimationStatus } from "./Modal";
 

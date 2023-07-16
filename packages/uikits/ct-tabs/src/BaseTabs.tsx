@@ -8,7 +8,7 @@ import {
 } from "@collie-ui/layout";
 import React, { useMemo, useState } from "react";
 import { anti } from "./util";
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 
 const StyledContentList = styled(List, {
   "&>[data-state='inactive']": { display: "none" },
@@ -75,23 +75,5 @@ export const BaseTabs = <T extends TabItemType<T>>(props: TabProps<T>) => {
       {nav}
       {content}
     </Layout>
-  );
-};
-
-//===========================================================
-// TabControlled
-//===========================================================
-export type BaseTabControlledProps<T extends TabItemType<T>> = Omit<
-  TabProps<T>,
-  "updateData" | "data"
-> & { initialData: T[] };
-
-export const BaseTabControlled = <T extends TabItemType<T>>(
-  props: BaseTabControlledProps<T>
-) => {
-  const { initialData, ...restProps } = props;
-  const [data, setData] = useState(initialData);
-  return (
-    <BaseTabs data={data} updateData={setData} {...restProps}></BaseTabs>
   );
 };

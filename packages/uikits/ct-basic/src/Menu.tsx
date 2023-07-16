@@ -1,7 +1,7 @@
 // import React from "react";
 // import * as MenuPrimitive from "@radix-ui/react-menu";
 // import { CheckIcon } from "@radix-ui/react-icons";
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 // import { Box } from "./Box";
 // import { Flex } from "./Flex";
 // import { panelStyles } from "./Panel";

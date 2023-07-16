@@ -1,5 +1,5 @@
 // import React from "react";
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 // import * as PopoverPrimitive from "@radix-ui/react-popover";
 // import { Box } from "./Box";
 // import { panelStyles } from "./Panel";

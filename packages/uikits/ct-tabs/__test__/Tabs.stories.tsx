@@ -1,8 +1,14 @@
-import { Text } from "@collie-ui/atomic";
 import React from "react";
-import { useState } from "react";
-import { TabItemType, TabConfig, BaseTabs, TabsControlled } from "../src";
+import {
+  TabItemType,
+  TabConfig,
+  TabsControlled,
+  SideBarControlled,
+} from "../dist";
+import { Text } from "@collie-ui/atomic";
 import "./index.css";
+import "../dist/index.css";
+
 export default { title: "uikits/c-tabs" };
 
 interface Item extends TabItemType<any> {
@@ -10,59 +16,57 @@ interface Item extends TabItemType<any> {
   to: string;
 }
 
-const config: TabConfig<Item> = [
+const data: TabConfig<Item> = [
   {
     id: "1",
     title: "name1",
     to: "/account#profile",
     active: true,
-    renderContent: () => <Text>content1</Text>,
+    renderContent: () => <p>content1</p>,
   },
   {
     id: "2",
     title: "name2",
     to: "/account#222",
     active: false,
-    renderContent: () => <Text>content2</Text>,
+    renderContent: () => <p>content2</p>,
   },
   {
     id: "3",
     title: "name3",
     to: "/account#222",
     active: false,
-    renderContent: () => <Text>content3</Text>,
+    renderContent: () => <p>content3</p>,
   },
   {
     id: "4",
     title: "name4",
     to: "/account#2222",
     active: false,
-    renderContent: () => <Text>content4</Text>,
+    renderContent: () => <p>content4</p>,
   },
 ];
 
-const SwitcherApp = (props: any): JSX.Element => {
-  const [menuconfig, setMenuConfig] = useState(config);
-  return (
-    <BaseTabs
-      data={menuconfig}
-      updateData={setMenuConfig}
-      renderItem={(e: Item) => <Text>{e.title}</Text>}
-      css={{ "co-nav": { border: "1px solid red", gap: 10 } }}
-      {...props}
-    />
-  );
-};
-//=====================================================================================================
-// HorizontalSwitcher
-//=====================================================================================================
+// //=====================================================================================================
+// // HorizontalSwitcher
+// //=====================================================================================================
 export const TabsControlledTest = () => (
-  <TabsControlled initialData={config}></TabsControlled>
+  <TabsControlled
+    initialData={data}
+    renderItem={e => {
+      return <Text>{e.title}</Text>;
+    }}
+  ></TabsControlled>
 );
 
 //=====================================================================================================
-// VerticalSwitcher
+// SideBarControlledDemo
 //=====================================================================================================
-export const VerticalSwitcher = () => (
-  <SwitcherApp direction="column"></SwitcherApp>
+export const SideBarControlledDemo = () => (
+  <SideBarControlled
+    initialData={data}
+    renderItem={e => {
+      return <Text>{e.title}</Text>;
+    }}
+  ></SideBarControlled>
 );

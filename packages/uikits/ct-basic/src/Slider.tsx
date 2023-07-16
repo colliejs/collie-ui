@@ -1,5 +1,5 @@
 // import React from "react";
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 // import * as SliderPrimitive from "@radix-ui/react-slider";
 
 // const SliderTrack = styled(SliderPrimitive.Track, {

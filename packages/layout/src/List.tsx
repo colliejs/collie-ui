@@ -1,6 +1,6 @@
 import { useExclusive } from "@c3/react";
 import { Color } from "@c3/utils";
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 import React, { useState } from "react";
 import { Box as _Box } from "./Box";
 //============================================================================

@@ -1,4 +1,4 @@
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 // import * as TogglePrimitive from "@radix-ui/react-toggle";
 
 // export const SimpleToggle = styled(TogglePrimitive.Root, {

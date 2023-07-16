@@ -1,4 +1,4 @@
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 import React, { useState } from "react";
 import { BaseListItemType, List, ListPropsWithoutRef } from "./List";
 

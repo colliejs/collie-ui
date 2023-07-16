@@ -1,6 +1,5 @@
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 
-type x = JSX.IntrinsicElements["code"];
 
 export const Code = styled("code", {
   fontFamily: "$mono",

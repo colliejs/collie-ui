@@ -1,4 +1,4 @@
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 // import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
 
 // export const RadioGridGroup = styled(RadioGroupPrimitive.Root, {

@@ -1,4 +1,4 @@
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 import { Text } from "./Text";
 
 export const Link = styled("a", {

@@ -1,4 +1,4 @@
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 import { Row } from "@collie-ui/layout";
 import React, { ForwardRefRenderFunction } from "react";
 
@@ -28,7 +28,7 @@ const __Row = styled(Row, {
     cursor: "not-allowed",
   },
 });
-export const __Input = styled<React.ComponentProps<"input">>("input", {
+export const __Input = styled("input", {
   appearance: "none",
   outline: "none",
 });

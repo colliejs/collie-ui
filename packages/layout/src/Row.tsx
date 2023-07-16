@@ -1,4 +1,4 @@
-import { styled } from "@colliejs/react";
+import { styled } from "@collie-ui/common";
 import { Box } from "./Box";
 import { rgap } from "@collie-ui/css";
 

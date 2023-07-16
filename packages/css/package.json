@@ -48,7 +48,8 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
-    "./css": "./dist/index.css"
+    "./css": "./dist/index.css",
+    "./theme": "./dist/theme.css"
   },
   "publishConfig": {
     "access": "public"

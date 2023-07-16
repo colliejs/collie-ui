@@ -1,5 +1,5 @@
 // import React from "react";
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 // import { Flex } from "../components/Flex";
 // import { CheckIcon } from "@radix-ui/react-icons";
 

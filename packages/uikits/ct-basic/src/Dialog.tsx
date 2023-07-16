@@ -1,5 +1,5 @@
 // import React from "react";
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 // import * as DialogPrimitive from "@radix-ui/react-dialog";
 // import { Cross1Icon } from "@radix-ui/react-icons";
 // import { overlayStyles } from "./Overlay";

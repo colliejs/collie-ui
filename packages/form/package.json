@@ -33,6 +33,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
     "@collie-ui/atomic": "workspace:^",
+    "@collie-ui/common": "workspace:^1.0.0",
     "@collie-ui/css": "workspace:^",
     "@collie-ui/ct-floating-ui": "workspace:^",
     "@collie-ui/layout": "workspace:^",
@@ -50,7 +51,9 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
-    "./css": "./dist/index.css"
+    "./css": "./dist/index.css",
+    "./theme": "./dist/theme.css"
+
   },
   "publishConfig": {
     "access": "public"

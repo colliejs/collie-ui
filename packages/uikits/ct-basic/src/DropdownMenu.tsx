@@ -1,6 +1,6 @@
 // import React, { ReactText } from "react";
 // import { CheckIcon } from "@radix-ui/react-icons";
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 // import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 // import { menuCss, separatorCss, itemCss, labelCss } from "./Menu";
 // import { Box } from "./Box";

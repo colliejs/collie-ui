@@ -1,6 +1,6 @@
 // import React from "react";
 // import { Text } from "./Text";
-// import { styled } from "@colliejs/react";
+// import { styled } from "@collie-ui/common";
 // import merge from "lodash.merge";
 
 // const DEFAULT_TAG = "p";
