@@ -1,6 +1,6 @@
 {
   "name": "@collie-ui/ct-infinite-loading",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ct-infinite-loading",
   "type": "module",
   "scripts": {
@@ -19,7 +19,7 @@
     "@c3/api": "^1.2.22",
     "@collie-ui/animation": "workspace:^",
     "@collie-ui/atomic": "workspace:^",
-    "@collie-ui/common": "workspace:^1.0.1",
+    "@collie-ui/common": "workspace:^1.0.2",
     "@collie-ui/css": "workspace:^",
     "@collie-ui/layout": "workspace:^"
   },

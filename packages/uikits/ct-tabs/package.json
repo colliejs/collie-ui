@@ -1,6 +1,6 @@
 {
   "name": "@collie-ui/ct-tabs",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "awesesome",
   "type": "module",
   "scripts": {
@@ -18,7 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "@collie-ui/atomic": "workspace:^",
-    "@collie-ui/common": "workspace:^1.0.1",
+    "@collie-ui/common": "workspace:^1.0.2",
     "@collie-ui/css": "workspace:^",
     "@collie-ui/layout": "workspace:^"
   },

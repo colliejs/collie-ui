@@ -1,6 +1,6 @@
 {
   "name": "@collie-ui/atomic",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "uibasic",
   "keywords": [],
   "author": "yuejs <colliedog1001@gmail.com>",
@@ -34,7 +34,7 @@
     "@ant-design/icons": "^4.7.0",
     "@c3/dom": "^1.2.6",
     "@collie-ui/animation": "workspace:^",
-    "@collie-ui/common": "workspace:^1.0.1",
+    "@collie-ui/common": "workspace:^1.0.2",
     "@collie-ui/css": "workspace:^",
     "classnames": "^2.3.2",
     "csstype": "^3.1.1"

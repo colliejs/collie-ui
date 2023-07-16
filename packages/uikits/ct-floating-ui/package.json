@@ -1,6 +1,6 @@
 {
   "name": "@collie-ui/ct-floating-ui",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "awesesome",
   "type": "module",
   "scripts": {
@@ -18,7 +18,7 @@
   "dependencies": {
     "@collie-ui/animation": "workspace:^",
     "@collie-ui/atomic": "workspace:^",
-    "@collie-ui/common": "workspace:^1.0.1",
+    "@collie-ui/common": "workspace:^1.0.2",
     "@collie-ui/css": "workspace:^",
     "@collie-ui/layout": "workspace:^",
     "@floating-ui/react-dom-interactions": "^0.13.3",

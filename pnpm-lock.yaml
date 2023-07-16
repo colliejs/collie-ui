@@ -272,7 +272,7 @@ importers:
   packages/animation:
     dependencies:
       "@collie-ui/common":
-        specifier: workspace:^1.0.1
+        specifier: workspace:^1.0.2
         version: link:../common
       "@collie-ui/css":
         specifier: workspace:^
@@ -315,7 +315,7 @@ importers:
         specifier: workspace:^
         version: link:../animation
       "@collie-ui/common":
-        specifier: workspace:^1.0.1
+        specifier: workspace:^1.0.2
         version: link:../common
       "@collie-ui/css":
         specifier: workspace:^
@@ -395,7 +395,7 @@ importers:
         specifier: workspace:^
         version: link:../atomic
       "@collie-ui/common":
-        specifier: workspace:^1.0.1
+        specifier: workspace:^1.0.2
         version: link:../common
       "@collie-ui/css":
         specifier: workspace:^
@@ -429,7 +429,7 @@ importers:
         specifier: workspace:^
         version: link:../atomic
       "@collie-ui/common":
-        specifier: workspace:^1.0.1
+        specifier: workspace:^1.0.2
         version: link:../common
       "@collie-ui/css":
         specifier: workspace:^
@@ -463,7 +463,7 @@ importers:
   packages/responsive:
     dependencies:
       "@collie-ui/common":
-        specifier: workspace:^1.0.1
+        specifier: workspace:^1.0.2
         version: link:../common
     devDependencies:
       "@babel/core":
@@ -485,7 +485,7 @@ importers:
         specifier: workspace:^
         version: link:../../atomic
       "@collie-ui/common":
-        specifier: workspace:^1.0.1
+        specifier: workspace:^1.0.2
         version: link:../../common
       "@collie-ui/css":
         specifier: workspace:^
@@ -503,7 +503,7 @@ importers:
         specifier: workspace:^
         version: link:../../atomic
       "@collie-ui/common":
-        specifier: workspace:^1.0.1
+        specifier: workspace:^1.0.2
         version: link:../../common
       "@collie-ui/css":
         specifier: workspace:^
@@ -530,7 +530,7 @@ importers:
         specifier: workspace:^
         version: link:../../atomic
       "@collie-ui/common":
-        specifier: workspace:^1.0.1
+        specifier: workspace:^1.0.2
         version: link:../../common
       "@collie-ui/css":
         specifier: workspace:^
@@ -548,7 +548,7 @@ importers:
         specifier: workspace:^
         version: link:../../atomic
       "@collie-ui/common":
-        specifier: workspace:^1.0.1
+        specifier: workspace:^1.0.2
         version: link:../../common
       "@collie-ui/css":
         specifier: workspace:^
@@ -563,7 +563,7 @@ importers:
         specifier: workspace:^
         version: link:../../atomic
       "@collie-ui/common":
-        specifier: workspace:^1.0.1
+        specifier: workspace:^1.0.2
         version: link:../../common
       "@collie-ui/css":
         specifier: workspace:^
@@ -581,7 +581,7 @@ importers:
         specifier: workspace:^
         version: link:../../atomic
       "@collie-ui/common":
-        specifier: workspace:^1.0.1
+        specifier: workspace:^1.0.2
         version: link:../../common
       "@collie-ui/css":
         specifier: workspace:^
