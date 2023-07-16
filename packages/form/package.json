@@ -1,6 +1,6 @@
 {
   "name": "@collie-ui/form",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "form",
   "keywords": [],
   "author": "yuejs <colliedog1001@gmail.com>",
@@ -33,7 +33,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
     "@collie-ui/atomic": "workspace:^",
-    "@collie-ui/common": "workspace:^1.0.0",
+    "@collie-ui/common": "workspace:^1.0.1",
     "@collie-ui/css": "workspace:^",
     "@collie-ui/ct-floating-ui": "workspace:^",
     "@collie-ui/layout": "workspace:^",
@@ -53,7 +53,6 @@
     },
     "./css": "./dist/index.css",
     "./theme": "./dist/theme.css"
-
   },
   "publishConfig": {
     "access": "public"

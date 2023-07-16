@@ -1,6 +1,6 @@
 {
   "name": "@collie-ui/animation",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "uibasic",
   "keywords": [],
   "author": "yuejs <colliedog1001@gmail.com>",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/yuejs/c3#readme",
   "dependencies": {
-    "@collie-ui/common": "workspace:^1.0.0",
+    "@collie-ui/common": "workspace:^1.0.1",
     "@collie-ui/css": "workspace:^",
     "@types/animejs": "^3.1.7",
     "animejs": "^3.2.1",
@@ -53,7 +53,6 @@
     },
     "./css": "./dist/index.css",
     "./theme": "./dist/theme.css"
-
   },
   "publishConfig": {
     "access": "public"

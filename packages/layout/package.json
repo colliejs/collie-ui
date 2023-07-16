@@ -1,6 +1,6 @@
 {
   "name": "@collie-ui/layout",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "uibasic",
   "keywords": [],
   "author": "yuejs <colliedog1001@gmail.com>",
@@ -33,7 +33,7 @@
   "dependencies": {
     "@c3/types": "^1.1.0",
     "@collie-ui/atomic": "workspace:^",
-    "@collie-ui/common": "workspace:^1.0.0",
+    "@collie-ui/common": "workspace:^1.0.1",
     "@collie-ui/css": "workspace:^",
     "@collie-ui/responsive": "workspace:^",
     "@stitches/react": "^1.2.8",

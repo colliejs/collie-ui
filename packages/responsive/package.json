@@ -1,6 +1,6 @@
 {
   "name": "@collie-ui/responsive",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "uibasic",
   "keywords": [],
   "author": "yuejs <colliedog1001@gmail.com>",
@@ -49,6 +49,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@collie-ui/common": "workspace:^1.0.0"
+    "@collie-ui/common": "workspace:^1.0.1"
   }
 }
