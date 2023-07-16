@@ -4,3 +4,5 @@ import { createTheme } from "@colliejs/core";
 
 export const styled = makeStyled(collieConfig);
 // createTheme(collieConfig);
+
+export { collieConfig };

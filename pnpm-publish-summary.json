@@ -1,52 +1,56 @@
 {
 	"publishedPackages": [
 		{
-			"name": "@collie-ui/css",
-			"version": "1.0.6"
+			"name": "@collie-ui/common",
+			"version": "1.0.1"
 		},
 		{
-			"name": "@collie-ui/responsive",
-			"version": "1.0.4"
+			"name": "@collie-ui/css",
+			"version": "1.0.7"
 		},
 		{
 			"name": "@collie-ui/animation",
-			"version": "1.0.6"
+			"version": "1.0.7"
+		},
+		{
+			"name": "@collie-ui/responsive",
+			"version": "1.0.5"
 		},
 		{
 			"name": "@collie-ui/atomic",
-			"version": "1.0.6"
+			"version": "1.0.7"
 		},
 		{
 			"name": "@collie-ui/layout",
-			"version": "1.0.6"
+			"version": "1.0.7"
 		},
 		{
 			"name": "@collie-ui/ct-basic",
-			"version": "1.0.1"
+			"version": "1.0.2"
 		},
 		{
 			"name": "@collie-ui/ct-floating-ui",
-			"version": "1.0.6"
+			"version": "1.0.7"
 		},
 		{
 			"name": "@collie-ui/ct-infinite-loading",
-			"version": "1.0.1"
+			"version": "1.0.2"
 		},
 		{
 			"name": "@collie-ui/ct-modal",
-			"version": "1.0.6"
+			"version": "1.0.7"
 		},
 		{
 			"name": "@collie-ui/ct-tabs",
-			"version": "1.0.6"
+			"version": "1.0.7"
 		},
 		{
 			"name": "@collie-ui/ct-toast",
-			"version": "1.0.1"
+			"version": "1.0.2"
 		},
 		{
 			"name": "@collie-ui/form",
-			"version": "1.0.6"
+			"version": "1.0.7"
 		}
 	]
 }
