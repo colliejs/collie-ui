@@ -1,15 +1,12 @@
-import { isOverflow } from "@c3/dom";
 import { useIsVisible } from "@c3/react";
-import _ from "lodash";
+import { noop } from "@c3/utils";
 import {
   BaseListItemType,
   Col,
   List,
   ListPropsWithoutRef,
 } from "@collie-ui/layout";
-import React from "react";
-import { useCallback, useEffect, useRef } from "react";
-import { noop } from "@c3/utils";
+import React, { useEffect, useRef } from "react";
 
 export type InfiniteLoadingProps<T extends BaseListItemType<T>> = {
   onNextPage: () => Promise<void>;

@@ -1,8 +1,3 @@
 {
-	"publishedPackages": [
-		{
-			"name": "@collie-ui/ct-infinite-loading",
-			"version": "1.0.4"
-		}
-	]
+	"publishedPackages": []
 }
