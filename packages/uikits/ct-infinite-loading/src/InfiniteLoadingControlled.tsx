@@ -10,7 +10,6 @@ import { usePagination } from "@c3/api";
 import { BaseListItemType } from "@collie-ui/layout";
 import React, { useCallback, useState } from "react";
 import { InfiniteLoading, InfiniteLoadingProps } from "./InfiniteLoading";
-import { useMount } from "@c3/react";
 
 export type InfiniteLoadingControlledProps<
   T extends BaseListItemType<T>,
@@ -19,7 +18,6 @@ export type InfiniteLoadingControlledProps<
   _RawResBody extends RawResBody,
   _ResBody extends PaginationData<T>
 > = {
-  intitalData: T[];
   pageSize: number;
   api: IAPI<_RawReqParameter, _ReqParameter, _RawResBody, _ResBody>;
   option: Option<_RawReqParameter>;
