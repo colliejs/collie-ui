@@ -16,7 +16,7 @@
   "author": "colliedog1001@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "@c3/api": "^1.2.22",
+    "@c3/api": "^1.2.23",
     "@collie-ui/animation": "workspace:^",
     "@collie-ui/atomic": "workspace:^",
     "@collie-ui/common": "workspace:^1.0.2",

@@ -37,22 +37,18 @@ export const InfiniteLoading = <T extends BaseListItemType<T>>(
   const [visible, watch] = useIsVisible<HTMLDivElement>();
 
   useEffect(() => {
-    if (!bottomLineRef.current || !containerRef.current || loading) {
+    if (!bottomLineRef.current || !containerRef.current) {
       return;
     }
-    //不足一屏，不触发
-    if (!isOverflow(containerRef.current, "vertical")) {
-      return;
-    }
-    return watch(bottomLineRef.current, { threshold: 0.5 });
-  }, [loading, watch]);
+    return watch(bottomLineRef, { threshold: 0.5 });
+  }, [watch]);
 
-  //FIXME:如果onNextPage一直是变化的的情况并且loading没设置好的情况下，这里可能导致加载多次
   useEffect(() => {
     if (visible && !loading) {
       onNextPage();
     }
   }, [loading, onNextPage, visible]);
+  console.log("isivisble", visible);
 
   return (
     <Col
@@ -65,7 +61,7 @@ export const InfiniteLoading = <T extends BaseListItemType<T>>(
       {!hasMore && endMessage}
       <div
         className="bottom-line"
-        style={{ minHeight: 6, width: "100%" }}
+        style={{ minHeight: 12, width: "100%" }}
         ref={bottomLineRef}
       />
     </Col>

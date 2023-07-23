@@ -1,8 +1,8 @@
 import type {
   IAPI,
   Option,
+  PageInfo,
   PaginationData,
-  RawReqParameter,
   RawResBody,
   ReqParameter,
 } from "@c3/api";
@@ -12,20 +12,13 @@ import React, { useCallback, useState } from "react";
 import { InfiniteLoading, InfiniteLoadingProps } from "./InfiniteLoading";
 import { useMount } from "@c3/react";
 
-type PageInfo = {
-  pageNo: number;
-  pageSize: number;
-};
-
 export type InfiniteLoadingControlledProps<
   T extends BaseListItemType<T>,
-  DataItem,
-  _RawReqParameter extends PageInfo = PageInfo,
-  _ReqParameter extends ReqParameter = ReqParameter,
-  _RawResBody extends RawResBody = RawResBody,
-  _ResBody extends PaginationData<DataItem> = PaginationData<DataItem>
+  _RawReqParameter extends PageInfo,
+  _ReqParameter extends ReqParameter,
+  _RawResBody extends RawResBody,
+  _ResBody extends PaginationData<T>
 > = {
-  scrollFromPageNo: number;
   intitalData: T[];
   pageSize: number;
   api: IAPI<_RawReqParameter, _ReqParameter, _RawResBody, _ResBody>;
@@ -37,58 +30,42 @@ export type InfiniteLoadingControlledProps<
 
 export const InfiniteLoadingControlled = <
   T extends BaseListItemType<T>,
-  DataItem,
-  _RawReqParameter extends PageInfo = PageInfo,
-  _ReqParameter extends ReqParameter = ReqParameter,
-  _RawResBody extends RawResBody = RawResBody,
-  _ResBody extends PaginationData<DataItem> = PaginationData<DataItem>
+  _RawReqParameter extends PageInfo,
+  _ReqParameter extends ReqParameter,
+  _RawResBody extends RawResBody,
+  _ResBody extends PaginationData<T>
 >(
   props: InfiniteLoadingControlledProps<
     T,
-    DataItem,
     _RawReqParameter,
     _ReqParameter,
     _RawResBody,
     _ResBody
   >
 ) => {
-  const {
-    api,
-    option,
-    getReqParam,
-    scrollFromPageNo: scrollFromPageNo,
-    ...restProps
-  } = props;
-  const [pageNo, setPageNo] = useState(scrollFromPageNo);
-  const { list, total, status, updateData, fetchPage } =
-    usePagination(api, option);
+  const { api, option, getReqParam, pageSize, ...restProps } = props;
+  const [pageNo, setPageNo] = useState(1);
+  const { list, total, status, fetchPage } = usePagination(api, option);
+
   const myFetchPage = useCallback(
     async (pn: number) => {
       const param = getReqParam(pn);
+      //@ts-ignore
       return fetchPage({ ...param, pageNo: pn, pageSize });
     },
-    [fetchPage, getReqParam]
+    [fetchPage, getReqParam, pageSize]
   );
 
-  useMount(async () => {
-    const i = 1;
-    const data: T[] = [];
-    while (i < scrollFromPageNo) {
-      const res = (await handleNextPage(i)) as _RawResBody;
-      data.push(...res.list);
-    }
-    updateData(data);
-  });
-  const handleNextPage = useCallback(async () => {
-    myFetchPage(pageNo);
+  const onNextPage = useCallback(async () => {
+    await myFetchPage(pageNo);
     setPageNo(pn => pn + 1);
   }, [myFetchPage, pageNo]);
 
   return (
     <InfiniteLoading
-      onNextPage={handleNextPage}
+      onNextPage={onNextPage}
       loading={status === "loading"}
-      hasMore={total < list.length}
+      hasMore={total > list.length}
       data={list}
       {...restProps}
     />
