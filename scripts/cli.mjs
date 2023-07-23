@@ -12,7 +12,7 @@ run({
     await $`git add .`;
     await $`git commit -m "chore: release"`;
     await $`lerna version ${semver} --conventional-commits --no-commit-hooks -y`;
-    await $`pnpm -r publish ----report-summary --token ${process.env.NPM_TOKEN_C3}`;
+    await $`pnpm -r publish ----report-summary `;
   },
   async makeTheme() {
     // await $`pnpm -r build`;

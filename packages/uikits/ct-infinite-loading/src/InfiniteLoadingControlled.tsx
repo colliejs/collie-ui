@@ -18,14 +18,11 @@ export type InfiniteLoadingControlledProps<
   _RawResBody extends RawResBody,
   _ResBody extends PaginationData<T>
 > = {
-  pageSize: number;
   api: IAPI<_RawReqParameter, _ReqParameter, _RawResBody, _ResBody>;
   option: Option<_RawReqParameter>;
-  getReqParam: (
-    pageNo: number
-  ) => Omit<_RawReqParameter, "pageSize" | "pageNo">;
 } & Omit<InfiniteLoadingProps<T>, "loading" | "hasMore" | "onNextPage">;
 
+//TODO: add funciton getReqPara = (pageNo:number) => ReqParameter
 export const InfiniteLoadingControlled = <
   T extends BaseListItemType<T>,
   _RawReqParameter extends PageInfo,
@@ -41,23 +38,19 @@ export const InfiniteLoadingControlled = <
     _ResBody
   >
 ) => {
-  const { api, option, getReqParam, pageSize, ...restProps } = props;
+  const { api, option, ...restProps } = props;
   const [pageNo, setPageNo] = useState(1);
   const { list, total, status, fetchPage } = usePagination(api, option);
 
-  const myFetchPage = useCallback(
-    async (pn: number) => {
-      const param = getReqParam(pn);
-      //@ts-ignore
-      return fetchPage({ ...param, pageNo: pn, pageSize });
-    },
-    [fetchPage, getReqParam, pageSize]
-  );
 
   const onNextPage = useCallback(async () => {
-    await myFetchPage(pageNo);
+    await fetchPage({
+      ...option.defaultReqParameter,
+      pageNo: pageNo,
+      pageSize: option.pageSize,
+    });
     setPageNo(pn => pn + 1);
-  }, [myFetchPage, pageNo]);
+  }, [fetchPage, option.defaultReqParameter, option.pageSize, pageNo]);
 
   return (
     <InfiniteLoading
