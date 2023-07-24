@@ -2,9 +2,10 @@ import { useEventListener, useExclusive, useMount } from "@c3/react";
 import React from "react";
 import { useCallback } from "react";
 import { TabItemType, BaseTabs, TabProps } from "./BaseTabs";
+import { Id } from "@collie-ui/layout";
 
-type TabsWithHashProps<T extends TabItemType<T>> = TabProps<T>;
-export const TabsWithHash = <T extends TabItemType<T>>(
+type TabsWithHashProps<T extends Id> = TabProps<T>;
+export const TabsWithHash = <T extends Id>(
   props: TabsWithHashProps<T>
 ) => {
   const { data: menuConfig, updateData: updateConfig } = props;

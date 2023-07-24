@@ -1,6 +1,6 @@
 import { styled } from "@collie-ui/common";
 import React, { useState } from "react";
-import { BaseListItemType, List, ListPropsWithoutRef } from "./List";
+import { ListItemType, List, ListPropsWithoutRef, Id } from "./List";
 
 //===========================================================
 // StyledGrid
@@ -34,11 +34,8 @@ export const StyledGrid = styled(
 //===========================================================
 // Grid
 //===========================================================
-export type GridProps<T extends BaseListItemType<T>> =
-  ListPropsWithoutRef<T>;
-export const Grid = <T extends BaseListItemType<T>>(
-  props: GridProps<T>
-) => {
+export type GridProps<T extends Id> = ListPropsWithoutRef<T>;
+export const Grid = <T extends Id>(props: GridProps<T>) => {
   return <StyledGrid {...props}></StyledGrid>;
 };
 Grid.displayName = "Grid";
@@ -46,12 +43,12 @@ Grid.displayName = "Grid";
 //===========================================================
 // GridControlled
 //===========================================================
-export type GridControlledProps<T extends BaseListItemType<T>> = Omit<
+export type GridControlledProps<T extends Id> = Omit<
   ListPropsWithoutRef<T>,
   "updateData" | "data"
 > & { initialData: T[] };
 
-export const GridControlled = <T extends BaseListItemType<T>>(
+export const GridControlled = <T extends Id>(
   props: GridControlledProps<T>
 ) => {
   const { initialData, ...restProps } = props;

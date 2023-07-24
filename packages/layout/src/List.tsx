@@ -35,7 +35,7 @@ type ListItemElementProps = {
 };
 
 export type RenderItem<T extends Id> = (
-  props: T
+  props: ListItemType<T>
 ) =>
   | React.ReactElement<ListItemElementProps>
   | string
@@ -46,24 +46,24 @@ export type RenderItem<T extends Id> = (
 export type Id = {
   id: string | number;
 };
-export type BaseListItemType<T extends Id> = {
+export type ListItemType<T extends Id> = {
   renderItem?: RenderItem<T>;
-  id: string | number;
-  active?: boolean;
-};
+  active: boolean;
+} & T;
 
-export type ListPropsWithoutRef<T extends BaseListItemType<T>> = {
-  data: T[];
+export type ListPropsWithoutRef<T extends Id> = {
+  data: ListItemType<T>[];
   direction?: "row" | "column";
   renderItem?: RenderItem<T>;
-  updateData: (newData: T[], prev: T[]) => void;
+  updateData: (
+    newData: ListItemType<T>[],
+    prev: ListItemType<T>[]
+  ) => void;
   onClick?: (e: MouseEvent) => void;
   divider?: Color; //TODO:
 } & React.ComponentProps<typeof StyledList>;
 
-export const List = <T extends BaseListItemType<T>>(
-  props: ListPropsWithoutRef<T>
-) => {
+export const List = <T extends Id>(props: ListPropsWithoutRef<T>) => {
   const {
     data,
     renderItem,
@@ -99,12 +99,12 @@ List.displayName = "List";
 //===========================================================
 // ListControlled
 //===========================================================
-export type ListControlledProps<T extends BaseListItemType<T>> = Omit<
+export type ListControlledProps<T extends Id> = Omit<
   ListPropsWithoutRef<T>,
   "updateData" | "data"
-> & { initialData: T[] };
+> & { initialData: ListItemType<T>[] };
 
-export const ListControlled = <T extends BaseListItemType<T>>(
+export const ListControlled = <T extends Id>(
   props: ListControlledProps<T>
 ) => {
   const { initialData, ...restProps } = props;

@@ -1,8 +1,9 @@
 import { noop } from "@c3/utils";
 import {
-  BaseListItemType,
   Col,
+  Id,
   List,
+  ListItemType,
   RenderItem,
   Row,
 } from "@collie-ui/layout";
@@ -17,16 +18,15 @@ const StyledContentList = styled(List, {
 //===========================================================
 // BaseTab
 //===========================================================
-export type TabItemType<T extends BaseListItemType<T>> = {
-  id: string | number;
+export type TabItemType<T extends Id> = {
   active: boolean;
   renderItem?: RenderItem<T>;
   renderContent?: RenderItem<T>;
-};
+} & T;
 
-export type TabConfig<T extends TabItemType<T>> = T[];
+export type TabConfig<T extends Id> = TabItemType<T>[];
 
-export type TabProps<T extends TabItemType<T>> = {
+export type TabProps<T extends Id> = {
   direction: "row" | "column";
   data: TabConfig<T>;
   updateData: (config: TabConfig<T>) => void;
@@ -34,7 +34,7 @@ export type TabProps<T extends TabItemType<T>> = {
   renderContent?: RenderItem<T>;
 };
 
-export const BaseTabs = <T extends TabItemType<T>>(props: TabProps<T>) => {
+export const BaseTabs = <T extends Id>(props: TabProps<T>) => {
   const {
     data,
     updateData,
@@ -50,7 +50,7 @@ export const BaseTabs = <T extends TabItemType<T>>(props: TabProps<T>) => {
         as="co-nav"
         data={data}
         direction={anti(direction)}
-        renderItem={(e: T) => e.renderItem?.(e) || renderItem?.(e)}
+        renderItem={e => e.renderItem?.(e) || renderItem?.(e)}
         updateData={updateData}
       />
     ),
@@ -62,7 +62,7 @@ export const BaseTabs = <T extends TabItemType<T>>(props: TabProps<T>) => {
       <StyledContentList
         data={data}
         direction={anti(direction)}
-        renderItem={(e: T) =>
+        renderItem={(e: TabItemType<T>) =>
           e.renderContent?.(e) || renderContent?.(e) || <></>
         }
         updateData={noop}

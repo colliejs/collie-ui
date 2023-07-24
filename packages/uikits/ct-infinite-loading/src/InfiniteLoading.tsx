@@ -1,15 +1,15 @@
 import { useIsVisible } from "@c3/react";
 import { noop } from "@c3/utils";
 import {
-  BaseListItemType,
   Col,
+  Id,
   List,
   ListPropsWithoutRef,
   RenderItem,
 } from "@collie-ui/layout";
 import React, { useEffect, useRef } from "react";
 
-export type InfiniteLoadingProps<T extends BaseListItemType<T>> = {
+export type InfiniteLoadingProps<T extends Id> = {
   onNextPage: () => Promise<void>;
   loader?: React.ReactNode;
   loading: boolean;
@@ -18,7 +18,7 @@ export type InfiniteLoadingProps<T extends BaseListItemType<T>> = {
   renderItem: RenderItem<T>;
 } & Omit<ListPropsWithoutRef<T>, "updateData" | "renderItem">;
 
-export const InfiniteLoading = <T extends BaseListItemType<T>>(
+export const InfiniteLoading = <T extends Id>(
   props: InfiniteLoadingProps<T>
 ) => {
   const {
