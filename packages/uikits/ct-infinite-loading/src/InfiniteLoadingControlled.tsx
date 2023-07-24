@@ -44,10 +44,13 @@ export const InfiniteLoadingControlled = <
   >
 ) => {
   const { api, pageSize, getReqPara, ...restProps } = props;
-  const { list, total, status, pageNo, fetchNextPage } = usePagination(
-    api,
-    pageSize
-  );
+  const { list, total, status, pageNo, fetchNextPage } = usePagination<
+    T,
+    _RawReqParameter,
+    _ReqParameter,
+    _RawResBody,
+    _ResBody
+  >(api, pageSize);
   const onNextPage = useCallback(async () => {
     const para = getReqPara
       ? getReqPara(pageNo)
