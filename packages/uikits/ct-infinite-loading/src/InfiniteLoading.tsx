@@ -5,6 +5,7 @@ import {
   Col,
   List,
   ListPropsWithoutRef,
+  RenderItem,
 } from "@collie-ui/layout";
 import React, { useEffect, useRef } from "react";
 
@@ -14,7 +15,8 @@ export type InfiniteLoadingProps<T extends BaseListItemType<T>> = {
   loading: boolean;
   hasMore: boolean;
   endMessage?: React.ReactNode;
-} & Omit<ListPropsWithoutRef<T>, "updateData">;
+  renderItem: RenderItem<T>;
+} & Omit<ListPropsWithoutRef<T>, "updateData" | "renderItem">;
 
 export const InfiniteLoading = <T extends BaseListItemType<T>>(
   props: InfiniteLoadingProps<T>
@@ -41,10 +43,10 @@ export const InfiniteLoading = <T extends BaseListItemType<T>>(
   }, [watch]);
 
   useEffect(() => {
-    if (visible && !loading) {
+    if (visible && !loading && hasMore) {
       onNextPage();
     }
-  }, [loading, onNextPage, visible]);
+  }, [hasMore, loading, onNextPage, visible]);
   console.log("isivisble", visible);
 
   return (

@@ -32,9 +32,7 @@ export const InfiniteoadingUncontrolledTest = () => {
       getReqParam={noop}
       api={api}
       option={{}}
-      pageSize={10}
       loader={<div>loading</div>}
-      intitalData={initialData}
       css={{
         h: 300,
         border: "3px solid red",
