@@ -34,7 +34,7 @@ type ListItemElementProps = {
   "data-state": "active" | "inactive";
 };
 
-export type RenderItem<T extends BaseListItemType<T>> = (
+export type RenderItem<T extends Id> = (
   props: T
 ) =>
   | React.ReactElement<ListItemElementProps>
@@ -43,13 +43,14 @@ export type RenderItem<T extends BaseListItemType<T>> = (
   | undefined
   | number;
 
-export type BaseListMetaType = {
+export type Id = {
   id: string | number;
-  active: boolean;
 };
-export type BaseListItemType<T extends BaseListMetaType> = {
+export type BaseListItemType<T extends Id> = {
   renderItem?: RenderItem<T>;
-} & BaseListMetaType;
+  id: string | number;
+  active?: boolean;
+};
 
 export type ListPropsWithoutRef<T extends BaseListItemType<T>> = {
   data: T[];
