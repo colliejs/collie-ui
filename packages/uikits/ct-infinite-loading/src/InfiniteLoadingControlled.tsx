@@ -62,7 +62,7 @@ export const InfiniteLoadingControlled = <
     <InfiniteLoading
       onNextPage={onNextPage}
       loading={status === "loading"}
-      hasMore={total > list.length}
+      hasMore={total > 0 && total > list.length}
       data={list}
       {...restProps}
     />
