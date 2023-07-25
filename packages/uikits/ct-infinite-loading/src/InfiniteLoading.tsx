@@ -47,7 +47,6 @@ export const InfiniteLoading = <T extends Id>(
       onNextPage();
     }
   }, [hasMore, loading, onNextPage, visible]);
-  console.log("isivisble", visible);
 
   return (
     <Col
