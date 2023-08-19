@@ -6,12 +6,12 @@ import type {
   ReqParameter,
 } from "@c3/api";
 import { usePagination } from "@c3/api";
-import { Id, RenderItem } from "@collie-ui/layout";
+import { ListItemType } from "@collie-ui/layout";
 import React, { useCallback, useState } from "react";
 import { InfiniteLoading, InfiniteLoadingProps } from "./InfiniteLoading";
 
 export type InfiniteLoadingControlledProps<
-  T extends Id,
+  T extends ListItemType,
   _RawReqParameter extends PageInfo,
   _ReqParameter extends ReqParameter,
   _RawResBody extends RawResBody,
@@ -22,14 +22,14 @@ export type InfiniteLoadingControlledProps<
   getReqPara?: (
     pageNo: number
   ) => Omit<_RawReqParameter, "pageNo" | "pageSize">;
-  renderItem: RenderItem<T>;
+  renderItem?(props: T): React.ReactNode;
 } & Omit<
   InfiniteLoadingProps<T>,
-  "loading" | "hasMore" | "onNextPage" | "renderItem"
+  "loading" | "hasMore" | "onNextPage" | "renderItem" | "data"
 >;
 
 export const InfiniteLoadingControlled = <
-  T extends Id,
+  T extends ListItemType,
   _RawReqParameter extends PageInfo,
   _ReqParameter extends ReqParameter,
   _RawResBody extends RawResBody,

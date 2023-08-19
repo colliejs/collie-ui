@@ -64,7 +64,6 @@ const config = {
     "npmlog",
     "resolve",
     "dayjs",
-    "dayjs/plugin/utc",
     "ethers",
     "@metamask/detect-provider",
     /@colliejs\//,

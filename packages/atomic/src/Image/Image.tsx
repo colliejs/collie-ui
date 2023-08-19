@@ -2,6 +2,16 @@ import { styled } from "@collie-ui/common";
 import React from "react";
 import { Atomic } from "../Atomic";
 import { useImageLoadingStatus } from "./useImageLoadingStatus";
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      "co-img-container": JSX.IntrinsicElements["div"];
+    }
+  }
+}
+
 export const StyledImage = styled(
   Atomic,
   {
@@ -30,7 +40,6 @@ export const StyledImage = styled(
   },
   { as: "img" }
 );
-
 const StyledImageContainer = styled(
   Atomic,
   {
@@ -39,17 +48,21 @@ const StyledImageContainer = styled(
   },
   { as: "co-img-container" }
 );
+export type Debug<T> = { [K in keyof T]: T[K] };
+
+type x = Debug<React.ComponentProps<typeof StyledImageContainer>>;
 
 //===========================================================
 // Image
 //===========================================================
-export type ImageProps = React.ComponentProps<typeof StyledImage> & {
+export type ImageProps = {
   fallback?: React.ReactNode;
   loading?: React.ReactNode;
-};
-export const Image = React.forwardRef<HTMLImageElement, ImageProps>(
-  (props, ref) => {
-    const { fallback, loading, className, src, ...restProps } = props;
+} & React.ComponentPropsWithoutRef<typeof StyledImage>;
+
+export const Image = React.forwardRef(
+  (props: ImageProps, ref: React.ForwardedRef<HTMLDivElement>) => {
+    const { fallback, loading, className, src = "", ...restProps } = props;
     const status = useImageLoadingStatus(src);
 
     const child =
@@ -61,11 +74,7 @@ export const Image = React.forwardRef<HTMLImageElement, ImageProps>(
         <StyledImage src={src} {...restProps} />
       );
     return (
-      <StyledImageContainer
-        status={status}
-        ref={ref}
-        className={className}
-      >
+      <StyledImageContainer ref={ref} className={className}>
         {child}
       </StyledImageContainer>
     );

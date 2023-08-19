@@ -1,5 +1,19 @@
 import { styled } from "@collie-ui/common";
 import { Atomic } from "./Atomic";
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      "co-space": React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      >;
+    }
+  }
+}
+
+
+
 export type SpaceProps = {
   size: number;
 };

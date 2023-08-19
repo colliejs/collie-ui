@@ -43,6 +43,7 @@ export const Tooltip: React.FC<TooltipProps> = props => {
   if (!React.isValidElement(children)) {
     throw new Error("TypeError:trigger must be reactElement");
   }
+
   return (
     <BaseFloating
       trigger="hover"
@@ -76,7 +77,8 @@ export type TextWithTooltipProps = {
   children: React.ReactNode;
   tooltipProps?: React.ComponentProps<typeof Tooltip>;
 } & React.ComponentProps<typeof Text>;
-
+type x = React.ComponentProps<typeof Text>;
+type x1 = x["ref"];
 export const TextWithTooltip: React.FC<TextWithTooltipProps> = props => {
   const {
     children,
@@ -93,7 +95,7 @@ export const TextWithTooltip: React.FC<TextWithTooltipProps> = props => {
   } = props;
 
   const [isOverflow, watch] = useIsOverflow();
-  const ref = useRef();
+  const ref = useRef<HTMLParagraphElement>(null);
   useEffect(() => {
     ref.current && watch(ref.current);
   }, [watch]);

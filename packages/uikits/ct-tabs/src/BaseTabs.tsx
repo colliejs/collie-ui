@@ -1,48 +1,48 @@
 import { noop } from "@c3/utils";
-import {
-  Col,
-  Id,
-  List,
-  ListItemType,
-  RenderItem,
-  Row,
-} from "@collie-ui/layout";
+import { Col, List, ListItemType, Row, useList } from "@collie-ui/layout";
 import React, { useMemo, useState } from "react";
 import { anti } from "./util";
 import { styled } from "@collie-ui/common";
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      "co-tabs": JSX.IntrinsicElements["div"];
+      "co-nav": JSX.IntrinsicElements["div"];
+    }
+  }
+}
 
 const StyledContentList = styled(List, {
   "&>[data-state='inactive']": { display: "none" },
 });
 
 //===========================================================
-// BaseTab
+// useTab
 //===========================================================
-export type TabItemType<T extends Id> = {
-  active: boolean;
-  renderItem?: RenderItem<T>;
-  renderContent?: RenderItem<T>;
-} & T;
-
-export type TabConfig<T extends Id> = TabItemType<T>[];
-
-export type TabProps<T extends Id> = {
-  direction: "row" | "column";
-  data: TabConfig<T>;
-  updateData: (config: TabConfig<T>) => void;
-  renderItem?: RenderItem<T>;
-  renderContent?: RenderItem<T>;
+export const useTab = (data: TabItemType[]) => {
+  return useList(data);
 };
 
-export const BaseTabs = <T extends Id>(props: TabProps<T>) => {
-  const {
-    data,
-    updateData,
-    direction,
-    renderItem,
-    renderContent,
-    ...restProps
-  } = props;
+//===========================================================
+// BaseTab
+//===========================================================
+export type TabItemType = {
+  renderContent?(props: TabItemType): React.ReactNode;
+} & ListItemType;
+
+export type TabItemsType<T extends TabItemType> = T[];
+
+export type TabProps<T extends TabItemType> = {
+  direction: "row" | "column";
+  data: TabItemsType<T>;
+  renderItem?(props: TabItemType): React.ReactNode;
+  renderContent?(props: TabItemType): React.ReactNode;
+};
+
+export const BaseTabs = <T extends TabItemType>(props: TabProps<T>) => {
+  const { data, direction, renderItem, renderContent, ...restProps } =
+    props;
   const Layout = direction === "row" ? Row : Col;
   const nav = useMemo(
     () => (
@@ -51,24 +51,15 @@ export const BaseTabs = <T extends Id>(props: TabProps<T>) => {
         data={data}
         direction={anti(direction)}
         renderItem={e => e.renderItem?.(e) || renderItem?.(e)}
-        updateData={updateData}
       />
     ),
-    [data, direction, renderItem, updateData]
+    [direction, data, renderItem]
   );
-
-  const content = useMemo(() => {
-    return (
-      <StyledContentList
-        data={data}
-        direction={anti(direction)}
-        renderItem={(e: TabItemType<T>) =>
-          e.renderContent?.(e) || renderContent?.(e) || <></>
-        }
-        updateData={noop}
-      />
-    );
-  }, [data, direction, renderContent]);
+  const activeItem = data.find(e => e.active);
+  const content =
+    activeItem &&
+    (activeItem?.renderContent?.(activeItem) ||
+      renderContent?.(activeItem));
 
   return (
     <Layout as="co-tabs" {...restProps}>

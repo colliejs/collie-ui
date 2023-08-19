@@ -1,6 +1,16 @@
 import { Box } from "./Box";
 import { styled } from "@collie-ui/common";
 
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      "co-responsive": JSX.IntrinsicElements["div"];
+    }
+  }
+}
+
+
 /**
  * Responsive
  * column on mobile, row on desktop
@@ -15,7 +25,7 @@ export const Responsive = styled(Box, {
   },
   variants: {
     fx: {
-      dynamic: (fx) => ({
+      dynamic: fx => ({
         justifyContent: fx,
         "@phone": {
           alignItems: fx,
@@ -23,7 +33,7 @@ export const Responsive = styled(Box, {
       }),
     },
     fy: {
-      dynamic: (fy) => ({
+      dynamic: fy => ({
         alignItems: fy,
         "@phone": {
           justifyContent: fy,

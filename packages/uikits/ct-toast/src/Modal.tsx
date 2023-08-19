@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from "react";
 import { BaseModal, BaseModalPropsWithoutRef } from "./BaseModal";
 import { animate, setScrollable } from "./utils";
 
+
+
+
 export type ModalUncontrolledProps = Omit<
   BaseModalPropsWithoutRef,
   "animationStatus"

@@ -10,7 +10,7 @@ export type ButtonProps = {
   preventDefault?: boolean;
   debounce?: number | boolean;
   disabled?: boolean;
-} & React.ComponentProps<typeof StyledButton>;
+} & React.ComponentPropsWithoutRef<typeof StyledButton>;
 
 export const StyledButton = styled(
   Atomic,
@@ -26,8 +26,12 @@ export const StyledButton = styled(
   { as: "button" }
 );
 
-export const Button: React.ForwardRefExoticComponent<ButtonProps> =
-  React.forwardRef((props, ref) => {
+type x = React.ComponentProps<typeof StyledButton>;
+type x1 = x["css"];
+type x2 = ButtonProps["onClick"];
+
+export const Button = React.forwardRef(
+  (props: ButtonProps, ref: React.ForwardedRef<HTMLButtonElement>) => {
     const {
       preventDefault,
       onClick,
@@ -77,6 +81,7 @@ export const Button: React.ForwardRefExoticComponent<ButtonProps> =
         {children}
       </StyledButton>
     );
-  });
+  }
+);
 
 Button.displayName = "Button";

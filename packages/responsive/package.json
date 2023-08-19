@@ -49,6 +49,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@collie-ui/common": "workspace:^1.0.2"
+    "@collie-ui/common": "workspace:^"
   }
 }

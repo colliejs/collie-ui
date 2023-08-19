@@ -33,7 +33,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
     "@collie-ui/atomic": "workspace:^",
-    "@collie-ui/common": "workspace:^1.0.2",
+    "@collie-ui/common": "workspace:^",
     "@collie-ui/css": "workspace:^",
     "@collie-ui/ct-floating-ui": "workspace:^",
     "@collie-ui/layout": "workspace:^",

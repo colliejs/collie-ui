@@ -2,6 +2,15 @@ import { CSSProperties } from "@colliejs/core";
 import { styled } from "@collie-ui/common";
 import { Box } from "./Box";
 
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      "co-col": JSX.IntrinsicElements["div"];
+    }
+  }
+}
+
 export const Col = styled(
   Box,
   {

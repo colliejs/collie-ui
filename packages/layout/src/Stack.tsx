@@ -1,6 +1,21 @@
 import { styled } from "@collie-ui/common";
-import React from "react";
+import React, {
+  ClassAttributes,
+  DetailedHTMLProps,
+  ForwardedRef,
+  HTMLAttributes,
+} from "react";
 import { Box } from "./Box";
+import { Debug } from "@c3/types";
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      "co-stack": JSX.IntrinsicElements["div"];
+    }
+  }
+}
 
 //===========================================================
 // StyledStack
@@ -29,8 +44,8 @@ export type StackProps = {
   children?: React.ReactNode[];
 } & React.ComponentProps<typeof StyledStack>;
 
-export const Stack = React.forwardRef<HTMLDivElement, StackProps>(
-  (props, ref) => {
+export const Stack = React.forwardRef(
+  (props: StackProps, ref: ForwardedRef<HTMLDivElement>) => {
     const { body, children, ...restProps } = props;
     return (
       <StyledStack {...restProps} ref={ref}>

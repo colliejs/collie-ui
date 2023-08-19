@@ -1,8 +1,19 @@
 import { useExclusive } from "@c3/react";
 import { Color } from "@c3/utils";
 import { styled } from "@collie-ui/common";
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Box as _Box } from "./Box";
+import { Debug } from "@c3/types";
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      "co-ul": JSX.IntrinsicElements["ul"];
+    }
+  }
+}
+
 //============================================================================
 // StyledList
 //=============================================================================
@@ -27,87 +38,50 @@ export const StyledList = styled(
 );
 
 //============================================================================
+// useList
+//============================================================================
+
+export const useList = (intialData: ListItemType[]) => {
+  const [data, setData] = useState(intialData);
+  const onClick = useCallback(
+    (item: ListItemType) => {
+      const newData = intialData.map(e => {
+        if (e.id === item.id) {
+          return { ...e, active: true };
+        }
+        return { ...e, active: false };
+      });
+      setData(newData);
+    },
+    [intialData]
+  );
+  return [data, onClick] as const;
+};
+
+//============================================================================
 // List
 //============================================================================
-type ListItemElementProps = {
-  onClick: (e: React.MouseEvent) => void;
-  "data-state": "active" | "inactive";
-};
-
-export type RenderItem<T extends Id> = (
-  props: ListItemType<T>
-) =>
-  | React.ReactElement<ListItemElementProps>
-  | string
-  | null
-  | undefined
-  | number;
-
-export type Id = {
+export type ListItemType = {
   id: string | number;
-};
-export type ListItemType<T extends Id> = {
-  renderItem?: RenderItem<T>;
+  renderItem?(item: ListItemType): React.ReactNode;
   active: boolean;
-} & T;
+};
 
-export type ListPropsWithoutRef<T extends Id> = {
-  data: ListItemType<T>[];
+export type ListPropsWithoutRef<T extends ListItemType> = {
+  data: T[];
   direction?: "row" | "column";
-  renderItem?: RenderItem<T>;
-  updateData: (
-    newData: ListItemType<T>[],
-    prev: ListItemType<T>[]
-  ) => void;
-  onClick?: (e: MouseEvent) => void;
-  divider?: Color; //TODO:
+  renderItem?(props: T): React.ReactNode;
 } & React.ComponentProps<typeof StyledList>;
 
-export const List = <T extends Id>(props: ListPropsWithoutRef<T>) => {
-  const {
-    data,
-    renderItem,
-    direction = "column",
-    updateData,
-    onClick,
-    ...restProps
-  } = props;
-  const on = useExclusive(data, "active", updateData);
-
+export const List = <T extends ListItemType>(
+  props: ListPropsWithoutRef<T>
+) => {
+  const { data, renderItem, direction = "column", ...restProps } = props;
   return (
-    <StyledList onClick={onClick} direction={direction} {...restProps}>
-      {data.map(e => {
-        const item = e.renderItem?.(e) || renderItem?.(e);
-        if (!React.isValidElement(item)) {
-          return item;
-        }
-        return React.cloneElement(item, {
-          onClick: async (event: React.MouseEvent) => {
-            on(e.id);
-            await item.props.onClick?.(event);
-          },
-          "data-state": e.active ? "active" : "inactive",
-          key: e.id,
-        });
-      })}
+    <StyledList direction={direction} {...restProps}>
+      {data.map(e => e.renderItem?.(e) || renderItem?.(e) || null)}
     </StyledList>
   );
 };
 
 List.displayName = "List";
-
-//===========================================================
-// ListControlled
-//===========================================================
-export type ListControlledProps<T extends Id> = Omit<
-  ListPropsWithoutRef<T>,
-  "updateData" | "data"
-> & { initialData: ListItemType<T>[] };
-
-export const ListControlled = <T extends Id>(
-  props: ListControlledProps<T>
-) => {
-  const { initialData, ...restProps } = props;
-  const [data, setData] = useState(initialData);
-  return <List data={data} updateData={setData} {...restProps}></List>;
-};

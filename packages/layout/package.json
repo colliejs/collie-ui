@@ -33,12 +33,11 @@
   "dependencies": {
     "@c3/types": "^1.1.0",
     "@collie-ui/atomic": "workspace:^",
-    "@collie-ui/common": "workspace:^1.0.2",
+    "@collie-ui/common": "workspace:^",
     "@collie-ui/css": "workspace:^",
     "@collie-ui/responsive": "workspace:^",
     "@stitches/react": "^1.2.8",
-    "classnames": "^2.3.2",
-    "csstype": "^3.1.1"
+    "classnames": "^2.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

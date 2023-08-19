@@ -3,7 +3,16 @@ import { mask as _mask } from "@collie-ui/css";
 import { styled } from "@collie-ui/common";
 import React, { useEffect } from "react";
 import { AnimationStatus } from "./Modal";
-
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      "co-mask": JSX.IntrinsicElements["div"];
+      "co-modal": JSX.IntrinsicElements["div"];
+      "co-body": JSX.IntrinsicElements["div"];
+    }
+  }
+}
 export type BaseModalPropsWithoutRef = {
   visible: boolean;
   animationStatus: AnimationStatus;

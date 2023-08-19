@@ -2,23 +2,22 @@ import { useIsVisible } from "@c3/react";
 import { noop } from "@c3/utils";
 import {
   Col,
-  Id,
   List,
+  ListItemType,
   ListPropsWithoutRef,
-  RenderItem,
 } from "@collie-ui/layout";
 import React, { useEffect, useRef } from "react";
 
-export type InfiniteLoadingProps<T extends Id> = {
+export type InfiniteLoadingProps<T extends ListItemType> = {
   onNextPage: () => Promise<void>;
   loader?: React.ReactNode;
   loading: boolean;
   hasMore: boolean;
   endMessage?: React.ReactNode;
-  renderItem: RenderItem<T>;
-} & Omit<ListPropsWithoutRef<T>, "updateData" | "renderItem">;
+  renderItem?(props: T): React.ReactNode;
+} & Omit<ListPropsWithoutRef<T>, "renderItem">;
 
-export const InfiniteLoading = <T extends Id>(
+export const InfiniteLoading = <T extends ListItemType>(
   props: InfiniteLoadingProps<T>
 ) => {
   const {
@@ -54,7 +53,7 @@ export const InfiniteLoading = <T extends Id>(
       className={className}
       css={{ alignItems: "center" }}
     >
-      <List data={data} updateData={noop} {...restProps} />
+      <List data={data} {...restProps} />
       {loading && loader}
       {!hasMore && endMessage}
       <div

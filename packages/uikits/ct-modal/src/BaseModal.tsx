@@ -3,6 +3,18 @@ import { mask as _mask } from "@collie-ui/css";
 import { styled } from "@collie-ui/common";
 import React, { useEffect } from "react";
 import { AnimationStatus } from "./Modal";
+import { Debug } from "@c3/types";
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      "co-mask": JSX.IntrinsicElements["div"];
+      "co-modal": JSX.IntrinsicElements["div"];
+      "co-body": JSX.IntrinsicElements["div"];
+    }
+  }
+}
 
 export type BaseModalPropsWithoutRef = {
   visible: boolean;
@@ -28,6 +40,7 @@ export const StyledMask = styled(
   },
   { as: "co-mask" }
 );
+type x = Debug<React.ComponentProps<typeof StyledMask>>;
 
 //===========================================================
 // Modal
@@ -43,7 +56,7 @@ export const BaseModal = React.forwardRef<
     body: _body,
     okBtn,
     cancelBtn,
-    mask = <StyledMask />,
+    mask = <StyledMask dbg/>,
     children,
     ...restProps
   } = props;
