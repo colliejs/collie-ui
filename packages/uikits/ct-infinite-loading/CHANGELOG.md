@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.17](https://github.com/border-collie-js/border-collie-ui/compare/@collie-ui/ct-infinite-loading@1.0.16...@collie-ui/ct-infinite-loading@1.0.17) (2023-09-02)
+
+**Note:** Version bump only for package @collie-ui/ct-infinite-loading
+
 ## [1.0.16](https://github.com/border-collie-js/border-collie-ui/compare/@collie-ui/ct-infinite-loading@1.0.15...@collie-ui/ct-infinite-loading@1.0.16) (2023-08-19)
 
 **Note:** Version bump only for package @collie-ui/ct-infinite-loading
