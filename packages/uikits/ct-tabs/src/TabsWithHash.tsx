@@ -4,11 +4,17 @@ import { useCallback } from "react";
 import { TabItemType, BaseTabs, TabProps } from "./BaseTabs";
 
 export type Id = { id: string | number };
-type TabsWithHashProps<T extends TabItemType> = TabProps<T> & {
+type TabsWithHashProps<
+  T extends TabItemType,
+  R extends "row" | "column"
+> = TabProps<T, R> & {
   updateData: (data: T[]) => void;
 };
-export const TabsWithHash = <T extends TabItemType>(
-  props: TabsWithHashProps<T>
+export const TabsWithHash = <
+  T extends TabItemType,
+  R extends "row" | "column"
+>(
+  props: TabsWithHashProps<T, R>
 ) => {
   const { data, updateData } = props;
   const on = useExclusive(data, "active", updateData);

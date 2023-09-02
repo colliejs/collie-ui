@@ -1,2 +1,2 @@
-export * from "./BaseModal";
-export * from "./ModalControlled";
+export * from "./Modal";
+export * from "./useModal";

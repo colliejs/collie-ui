@@ -1,22 +1,17 @@
 import React from "react";
-import {
-  TabItemType,
-  TabConfig,
-  TabsControlled,
-  SideBarControlled,
-} from "../dist";
+import { TabItemType, TabDataType, Tabs, useTabs } from "../dist";
 import { Text } from "@collie-ui/atomic";
 import "./index.css";
 import "../dist/index.css";
 
 export default { title: "uikits/c-tabs" };
 
-interface Item extends TabItemType<any> {
+interface Item extends TabItemType {
   title: string;
   to: string;
 }
 
-const data: TabConfig<Item> = [
+const initialData: TabDataType<Item> = [
   {
     id: "1",
     title: "name1",
@@ -50,23 +45,18 @@ const data: TabConfig<Item> = [
 // //=====================================================================================================
 // // HorizontalSwitcher
 // //=====================================================================================================
-export const TabsControlledTest = () => (
-  <TabsControlled
-    initialData={data}
-    renderItem={e => {
-      return <Text>{e.title}</Text>;
-    }}
-  ></TabsControlled>
-);
-
-//=====================================================================================================
-// SideBarControlledDemo
-//=====================================================================================================
-export const SideBarControlledDemo = () => (
-  <SideBarControlled
-    initialData={data}
-    renderItem={e => {
-      return <Text>{e.title}</Text>;
-    }}
-  ></SideBarControlled>
-);
+export const TabsTest = () => {
+  const [data, onClick] = useTabs(initialData);
+  return (
+    <Tabs
+      data={data}
+      direction="row"
+      renderItem={e => {
+        return <Text onClick={() => onClick(e)}>{e.title}</Text>;
+      }}
+      renderContent={e => {
+        return <div>content-${e.title}</div>;
+      }}
+    ></Tabs>
+  );
+};

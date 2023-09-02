@@ -1,36 +1,39 @@
-// import { Button } from "@collie-ui/atomic"; //TODO:为什么这样引入button就渲染不对
-import { abs } from "../../../css/src/layout";
-import { Box } from "../../../layout/src";
+import { Box } from "@collie-ui/layout";
 import { styled } from "@collie-ui/common";
 import React from "react";
-import { Button } from "../../../atomic/src/Button";
-import { StyledMask as _Mask } from "../src/BaseModal";
-import { ModalControlled } from "../src/ModalControlled";
+import { Button } from "@collie-ui/atomic";
+import { StyledMask as _Mask, Modal } from "../src";
+import { useModal } from "../src";
 export default { title: "uikits/Modal" };
 
 const Mask = styled(_Mask, {
-  background: "rgba(0,0,0,0.9)",
-  color: "white",
+  background: "rgba(0,244,0,0.1)",
+  color: "red",
 });
-export const MyModal: React.FC = (props) => {
+const animationOption = { useAnimation: true };
+
+export const MyModal: React.FC = props => {
+  const { visible, show, hide, ref, animationStatus } =
+    useModal(animationOption);
+  console.log("visible", visible);
   return (
     <div>
-      <ModalControlled
-        mask={<Mask />}
-        body={
-          <Box css={{ w: 400, h: 300, background: "rgba(0,0,0,0.9)" }}>
-            hello,world
-          </Box>
-        }
-        cancelBtn={
-          <Button css={{ ...abs({ top: 10, left: 100 }) }}>cancel</Button>
-        }
-        closeBtn={
-          <Button css={{ ...abs({ top: 10, left: 10 }) }}>close</Button>
-        }
-      >
-        <Button>open</Button>
-      </ModalControlled>
+      {
+        <Modal mask={Mask} ref={ref} animationStatus={animationStatus}>
+          <div style={{ padding: 50, background: "black" }}>
+            <p>hello</p>
+            <button
+              onClick={() => {
+                console.log("click close");
+                hide();
+              }}
+            >
+              close
+            </button>
+          </div>
+        </Modal>
+      }
+      <Button onClick={show}>open</Button>
     </div>
   );
 };

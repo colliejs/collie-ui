@@ -8,19 +8,18 @@ export type AnimeInstance = anime.AnimeInstance;
 
 export const animate = async (animeParams: AnimateParams) => {
   const ins = _anime({
-    update: (ins) => {
+    update: ins => {
       dbg(
         "progress",
         ins.progress,
         ins.animations.map(
-          (a) =>
-            `target:${a.animatable.target.tagName}, ${a.property}:${a.currentValue}`
+          a => `target:${a.animatable.target.tagName}, ${a.property}:${a.currentValue}`
         )
       );
     },
     ...animeParams,
   });
-  await waitFor(() => ins.completed);
+  await ins.finished;
   return ins;
 };
 

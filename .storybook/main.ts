@@ -4,7 +4,7 @@ import glob from "glob";
 import { mergeConfig } from "vite";
 import Inspect from "vite-plugin-inspect";
 
-const xpath = "packages/uikits/ct-infinite-loading/**";
+const xpath = "packages/uikits/ct-modal/**";
 import yue from "@colliejs/vite";
 import { collieConfig } from "../collie-config.mjs";
 

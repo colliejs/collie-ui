@@ -25,7 +25,6 @@ const api = makeApi({
   },
 });
 
-const initialData = [];
 export const InfiniteoadingUncontrolledTest = () => {
   return (
     <InfiniteLoadingControlled

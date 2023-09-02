@@ -1,113 +1,64 @@
-import { useLatest } from "@c3/react";
-import React, { useEffect, useRef } from "react";
-import { BaseModal, BaseModalPropsWithoutRef } from "./BaseModal";
-import { animate, setScrollable } from "./utils";
+import { Fixed, Stack } from "@collie-ui/layout";
+import { mask as _mask } from "@collie-ui/css";
+import { styled } from "@collie-ui/common";
+import React, { useEffect } from "react";
+import { AnimationStatus } from "./useModal";
 
-export type ModalUncontrolledProps = Omit<
-  BaseModalPropsWithoutRef,
-  "animationStatus"
-> & {
-  useAnimation?: boolean;
-  setVisible: (visible: boolean) => void;
-};
-export type AnimationStatus = "doing" | "done" | "not-triggered" | "triggered";
-export const Modal: React.FC<ModalUncontrolledProps> = (props) => {
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      "co-mask": JSX.IntrinsicElements["div"];
+      "co-modal": JSX.IntrinsicElements["div"];
+      "co-body": JSX.IntrinsicElements["div"];
+    }
+  }
+}
+
+export type BaseModalPropsWithoutRef = {
+  mask?: React.ForwardRefExoticComponent<any>;
+  animationStatus: AnimationStatus;
+} & React.ComponentPropsWithoutRef<"div">;
+//===========================================================
+// Mask
+//===========================================================
+export const StyledMask = styled(
+  Fixed,
+  {
+    opacity: 0,
+    pointerEvents: "none",
+    contentVisibility: "auto",
+    zIndex: 100,
+    "&[data-state='visible']": { opacity: 1, pointerEvents: "auto" },
+    "&[data-state='showing']": { opacity: 1, pointerEvents: "auto" },
+    "&[data-state='hidding']": { opacity: 1, pointerEvents: "auto" },
+    "&[data-state='hidden']": { opacity: 0, pointerEvents: "none" },
+    ..._mask,
+  },
+  { as: "co-mask" }
+);
+
+//===========================================================
+// Modal
+//===========================================================
+export const Modal = React.forwardRef<
+  HTMLDivElement,
+  BaseModalPropsWithoutRef
+>((props, ref) => {
   const {
-    visible,
-    setVisible,
-    okBtn: _okBtn,
-    cancelBtn: _cancelBtn,
-    closeBtn: _closeBtn,
-    useAnimation = true,
+    mask: MyMask = StyledMask,
+    animationStatus,
     children,
     ...restProps
   } = props;
-  const ref = useRef<HTMLDivElement>(null);
-  const [animationStatus, setAnimationStatus] =
-    React.useState<AnimationStatus>("not-triggered");
-  useEffect(() => {
-    console.log("visible", visible);
-    if (animationStatus === "not-triggered") return;
-
-    if (visible && animationStatus === "triggered") {
-      setAnimationStatus("doing");
-      ref.current &&
-        useAnimation &&
-        animate(true, ref.current).then(() => {
-          setAnimationStatus("done");
-          setScrollable(false);
-        });
-      return;
-    }
-    if (!visible && animationStatus === "triggered") {
-      setAnimationStatus("doing");
-      ref.current &&
-        useAnimation &&
-        animate(false, ref.current).then(() => {
-          setAnimationStatus("done");
-          setScrollable(true);
-        });
-      return;
-    }
-  }, [animationStatus, useAnimation, visible]);
-
-  const show = () => {
-    setVisible(true);
-    setAnimationStatus("triggered");
-  };
-  const hide = () => {
-    setVisible(false);
-    setAnimationStatus("triggered");
-  };
-  if (!React.isValidElement(children)) {
-    throw new Error(
-      "Modal must have a valid ReactElement as children(trigger)"
-    );
-  }
-  const nChildren = React.cloneElement(children, {
-    ...children.props,
-    onClick: (e: React.MouseEvent) => {
-      show();
-      children.props.onClick?.(e);
-    },
-  });
-
-  const closeBtn =
-    _closeBtn &&
-    React.cloneElement(_closeBtn, {
-      onClick: async (e: React.MouseEvent) => {
-        await _closeBtn.props.onClick?.(e);
-        hide();
-      },
-    });
-  const okBtn =
-    _okBtn &&
-    React.cloneElement(_okBtn, {
-      onClick: async (e: React.MouseEvent) => {
-        await _okBtn.props.onClick?.(e);
-        hide();
-      },
-    });
-  const cancelBtn =
-    _cancelBtn &&
-    React.cloneElement(_cancelBtn, {
-      onClick: async (e: React.MouseEvent) => {
-        await _cancelBtn.props.onClick?.(e);
-        hide();
-      },
-    });
-
   return (
-    <BaseModal
-      ref={ref}
-      visible={visible}
-      okBtn={okBtn}
-      cancelBtn={cancelBtn}
-      closeBtn={closeBtn}
-      animationStatus={animationStatus}
+    <MyMask
+      data-state={animationStatus}
       {...restProps}
+      ref={ref}
     >
-      {nChildren}
-    </BaseModal>
+      <co-body>{children}</co-body>
+    </MyMask>
   );
-};
+});
+Modal.displayName = "Modal";

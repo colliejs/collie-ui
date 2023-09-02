@@ -20,7 +20,7 @@ const StyledContentList = styled(List, {
 //===========================================================
 // useTab
 //===========================================================
-export const useTab = (data: TabItemType[]) => {
+export const useTabs = <T extends TabItemType>(data: T[]) => {
   return useList(data);
 };
 
@@ -31,19 +31,28 @@ export type TabItemType = {
   renderContent?(props: TabItemType): React.ReactNode;
 } & ListItemType;
 
-export type TabItemsType<T extends TabItemType> = T[];
+export type TabDataType<T extends TabItemType> = T[];
 
-export type TabProps<T extends TabItemType> = {
-  direction: "row" | "column";
-  data: TabItemsType<T>;
-  renderItem?(props: TabItemType): React.ReactNode;
-  renderContent?(props: TabItemType): React.ReactNode;
-};
+type RootProps<T extends "row" | "column"> = T extends "row"
+  ? React.ComponentProps<typeof Row>
+  : React.ComponentProps<typeof Col>;
 
-export const BaseTabs = <T extends TabItemType>(props: TabProps<T>) => {
+export type TabProps<T extends TabItemType, R extends "row" | "column"> = {
+  direction: R;
+  data: TabDataType<T>;
+  renderItem?(props: T): React.ReactNode;
+  renderContent?(props: T): React.ReactNode;
+} & RootProps<R>;
+
+export const BaseTabs = <
+  T extends TabItemType,
+  R extends "row" | "column"
+>(
+  props: TabProps<T, R>
+) => {
   const { data, direction, renderItem, renderContent, ...restProps } =
     props;
-  const Layout = direction === "row" ? Row : Col;
+  const Layout = direction === "row" ? Col : Row;
   const nav = useMemo(
     () => (
       <List

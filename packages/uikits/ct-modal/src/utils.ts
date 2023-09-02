@@ -2,13 +2,16 @@ import { assert } from "@c3/utils";
 import { AnimeInstance, fades, zoom } from "@collie-ui/animation";
 
 export const animate = async (visible: boolean, mask: HTMLElement): Promise<AnimeInstance[]> => {
+  const key = visible ? "in" : "out";
+  const body = mask.querySelector("co-body");
   assert(!!mask, "mask is required");
-  console.log("animation...");
-  const key: "in" | "out" = visible ? "in" : "out";
+  assert(!!body, "body is required");
   return Promise.all([
-    fades[key]({ targets: mask }),
+    fades[key]({ targets: mask, easing: "linear" }),
     zoom[`center-${key}`]({
-      targets: mask.querySelector("co-modal") as HTMLElement,
+      targets: body,
+      duration: visible ? 500 : 200,
+      easing: visible ? "spring" : "easeOutQuad",
     }),
   ]);
 };
