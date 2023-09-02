@@ -1,8 +1,7 @@
-import { Fixed, Stack } from "@collie-ui/layout";
-import { mask as _mask } from "@collie-ui/css";
 import { styled } from "@collie-ui/common";
-import React, { useEffect } from "react";
-import { AnimationStatus } from "./useModal";
+import { mask as _mask } from "@collie-ui/css";
+import { Fixed } from "@collie-ui/layout";
+import React from "react";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -17,7 +16,7 @@ declare global {
 
 export type BaseModalPropsWithoutRef = {
   mask?: React.ForwardRefExoticComponent<any>;
-  animationStatus: AnimationStatus;
+  visible?: boolean;
 } & React.ComponentPropsWithoutRef<"div">;
 //===========================================================
 // Mask
@@ -25,13 +24,13 @@ export type BaseModalPropsWithoutRef = {
 export const StyledMask = styled(
   Fixed,
   {
-    opacity: 0,
-    pointerEvents: "none",
+    // opacity: 0,
+    // pointerEvents: "none",
     contentVisibility: "auto",
     zIndex: 100,
     "&[data-state='visible']": { opacity: 1, pointerEvents: "auto" },
-    "&[data-state='showing']": { opacity: 1, pointerEvents: "auto" },
-    "&[data-state='hidding']": { opacity: 1, pointerEvents: "auto" },
+    // "&[data-state='showing']": { opacity: 1, pointerEvents: "auto" },
+    // "&[data-state='hidding']": { opacity: 1, pointerEvents: "auto" },
     "&[data-state='hidden']": { opacity: 0, pointerEvents: "none" },
     ..._mask,
   },
@@ -47,13 +46,13 @@ export const Modal = React.forwardRef<
 >((props, ref) => {
   const {
     mask: MyMask = StyledMask,
-    animationStatus,
+    visible,
     children,
     ...restProps
   } = props;
   return (
     <MyMask
-      data-state={animationStatus}
+      data-state={visible ? "visible" : "hidden"}
       {...restProps}
       ref={ref}
     >

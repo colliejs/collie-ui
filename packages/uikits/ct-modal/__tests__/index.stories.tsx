@@ -10,16 +10,14 @@ const Mask = styled(_Mask, {
   background: "rgba(0,244,0,0.1)",
   color: "red",
 });
-const animationOption = { useAnimation: true };
 
 export const MyModal: React.FC = props => {
-  const { visible, show, hide, ref, animationStatus } =
-    useModal(animationOption);
+  const { visible, show, hide, ref } = useModal();
   console.log("visible", visible);
   return (
     <div>
       {
-        <Modal mask={Mask} ref={ref} animationStatus={animationStatus}>
+        <Modal mask={Mask} ref={ref} visible={visible}>
           <div style={{ padding: 50, background: "black" }}>
             <p>hello</p>
             <button
