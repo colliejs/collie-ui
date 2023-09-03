@@ -7,10 +7,10 @@ export const animate = async (visible: boolean, mask: HTMLElement): Promise<Anim
   assert(!!mask, "mask is required");
   assert(!!body, "body is required");
   return Promise.all([
-    fades[key]({ targets: mask, easing: "linear" }),
+    fades[key]({ targets: mask, easing: "linear", duration: 10 }),
     zoom[`center-${key}`]({
       targets: body,
-      duration: visible ? 500 : 200,
+      duration: visible ? 300 : 200,
       easing: visible ? "spring" : "easeOutQuad",
     }),
   ]);

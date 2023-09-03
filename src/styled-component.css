@@ -1,0 +1,11 @@
+@layer app {
+    @layer index_stories_tsx-Mask-cRuOdX {
+      .baseStyle-Mask-cUHoAH{background:rgba(0,244,0,0.1);color:red}    
+    }
+@layer Modal_tsx-StyledMask-dpoAmx {
+      .baseStyle-StyledMask-gLlRQQ{content-visibility:auto;z-index:100}
+.baseStyle-StyledMask-gLlRQQ[data-state='visible']{opacity:1;pointer-events:auto}
+.baseStyle-StyledMask-gLlRQQ[data-state='hidden']{opacity:0;pointer-events:none}
+.baseStyle-StyledMask-gLlRQQ{position:fixed;top:0;left:0;width:100vw;height:100vh;display:flex;justify-content:center;align-items:center}    
+    }
+  }
