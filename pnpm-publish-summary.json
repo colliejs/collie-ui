@@ -1,40 +1,8 @@
 {
 	"publishedPackages": [
 		{
-			"name": "@collie-ui/animation",
-			"version": "1.0.10"
-		},
-		{
-			"name": "@collie-ui/atomic",
-			"version": "1.0.10"
-		},
-		{
-			"name": "@collie-ui/layout",
-			"version": "1.0.12"
-		},
-		{
-			"name": "@collie-ui/ct-basic",
-			"version": "1.0.7"
-		},
-		{
-			"name": "@collie-ui/ct-floating-ui",
-			"version": "1.0.12"
-		},
-		{
-			"name": "@collie-ui/ct-infinite-loading",
-			"version": "1.0.17"
-		},
-		{
 			"name": "@collie-ui/ct-modal",
-			"version": "1.0.12"
-		},
-		{
-			"name": "@collie-ui/ct-tabs",
-			"version": "1.0.12"
-		},
-		{
-			"name": "@collie-ui/form",
-			"version": "1.0.12"
+			"version": "1.0.13"
 		}
 	]
 }
