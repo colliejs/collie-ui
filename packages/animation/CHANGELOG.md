@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.12](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.11...@collie-ui/animation@1.0.12) (2023-09-08)
+
+**Note:** Version bump only for package @collie-ui/animation
+
 ## [1.0.11](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.10...@collie-ui/animation@1.0.11) (2023-09-03)
 
 **Note:** Version bump only for package @collie-ui/animation

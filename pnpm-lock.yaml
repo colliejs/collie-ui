@@ -466,24 +466,6 @@ importers:
         specifier: ^8.3.0
         version: 8.3.0(@babel/core@7.20.12)(webpack@5.88.2)
 
-  packages/uikits/ct-basic:
-    dependencies:
-      "@collie-ui/animation":
-        specifier: workspace:^
-        version: link:../../animation
-      "@collie-ui/atomic":
-        specifier: workspace:^
-        version: link:../../atomic
-      "@collie-ui/common":
-        specifier: workspace:^
-        version: link:../../common
-      "@collie-ui/css":
-        specifier: workspace:^
-        version: link:../../css
-      "@collie-ui/layout":
-        specifier: workspace:^
-        version: link:../../layout
-
   packages/uikits/ct-floating-ui:
     dependencies:
       "@collie-ui/animation":
@@ -512,7 +494,7 @@ importers:
     dependencies:
       "@c3/api":
         specifier: ^1.2.27
-        version: 1.2.27(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.6)
+        version: 1.2.27(react-dom@18.2.0)(react@18.2.0)
       "@c3/react":
         specifier: ^1.1.22
         version: 1.1.22(react-dom@18.2.0)(react@18.2.0)
@@ -4016,7 +3998,7 @@ packages:
       }
     dev: true
 
-  /@c3/api@1.2.27(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.6):
+  /@c3/api@1.2.27(react-dom@18.2.0)(react@18.2.0):
     resolution:
       {
         integrity: sha512-sv6rgtuXXKtiy82m5udewVHYre+snQF16i1xa5Z84UeGra9oKmVW1ZlJtzEV+RqeoanBnv9YfQlXveVND/4foQ==,
@@ -4026,7 +4008,7 @@ packages:
       "@c3/react": 1.1.22(react-dom@18.2.0)(react@18.2.0)
       "@c3/types": 1.1.9
       "@c3/utils": 1.3.15
-      msw: 0.47.4(typescript@5.1.6)
+      msw: 0.47.4
       qs: 6.11.2
       vitest: 0.22.1
     transitivePeerDependencies:
@@ -10502,7 +10484,6 @@ packages:
       {
         integrity: sha512-rt40Nk13II9JwQBdeYqmbn2Q6IVTA5uPhvSO+JVqdXw/6/4glI6oR9ezty/A9Hg5u7JH4OmYmuQ+XvjKm0Datg==,
       }
-    dev: false
 
   /@types/normalize-package-data@2.4.1:
     resolution:
@@ -12264,7 +12245,7 @@ packages:
       loader-utils: 2.0.4
       make-dir: 3.1.0
       schema-utils: 2.7.1
-      webpack: 5.88.2(esbuild@0.17.19)
+      webpack: 5.88.2
     dev: true
 
   /babel-loader@8.3.0(@babel/core@7.22.5)(webpack@5.88.2):
@@ -18796,7 +18777,7 @@ packages:
       }
     engines: { node: ">= 10.13.0" }
     dependencies:
-      "@types/node": 20.3.1
+      "@types/node": 20.4.5
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
@@ -20319,7 +20300,7 @@ packages:
       }
     dev: true
 
-  /msw@0.47.4(typescript@5.1.6):
+  /msw@0.47.4:
     resolution:
       {
         integrity: sha512-Psftt8Yfl0+l+qqg9OlmKEsxF8S/vtda0CmlR6y8wTaWrMMzuCDa55n2hEGC0ZRDwuV6FFWc/4CjoDsBpATKBw==,
@@ -20352,7 +20333,6 @@ packages:
       statuses: 2.0.1
       strict-event-emitter: 0.2.8
       type-fest: 2.19.0
-      typescript: 5.1.6
       yargs: 17.7.2
     transitivePeerDependencies:
       - encoding
@@ -24443,6 +24423,33 @@ packages:
       webpack: 5.88.2(esbuild@0.17.19)
     dev: true
 
+  /terser-webpack-plugin@5.3.9(webpack@5.88.2):
+    resolution:
+      {
+        integrity: sha512-ZuXsqE07EcggTWQjXUj+Aot/OMcD0bMKGgF63f7UxYcu5/AJF53aIpK1YoP5xR9l6s/Hy2b+t1AM0bLNPRuhwA==,
+      }
+    engines: { node: ">= 10.13.0" }
+    peerDependencies:
+      "@swc/core": "*"
+      esbuild: "*"
+      uglify-js: "*"
+      webpack: ^5.1.0
+    peerDependenciesMeta:
+      "@swc/core":
+        optional: true
+      esbuild:
+        optional: true
+      uglify-js:
+        optional: true
+    dependencies:
+      "@jridgewell/trace-mapping": 0.3.19
+      jest-worker: 27.5.1
+      schema-utils: 3.3.0
+      serialize-javascript: 6.0.1
+      terser: 5.19.3
+      webpack: 5.88.2
+    dev: true
+
   /terser@5.19.3:
     resolution:
       {
@@ -24959,6 +24966,7 @@ packages:
       }
     engines: { node: ">=14.17" }
     hasBin: true
+    dev: true
 
   /uglify-js@3.17.4:
     resolution:
@@ -25645,6 +25653,49 @@ packages:
       {
         integrity: sha512-5tyDlKLqPfMqjT3Q9TAqf2YqjwmnUleZwzJi1A5qXnlBCdj2AtOJ6wAWdglTIDOPgOiOrXeBeFcsQ8+aGQ6QbA==,
       }
+    dev: true
+
+  /webpack@5.88.2:
+    resolution:
+      {
+        integrity: sha512-JmcgNZ1iKj+aiR0OvTYtWQqJwq37Pf683dY9bVORwVbUrDhLhdn/PlO2sHsFHPkj7sHNQF3JwaAkp49V+Sq1tQ==,
+      }
+    engines: { node: ">=10.13.0" }
+    hasBin: true
+    peerDependencies:
+      webpack-cli: "*"
+    peerDependenciesMeta:
+      webpack-cli:
+        optional: true
+    dependencies:
+      "@types/eslint-scope": 3.7.4
+      "@types/estree": 1.0.1
+      "@webassemblyjs/ast": 1.11.6
+      "@webassemblyjs/wasm-edit": 1.11.6
+      "@webassemblyjs/wasm-parser": 1.11.6
+      acorn: 8.10.0
+      acorn-import-assertions: 1.9.0(acorn@8.10.0)
+      browserslist: 4.21.10
+      chrome-trace-event: 1.0.3
+      enhanced-resolve: 5.15.0
+      es-module-lexer: 1.3.0
+      eslint-scope: 5.1.1
+      events: 3.3.0
+      glob-to-regexp: 0.4.1
+      graceful-fs: 4.2.11
+      json-parse-even-better-errors: 2.3.1
+      loader-runner: 4.3.0
+      mime-types: 2.1.35
+      neo-async: 2.6.2
+      schema-utils: 3.3.0
+      tapable: 2.2.1
+      terser-webpack-plugin: 5.3.9(webpack@5.88.2)
+      watchpack: 2.4.0
+      webpack-sources: 3.2.3
+    transitivePeerDependencies:
+      - "@swc/core"
+      - esbuild
+      - uglify-js
     dev: true
 
   /webpack@5.88.2(esbuild@0.17.19):
