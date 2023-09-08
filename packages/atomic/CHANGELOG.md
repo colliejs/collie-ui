@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.14](https://github.com/yuejs/c3/compare/@collie-ui/atomic@1.0.13...@collie-ui/atomic@1.0.14) (2023-09-08)
+
+**Note:** Version bump only for package @collie-ui/atomic
+
 ## 1.0.13 (2023-09-08)
 
 ### Features
