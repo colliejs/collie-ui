@@ -1,0 +1,36 @@
+{
+  "name": "@collie-ui/ct-tabs",
+  "version": "1.0.14",
+  "description": "awesesome",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c && pnpm type",
+    "buildOnly": "vite build",
+    "clean": "rm -rf dist  ",
+    "reset": "pnpm clean && rm -rf node_modules && pnpm install",
+    "type": "tsc --project . --paths null --emitDeclarationOnly --declaration",
+    "watchtype": "tsc --project . --watch"
+  },
+  "types": "./dist/index.d.ts",
+  "keywords": [],
+  "author": "colliedog1001@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@collie-ui/atomic": "workspace:^",
+    "@collie-ui/common": "workspace:^",
+    "@collie-ui/css": "workspace:^",
+    "@collie-ui/layout": "workspace:^"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./css": "./dist/index.css",
+    "./theme": "./dist/theme.css"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
