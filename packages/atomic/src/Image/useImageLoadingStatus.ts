@@ -1,25 +1,23 @@
 import { URL } from "@c3/types";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export const useImageLoadingStatus = (src: URL) => {
-  const [status, setStatus] = React.useState<"loading" | "error" | "loaded">(
-    "loading"
-  );
-  const handleLoad = () => {
+  const [status, setStatus] = useState<"loading" | "error" | "loaded">("loading");
+  const onLoad = () => {
     setStatus("loaded");
   };
-  const handleError = () => {
+  const onError = () => {
     setStatus("error");
   };
 
-  React.useEffect(() => {
-    const ele = new Image();
-    ele.onload = handleLoad;
-    ele.onerror = handleError;
-    ele.src = src;
+  useEffect(() => {
+    const img = new Image();
+    img.onload = onLoad;
+    img.onerror = onError;
+    img.src = src;
     return () => {
-      ele.removeEventListener("load", handleLoad);
-      ele.removeEventListener("error", handleError);
+      img.removeEventListener("load", onLoad);
+      img.removeEventListener("error", onError);
     };
   }, [src]);
 

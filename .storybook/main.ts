@@ -4,7 +4,7 @@ import glob from "glob";
 import { mergeConfig } from "vite";
 import Inspect from "vite-plugin-inspect";
 
-const xpath = "packages/uikits/ct-modal/**";
+const xpath = "packages/atomic/src/Image/__tests__/**";
 import yue from "@colliejs/vite";
 import { collieConfig } from "../collie-config.mjs";
 
@@ -39,6 +39,8 @@ const config: StorybookConfig = {
           index: path.resolve(__dirname, "../index.ts"),
           exclude: /(dist\/)/,
           styledConfig: collieConfig,
+          styledComponentCssFile: "dist/styledComponent.css",
+          styledElementCssFile: "dist/styledElement.css",
         }),
       ],
       externals: ["ethers"],

@@ -3,6 +3,8 @@ import { Image } from "../Image";
 import React from "react";
 import { styled } from "@collie-ui/common";
 const Row = styled("div", { display: "flex" });
+import "../../../../../dist/styledComponent.css";
+import "../../../../../dist/styledElement.css";
 
 export default {
   component: Image,
@@ -12,14 +14,20 @@ export default {
 export const _Image = () => (
   <Row>
     <Image
-      src={mock.getRandomPic()}
-      css={{
-        w: 100,
-        aspectRatio: "1",
-      }}
-    />
-    <Image
-      src={mock.getRandomPic()}
+      loadingNode={
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            background: "lightgrey",
+          }}
+        >
+          loading
+        </div>
+      }
+      src={
+        "https://app.requestly.io/delay/5000/https://nextui-docs-v2.vercel.app/images/hero-card-complete.jpeg"
+      }
       css={{
         w: 100,
         aspectRatio: "1",

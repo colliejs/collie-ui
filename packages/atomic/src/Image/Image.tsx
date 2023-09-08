@@ -50,26 +50,31 @@ const StyledImageContainer = styled(
 );
 export type Debug<T> = { [K in keyof T]: T[K] };
 
-type x = Debug<React.ComponentProps<typeof StyledImageContainer>>;
 
 //===========================================================
 // Image
 //===========================================================
 export type ImageProps = {
-  fallback?: React.ReactNode;
-  loading?: React.ReactNode;
+  fallbackNode?: React.ReactNode;
+  loadingNode?: React.ReactNode;
 } & React.ComponentPropsWithoutRef<typeof StyledImage>;
 
 export const Image = React.forwardRef(
   (props: ImageProps, ref: React.ForwardedRef<HTMLDivElement>) => {
-    const { fallback, loading, className, src = "", ...restProps } = props;
+    const {
+      fallbackNode,
+      loadingNode,
+      className,
+      src = "",
+      ...restProps
+    } = props;
     const status = useImageLoadingStatus(src);
 
     const child =
-      status === "loading" && loading ? (
-        loading
-      ) : status === "error" && fallback ? (
-        fallback
+      status === "loading" && loadingNode ? (
+        loadingNode
+      ) : status === "error" && fallbackNode ? (
+        fallbackNode
       ) : (
         <StyledImage src={src} {...restProps} />
       );
