@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.13 (2023-09-08)
+
+### Features
+
+- collie-ui ([3dfa5e4](https://github.com/yuejs/c3/commit/3dfa5e4eadca863919e9ffbb3dfb9ab726977c7e))
+
 ## [1.0.12](https://github.com/yuejs/c3/compare/@collie-ui/atomic@1.0.11...@collie-ui/atomic@1.0.12) (2023-09-08)
 
 **Note:** Version bump only for package @collie-ui/atomic
