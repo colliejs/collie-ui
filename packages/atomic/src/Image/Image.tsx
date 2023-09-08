@@ -36,6 +36,9 @@ export const StyledImage = styled(
           objectFit: "fill",
         },
       },
+      blur: {
+        dynamic: (px) => ({ filter: `blur(${px})` }),
+      },
     },
   },
   { as: "img" }
@@ -49,7 +52,6 @@ const StyledImageContainer = styled(
   { as: "co-img-container" }
 );
 export type Debug<T> = { [K in keyof T]: T[K] };
-
 
 //===========================================================
 // Image

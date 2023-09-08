@@ -14,6 +14,7 @@ export default {
 export const _Image = () => (
   <Row>
     <Image
+      blur="1px"
       loadingNode={
         <div
           style={{
