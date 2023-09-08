@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "@collie-ui/atomic";
 import { StyledMask as _Mask, Modal } from "../src";
 import { useModal } from "../src";
+import "./index.css";
 export default { title: "uikits/Modal" };
 
 const Mask = styled(_Mask, {
@@ -16,7 +17,7 @@ export const MyModal: React.FC = props => {
   console.log("visible", visible);
   return (
     <div>
-      {
+      {visible && (
         <Modal mask={Mask} ref={ref} visible={visible}>
           <div style={{ padding: 50, background: "black" }}>
             <p>hello</p>
@@ -30,7 +31,7 @@ export const MyModal: React.FC = props => {
             </button>
           </div>
         </Modal>
-      }
+      )}
       <Button onClick={show}>open</Button>
     </div>
   );

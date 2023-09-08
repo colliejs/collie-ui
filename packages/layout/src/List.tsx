@@ -43,18 +43,16 @@ export const StyledList = styled(
 
 export const useList = <T extends ListItemType>(intialData: T[]) => {
   const [data, setData] = useState(intialData);
-  const onClick = useCallback(
-    (item: T) => {
-      const newData = intialData.map(e => {
+  const onClick = useCallback((item: T) => {
+    setData(data =>
+      data.map(e => {
         if (e.id === item.id) {
           return { ...e, active: true };
         }
         return { ...e, active: false };
-      });
-      setData(newData);
-    },
-    [intialData]
-  );
+      })
+    );
+  }, []);
   return [data, onClick] as const;
 };
 

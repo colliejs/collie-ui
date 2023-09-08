@@ -25,7 +25,7 @@ export const StyledMask = styled(
   Fixed,
   {
     // opacity: 0,
-    // pointerEvents: "none",
+    // transform: "scale(0)",
     contentVisibility: "auto",
     zIndex: 100,
     "&[data-state='visible']": { opacity: 1, pointerEvents: "auto" },
