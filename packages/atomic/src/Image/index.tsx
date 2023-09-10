@@ -1,2 +1,2 @@
-export * from "./Image";
-export * from "./variants";
+export { Image } from "./Image";
+export { Icon, Avatar } from "./variants";

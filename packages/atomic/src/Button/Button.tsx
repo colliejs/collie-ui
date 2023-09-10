@@ -26,9 +26,6 @@ export const StyledButton = styled(
   { as: "button" }
 );
 
-type x = React.ComponentProps<typeof StyledButton>;
-type x1 = x["css"];
-type x2 = ButtonProps["onClick"];
 
 export const Button = React.forwardRef(
   (props: ButtonProps, ref: React.ForwardedRef<HTMLButtonElement>) => {

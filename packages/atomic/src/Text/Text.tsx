@@ -5,22 +5,6 @@ export const Text = styled("p", {
   lineHeight: "$sm",
   fontFamily: "$font-family",
   variants: {
-    size: {
-      md: {
-        fontSize: "16px",
-      },
-      sm: {
-        fontSize: "14px",
-      },
-    },
-    weight: {
-      bold: {
-        fontWeight: 600,
-      },
-      normal: {
-        fontWeight: 400,
-      },
-    },
     italic: {
       true: {
         fontStyle: "italic",

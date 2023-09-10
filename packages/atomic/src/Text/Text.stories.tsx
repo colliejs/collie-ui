@@ -42,7 +42,7 @@ export const UnderlineText = () => {
   return (
     <div>
       <Text underline>Underline</Text>
-      <Text bold>bold</Text>
+      <Text weight="bold">bold</Text>
       <Text italic>italic</Text>
       <Text delete>delete</Text>
       <p style={{ textDecoration: "line-through" }}>xxx</p>
@@ -87,7 +87,7 @@ export const OnelineText = () => (
     nihil provident magnam autem est ut quaerat eaque corporis odit
   </Text>
 );
-type x = Parameters<typeof Text>[0]["rows"]
+type x = Parameters<typeof Text>[0]["rows"];
 // tyep x2 = DEBUG<Parameters<typeof Text>>
 // type x1=x['']
 export const TwoLineText = () => {

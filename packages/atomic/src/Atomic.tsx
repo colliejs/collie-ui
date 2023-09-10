@@ -42,4 +42,3 @@ export const Atomic = styled("div", {
   },
 });
 
-type x = React.ComponentProps<typeof Atomic>;

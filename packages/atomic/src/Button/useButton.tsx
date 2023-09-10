@@ -1,31 +1,26 @@
 import { useSwitch } from "@c3/react";
 import React, { useCallback } from "react";
 
-export type UseBtnOption = {
+export type UseLoadingBtnOption = {
   useLoading: boolean;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
 };
 
-export const useButton = (
-  btn: JSX.Element,
-  option: UseBtnOption
-): JSX.Element => {
-  const { useLoading } = option;
+export const useLoadingButton = (option: UseLoadingBtnOption) => {
+  const { useLoading, onClick: _onClick } = option;
   const [loading, showLoading, hideLoading] = useSwitch(false);
 
   const onClick = useCallback(
     async (e: React.MouseEvent<HTMLButtonElement>) => {
       try {
         useLoading && showLoading();
-        await btn.props.onClick?.(e);
+        await _onClick?.(e);
       } finally {
         useLoading && hideLoading();
       }
     },
-    [btn.props, hideLoading, showLoading, useLoading]
+    [_onClick, hideLoading, showLoading, useLoading]
   );
-
-  return React.cloneElement(btn, {
-    loading,
-    onClick,
-  });
+  const disabled = loading;
+  return { loading, onClick, disabled } as const;
 };

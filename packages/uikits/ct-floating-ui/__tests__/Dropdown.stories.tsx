@@ -9,6 +9,9 @@ export default {
   title: "uikits/ct-loating-ui/Dropdown",
 };
 
+const Btn: React.FC = () => {
+  return <button>button</button>;
+};
 const defaultArgs = {
   floating: mock.getList(),
 };
@@ -16,7 +19,10 @@ export const ClickDropdown = () => {
   return (
     <Row css={{ ...absXYCenter(), gap: 40 }}>
       <Dropdown {...defaultArgs}>
-        <Button>Button</Button>
+        <div>
+          <Btn>Button</Btn>
+          <Button>ButtonOK</Button>
+        </div>
       </Dropdown>
     </Row>
   );
