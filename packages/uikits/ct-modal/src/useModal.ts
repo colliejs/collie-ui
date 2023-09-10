@@ -6,7 +6,6 @@ import { on } from "events";
 
 // export type AnimationStatus = "showing" | "hidding" | "initial" | "visible" | "hidden";
 
-
 export type useModalOption = {
   useAnimation?: boolean;
   animate?: typeof _animate;
@@ -26,15 +25,13 @@ export const useModal = (option: useModalOption) => {
   } = option;
   const [visible, setVisible] = React.useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  // const [animationStatus, setAnimationStatus] = React.useState<AnimationStatus>("initial");
 
-  const show = useCallback(async () => {
+  const onShow = useCallback(async () => {
     let animateInstance;
     await onBeforeShow?.();
     setVisible(true);
     if (useAnimation) {
       await waitFor(() => !!ref.current);
-      // setAnimationStatus(x => (x === "hidden" ? "showing" : x));
       assert(!!ref.current, "ref.current is required");
       anime.remove([ref.current, ref.current.querySelector("co-body")]);
       animateInstance = await animate(true, ref.current);
@@ -44,7 +41,7 @@ export const useModal = (option: useModalOption) => {
     return animateInstance;
   }, [animate, onAfterShow, onBeforeShow, useAnimation]);
 
-  const hide = useCallback(async () => {
+  const onHide = useCallback(async () => {
     let animateInstance;
 
     await onBeforeHide?.();
@@ -58,5 +55,5 @@ export const useModal = (option: useModalOption) => {
     await onAfterHide?.();
     return animateInstance;
   }, [animate, onAfterHide, onBeforeHide, useAnimation]);
-  return { show, hide, visible, ref } as const;
+  return { onShow, onHide, visible, ref } as const;
 };

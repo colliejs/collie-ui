@@ -30,7 +30,7 @@ const ModalWrapper1 = () => {
 const ModalWrapper2 = () => {
   const { visible } = useModalCtx();
   return (
-    <Modal style={{ top: 100 }} defaultHidden >
+    <Modal style={{ top: 100 }} defaultHidden>
       <div style={{ padding: 50, background: "black" }}>
         <p>hello</p>
         <CloseBtn />
@@ -51,6 +51,20 @@ export const MyModal1: React.FC = props => {
 export const MyModal2: React.FC = props => {
   return (
     <div>
+      <ModalProvider>
+        <TriggerBtn />
+        <ModalWrapper2 />
+      </ModalProvider>
+    </div>
+  );
+};
+export const MultiModalExisted: React.FC = props => {
+  return (
+    <div>
+      <ModalProvider>
+        <TriggerBtn />
+        <ModalWrapper2 />
+      </ModalProvider>
       <ModalProvider>
         <TriggerBtn />
         <ModalWrapper2 />

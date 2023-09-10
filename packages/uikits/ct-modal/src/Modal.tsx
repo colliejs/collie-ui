@@ -16,10 +16,6 @@ declare global {
   }
 }
 
-export type BaseModalPropsWithoutRef =
-  React.ComponentPropsWithoutRef<"div"> & {
-    defaultHidden?: boolean;
-  };
 //===========================================================
 // Mask
 //===========================================================
@@ -47,6 +43,10 @@ export const StyledMask = styled(
 //===========================================================
 // Modal
 //===========================================================
+export type BaseModalPropsWithoutRef =
+  React.ComponentPropsWithoutRef<"div"> & {
+    defaultHidden?: boolean;
+  };
 export const Modal: React.FC<BaseModalPropsWithoutRef> = props => {
   const { children, defaultHidden = false, ...restProps } = props;
   const { visible, ref } = useModalCtx();
@@ -63,17 +63,18 @@ export const Modal: React.FC<BaseModalPropsWithoutRef> = props => {
 };
 Modal.displayName = "Modal";
 
+//===========================================================
+// ModalProvider
+//===========================================================
 export type ModalProviderProps = {
   children?: React.ReactNode;
 } & useModalOption;
 
 export const ModalProvider: React.FC<ModalProviderProps> = props => {
   const { children, ...useModalOption } = props;
-  const { show, hide, visible, ref } = useModal(useModalOption);
+  const { onShow, onHide, visible, ref } = useModal(useModalOption);
   return (
-    <modalCtx.Provider
-      value={{ visible: visible, onShow: show, onHide: hide, ref }}
-    >
+    <modalCtx.Provider value={{ visible, onShow, onHide, ref }}>
       {children}
     </modalCtx.Provider>
   );

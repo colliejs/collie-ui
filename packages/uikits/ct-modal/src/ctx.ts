@@ -1,10 +1,12 @@
-import { noop } from "@c3/utils";
+import { AnimeInstance } from "@collie-ui/animation";
 import React from "react";
 import { createContext } from "react";
-
+const noop = async () => {
+  return undefined;
+};
 const defaultModalValue: {
-  onShow: () => void;
-  onHide: () => void;
+  onShow: () => Promise<AnimeInstance[] | undefined>;
+  onHide: () => Promise<AnimeInstance[] | undefined>;
   visible: boolean;
   ref: React.MutableRefObject<HTMLDivElement | null>;
 } = { onShow: noop, onHide: noop, visible: false, ref: { current: null } };
