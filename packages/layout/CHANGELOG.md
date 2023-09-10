@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.17](https://github.com/yuejs/c3/compare/@collie-ui/layout@1.0.16...@collie-ui/layout@1.0.17) (2023-09-10)
+
+**Note:** Version bump only for package @collie-ui/layout
+
 ## [1.0.16](https://github.com/yuejs/c3/compare/@collie-ui/layout@1.0.15...@collie-ui/layout@1.0.16) (2023-09-08)
 
 **Note:** Version bump only for package @collie-ui/layout
