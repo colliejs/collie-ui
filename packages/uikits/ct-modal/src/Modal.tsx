@@ -2,6 +2,8 @@ import { styled } from "@collie-ui/common";
 import { mask as _mask } from "@collie-ui/css";
 import { Fixed } from "@collie-ui/layout";
 import React from "react";
+import { useModal, useModalOption } from "./useModal";
+import { modalCtx, useModalCtx } from "./ctx";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -14,25 +16,30 @@ declare global {
   }
 }
 
-export type BaseModalPropsWithoutRef = {
-  mask?: React.ForwardRefExoticComponent<any>;
-  visible?: boolean;
-} & React.ComponentPropsWithoutRef<"div">;
+export type BaseModalPropsWithoutRef =
+  React.ComponentPropsWithoutRef<"div"> & {
+    defaultHidden?: boolean;
+  };
 //===========================================================
 // Mask
 //===========================================================
 export const StyledMask = styled(
   Fixed,
   {
-    // opacity: 0,
-    // transform: "scale(0)",
     contentVisibility: "auto",
     zIndex: 100,
-    "&[data-state='visible']": { opacity: 1, pointerEvents: "auto" },
-    // "&[data-state='showing']": { opacity: 1, pointerEvents: "auto" },
-    // "&[data-state='hidding']": { opacity: 1, pointerEvents: "auto" },
-    "&[data-state='hidden']": { opacity: 0, pointerEvents: "none" },
+    background: "rgba(0 ,0, 0, 0.2)",
+    "&[data-state='visible']": { pointerEvents: "auto" },
+    "&[data-state='hidden']": { pointerEvents: "none" },
     ..._mask,
+    variants: {
+      defaultHidden: {
+        true: {
+          opacity: 0,
+          // pointerEvents: "none",
+        },
+      },
+    },
   },
   { as: "co-mask" }
 );
@@ -40,24 +47,34 @@ export const StyledMask = styled(
 //===========================================================
 // Modal
 //===========================================================
-export const Modal = React.forwardRef<
-  HTMLDivElement,
-  BaseModalPropsWithoutRef
->((props, ref) => {
-  const {
-    mask: MyMask = StyledMask,
-    visible,
-    children,
-    ...restProps
-  } = props;
+export const Modal: React.FC<BaseModalPropsWithoutRef> = props => {
+  const { children, defaultHidden = false, ...restProps } = props;
+  const { visible, ref } = useModalCtx();
   return (
-    <MyMask
+    <StyledMask
       data-state={visible ? "visible" : "hidden"}
-      {...restProps}
+      defaultHidden={defaultHidden}
       ref={ref}
+      {...restProps}
     >
       <co-body>{children}</co-body>
-    </MyMask>
+    </StyledMask>
   );
-});
+};
 Modal.displayName = "Modal";
+
+export type ModalProviderProps = {
+  children?: React.ReactNode;
+} & useModalOption;
+
+export const ModalProvider: React.FC<ModalProviderProps> = props => {
+  const { children, ...useModalOption } = props;
+  const { show, hide, visible, ref } = useModal(useModalOption);
+  return (
+    <modalCtx.Provider
+      value={{ visible: visible, onShow: show, onHide: hide, ref }}
+    >
+      {children}
+    </modalCtx.Provider>
+  );
+};

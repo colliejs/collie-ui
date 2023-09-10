@@ -16,7 +16,7 @@ export const animate = async (visible: boolean, mask: HTMLElement): Promise<Anim
   ]);
 };
 
-export const setScrollable = (scrollable: boolean) => {
+export const setBodyScrollable = (scrollable: boolean) => {
   if (scrollable) {
     document.body.style.overflow = "auto";
   } else {

@@ -6,3 +6,4 @@
 /* @import url("@collie-ui/form/css") layer(form); */
 /* @import url("@collie-ui/ct-modal/css") layer(ct-modal); */
 /* @import url("@collie-ui/ct-tabs/css") layer(ct-tabs); */
+@import '../dist/index.css'

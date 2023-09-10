@@ -4,7 +4,8 @@ import glob from "glob";
 import { mergeConfig } from "vite";
 import Inspect from "vite-plugin-inspect";
 
-const xpath = "packages/atomic/src/Image/__tests__/**";
+// const xpath = "packages/atomic/src/Image/__tests__/**";
+const xpath = "packages/uikits/ct-modal/**/__tests__/**";
 import yue from "@colliejs/vite";
 import { collieConfig } from "../collie-config.mjs";
 
