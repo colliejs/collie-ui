@@ -77,8 +77,6 @@ export type TextWithTooltipProps = {
   children: React.ReactNode;
   tooltipProps?: React.ComponentProps<typeof Tooltip>;
 } & React.ComponentProps<typeof Text>;
-type x = React.ComponentProps<typeof Text>;
-type x1 = x["ref"];
 export const TextWithTooltip: React.FC<TextWithTooltipProps> = props => {
   const {
     children,

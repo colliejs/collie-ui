@@ -22,7 +22,7 @@ export const PopoverX = () => {
         open={clickVisible}
         onOpenChange={setClickVisible}
         floating={Overlay}
-        placement="bottom"
+        placement="top"
       >
         <button>click</button>
       </Popover>
@@ -30,6 +30,8 @@ export const PopoverX = () => {
         open={hoverVisible}
         onOpenChange={setHoverVisible}
         floating={Overlay}
+        placement="top"
+
         trigger={["hover"]}
       >
         <button>hover</button>

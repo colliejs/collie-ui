@@ -16,6 +16,7 @@ export const StyledImage = styled(
   Atomic,
   {
     objectPosition: "center",
+    objectFit: "cover",
     w: "100%",
     h: "100%",
     flexShrink: 0,
@@ -37,7 +38,7 @@ export const StyledImage = styled(
         },
       },
       blur: {
-        dynamic: (px) => ({ filter: `blur(${px})` }),
+        dynamic: px => ({ filter: `blur(${px})` }),
       },
     },
   },

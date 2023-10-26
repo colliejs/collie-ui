@@ -1,8 +1,32 @@
 {
 	"publishedPackages": [
 		{
+			"name": "@collie-ui/atomic",
+			"version": "1.0.15"
+		},
+		{
+			"name": "@collie-ui/layout",
+			"version": "1.0.17"
+		},
+		{
+			"name": "@collie-ui/ct-floating-ui",
+			"version": "1.0.17"
+		},
+		{
+			"name": "@collie-ui/ct-infinite-loading",
+			"version": "1.0.22"
+		},
+		{
 			"name": "@collie-ui/ct-modal",
-			"version": "1.0.20"
+			"version": "1.0.21"
+		},
+		{
+			"name": "@collie-ui/ct-tabs",
+			"version": "1.0.17"
+		},
+		{
+			"name": "@collie-ui/form",
+			"version": "1.0.17"
 		}
 	]
 }

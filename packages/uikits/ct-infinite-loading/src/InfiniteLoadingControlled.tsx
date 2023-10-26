@@ -22,7 +22,7 @@ export type InfiniteLoadingControlledProps<
   getReqPara?: (
     pageNo: number
   ) => Omit<_RawReqParameter, "pageNo" | "pageSize">;
-  renderItem?(props: T): React.ReactNode;
+  renderItem(props: T): React.ReactNode;
 } & Omit<
   InfiniteLoadingProps<T>,
   "loading" | "hasMore" | "onNextPage" | "renderItem" | "data"
