@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.20](https://github.com/border-collie-js/border-collie-ui/compare/@collie-ui/ct-tabs@1.0.19...@collie-ui/ct-tabs@1.0.20) (2023-11-04)
+
+**Note:** Version bump only for package @collie-ui/ct-tabs
+
 ## [1.0.19](https://github.com/border-collie-js/border-collie-ui/compare/@collie-ui/ct-tabs@1.0.18...@collie-ui/ct-tabs@1.0.19) (2023-11-04)
 
 **Note:** Version bump only for package @collie-ui/ct-tabs
