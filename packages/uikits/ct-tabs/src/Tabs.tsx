@@ -18,4 +18,4 @@ export const Menus = <T extends TabItemType, R extends "row" | "column">(
 //===========================================================
 // Tabs
 //===========================================================
-export const Tabs = BaseTabs;
+export const Tabs = Menus;

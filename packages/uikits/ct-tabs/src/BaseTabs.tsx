@@ -18,13 +18,6 @@ const StyledContentList = styled(List, {
 });
 
 //===========================================================
-// useTab
-//===========================================================
-export const useTabs = <T extends TabItemType>(data: T[]) => {
-  return useList(data);
-};
-
-//===========================================================
 // BaseTab
 //===========================================================
 export type TabItemType = {
@@ -52,7 +45,7 @@ export const BaseTabs = <
 ) => {
   const { data, direction, renderItem, renderContent, ...restProps } =
     props;
-  const Layout = direction === "row" ? Col : Row;
+  const Layout = direction === "row" ? Row : Col;
   const nav = useMemo(
     () => (
       <List
