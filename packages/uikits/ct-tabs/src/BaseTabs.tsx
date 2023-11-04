@@ -46,7 +46,7 @@ export const BaseTabs = <
   const { data, direction, renderItem, renderContent, ...restProps } =
     props;
   const Layout = direction === "row" ? Row : Col;
-  const nav = useMemo(
+  const navbar = useMemo(
     () => (
       <List
         as="co-nav"
@@ -57,16 +57,29 @@ export const BaseTabs = <
     ),
     [direction, data, renderItem]
   );
-  const activeItem = data.find(e => e.active);
-  const content =
-    activeItem &&
-    (activeItem?.renderContent?.(activeItem) ||
-      renderContent?.(activeItem));
+
+  //TODO:一开始就渲染了所有元素
+  const contentList = useMemo(
+    () => (
+      <List
+        data={data}
+        renderItem={(e: T) => (
+          <div
+            className={`tab-content ${e.active ? "active" : "inactive"}`}
+            style={{ display: e.active ? "block" : "none" }}
+          >
+            {e.renderContent?.(e) || renderContent?.(e)}
+          </div>
+        )}
+      />
+    ),
+    [data, renderContent]
+  );
 
   return (
     <Layout as="co-tabs" {...restProps}>
-      {nav}
-      {content}
+      {navbar}
+      {contentList}
     </Layout>
   );
 };

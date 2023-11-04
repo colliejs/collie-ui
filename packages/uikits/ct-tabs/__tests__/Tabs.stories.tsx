@@ -17,14 +17,12 @@ const initialData: TabDataType<Item> = [
     title: "name1",
     to: "/account#profile",
     active: true,
-    renderContent: () => <p>content1</p>,
   },
   {
     id: "2",
     title: "name2",
     to: "/account#222",
     active: false,
-    renderContent: () => <p>content2</p>,
   },
   {
     id: "3",
@@ -50,12 +48,16 @@ export const TabsTest = () => {
   return (
     <Tabs
       data={data}
-      direction="row"
       renderItem={e => {
         return <Text onClick={() => onClick(e)}>{e.title}</Text>;
       }}
       renderContent={e => {
-        return <div>content-${e.title}</div>;
+        return (
+          <div>
+            content-${e.title}
+            <input placeholder="input something"></input>
+          </div>
+        );
       }}
     ></Tabs>
   );

@@ -37,11 +37,8 @@ const config: StorybookConfig = {
       plugins: [
         Inspect(),
         yue({
-          index: path.resolve(__dirname, "../index.ts"),
           exclude: /(dist\/)/,
           styledConfig: collieConfig,
-          styledComponentCssFile: "dist/styledComponent.css",
-          styledElementCssFile: "dist/styledElement.css",
         }),
       ],
       externals: ["ethers"],
