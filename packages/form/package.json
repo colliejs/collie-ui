@@ -3,7 +3,7 @@
   "version": "1.0.18",
   "description": "form",
   "keywords": [],
-  "author": "yuejs <colliedog1001@gmail.com>",
+  "author": "collie <colliedog1001@gmail.com>",
   "license": "MIT",
   "directories": {
     "lib": "dist",
@@ -15,7 +15,7 @@
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yuejs/c3.git"
+    "url": "git+https://github.com/collie-ui/collie-ui.git"
   },
   "scripts": {
     "test": "jest --config ../../jest.config.ts --rootDir .",
@@ -27,9 +27,9 @@
     "watchtype": "tsc --project . --watch"
   },
   "bugs": {
-    "url": "https://github.com/yuejs/c3/issues"
+    "url": "https://github.com/collie-ui/collie-ui/issues"
   },
-  "homepage": "https://github.com/yuejs/c3#readme",
+  "homepage": "https://github.com/collie-ui/collie-ui#readme",
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
     "@collie-ui/atomic": "workspace:^",

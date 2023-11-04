@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.0.14](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.13...@collie-ui/animation@1.0.14) (2023-10-26)
+## [1.0.14](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.13...@collie-ui/animation@1.0.14) (2023-10-26)
 
 **Note:** Version bump only for package @collie-ui/animation
 
@@ -10,49 +10,49 @@ All notable changes to this project will be documented in this file. See [Conven
 
 ### Features
 
-- collie-ui ([3dfa5e4](https://github.com/yuejs/c3/commit/3dfa5e4eadca863919e9ffbb3dfb9ab726977c7e))
+- collie-ui ([3dfa5e4](https://github.com/collie-ui/collie-ui/commit/3dfa5e4eadca863919e9ffbb3dfb9ab726977c7e))
 
-## [1.0.12](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.11...@collie-ui/animation@1.0.12) (2023-09-08)
-
-**Note:** Version bump only for package @collie-ui/animation
-
-## [1.0.11](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.10...@collie-ui/animation@1.0.11) (2023-09-03)
+## [1.0.12](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.11...@collie-ui/animation@1.0.12) (2023-09-08)
 
 **Note:** Version bump only for package @collie-ui/animation
 
-## [1.0.10](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.9...@collie-ui/animation@1.0.10) (2023-09-02)
+## [1.0.11](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.10...@collie-ui/animation@1.0.11) (2023-09-03)
 
 **Note:** Version bump only for package @collie-ui/animation
 
-## [1.0.9](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.8...@collie-ui/animation@1.0.9) (2023-08-19)
+## [1.0.10](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.9...@collie-ui/animation@1.0.10) (2023-09-02)
 
 **Note:** Version bump only for package @collie-ui/animation
 
-## [1.0.8](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.7...@collie-ui/animation@1.0.8) (2023-07-16)
+## [1.0.9](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.8...@collie-ui/animation@1.0.9) (2023-08-19)
 
 **Note:** Version bump only for package @collie-ui/animation
 
-## [1.0.7](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.6...@collie-ui/animation@1.0.7) (2023-07-16)
+## [1.0.8](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.7...@collie-ui/animation@1.0.8) (2023-07-16)
 
 **Note:** Version bump only for package @collie-ui/animation
 
-## [1.0.6](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.5...@collie-ui/animation@1.0.6) (2023-07-07)
+## [1.0.7](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.6...@collie-ui/animation@1.0.7) (2023-07-16)
 
 **Note:** Version bump only for package @collie-ui/animation
 
-## [1.0.5](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.4...@collie-ui/animation@1.0.5) (2023-07-01)
+## [1.0.6](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.5...@collie-ui/animation@1.0.6) (2023-07-07)
 
 **Note:** Version bump only for package @collie-ui/animation
 
-## [1.0.4](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.3...@collie-ui/animation@1.0.4) (2023-07-01)
+## [1.0.5](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.4...@collie-ui/animation@1.0.5) (2023-07-01)
 
 **Note:** Version bump only for package @collie-ui/animation
 
-## [1.0.3](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.1...@collie-ui/animation@1.0.3) (2023-06-30)
+## [1.0.4](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.3...@collie-ui/animation@1.0.4) (2023-07-01)
 
 **Note:** Version bump only for package @collie-ui/animation
 
-## [1.0.2](https://github.com/yuejs/c3/compare/@collie-ui/animation@1.0.1...@collie-ui/animation@1.0.2) (2023-06-30)
+## [1.0.3](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.1...@collie-ui/animation@1.0.3) (2023-06-30)
+
+**Note:** Version bump only for package @collie-ui/animation
+
+## [1.0.2](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.1...@collie-ui/animation@1.0.2) (2023-06-30)
 
 **Note:** Version bump only for package @collie-ui/animation
 
@@ -60,4 +60,4 @@ All notable changes to this project will be documented in this file. See [Conven
 
 ### Features
 
-- first ([c080168](https://github.com/yuejs/c3/commit/c08016812d92193e95c9600e6121a9e57c6a9165))
+- first ([c080168](https://github.com/collie-ui/collie-ui/commit/c08016812d92193e95c9600e6121a9e57c6a9165))
