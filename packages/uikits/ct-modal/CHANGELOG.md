@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.23](https://github.com/border-collie-js/border-collie-ui/compare/@collie-ui/ct-modal@1.0.22...@collie-ui/ct-modal@1.0.23) (2023-11-05)
+
+**Note:** Version bump only for package @collie-ui/ct-modal
+
 ## [1.0.22](https://github.com/border-collie-js/border-collie-ui/compare/@collie-ui/ct-modal@1.0.21...@collie-ui/ct-modal@1.0.22) (2023-10-26)
 
 **Note:** Version bump only for package @collie-ui/ct-modal

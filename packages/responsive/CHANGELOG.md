@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.11](https://github.com/collie-ui/collie-ui/compare/@collie-ui/responsive@1.0.10...@collie-ui/responsive@1.0.11) (2023-11-05)
+
+### Features
+
+- remove ([35a7a53](https://github.com/collie-ui/collie-ui/commit/35a7a531845a08f99114a7d707c83c1e84d0d0e4))
+
 ## [1.0.10](https://github.com/collie-ui/collie-ui/compare/@collie-ui/responsive@1.0.9...@collie-ui/responsive@1.0.10) (2023-10-26)
 
 **Note:** Version bump only for package @collie-ui/responsive
