@@ -11,7 +11,6 @@ declare global {
   }
 }
 
-
 export const Row = styled(
   Box,
   {
@@ -21,15 +20,15 @@ export const Row = styled(
     justifyContent: "flex-start",
     variants: {
       gap: {
-        dynamic: gap => ({ ...rgap(gap) }),
+        dynamic: gap => ({ ...rgap(gap as string) }),//TODO: fixme
       },
       fx: {
-        dynamic: (fx: string) => ({
+        dynamic: fx => ({
           justifyContent: fx,
         }),
       },
       fy: {
-        dynamic: (fy: string) => ({
+        dynamic: fy => ({
           alignItems: fy,
         }),
       },

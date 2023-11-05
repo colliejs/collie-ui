@@ -1,9 +1,6 @@
-import { useExclusive } from "@c3/react";
-import { Color } from "@c3/utils";
 import { styled } from "@collie-ui/common";
-import React, { useState, useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { Box as _Box } from "./Box";
-import { Debug } from "@c3/types";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace

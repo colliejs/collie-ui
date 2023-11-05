@@ -10,7 +10,6 @@ declare global {
   }
 }
 
-
 /**
  * Responsive
  * column on mobile, row on desktop
@@ -25,6 +24,7 @@ export const Responsive = styled(Box, {
   },
   variants: {
     fx: {
+      //@ts-ignore
       dynamic: fx => ({
         justifyContent: fx,
         "@phone": {
@@ -33,6 +33,7 @@ export const Responsive = styled(Box, {
       }),
     },
     fy: {
+      //@ts-ignore
       dynamic: fy => ({
         alignItems: fy,
         "@phone": {
