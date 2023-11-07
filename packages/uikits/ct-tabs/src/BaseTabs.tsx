@@ -65,6 +65,7 @@ export const BaseTabs = <
         data={data}
         renderItem={(e: T) => (
           <div
+            key={e.id}
             className={`tab-content ${e.active ? "active" : "inactive"}`}
             style={{ display: e.active ? "block" : "none" }}
           >
