@@ -29,97 +29,6 @@ const colors = {
 export const collieConfig = _.merge(defaultConfig, {
   theme: {
     colors: {
-      //===========================================================
-      // primary-color:
-      //===========================================================
-      "primary-color": colors.basicBlue, //#0085ff Use this to emphasise main ui components (Button, Input...)
-      "primary-selected-color": colors.higlight, //#dff0ff
-      "primary-hover-color": colors.darkBlue,
-      "primary-selected-hover-color": "#aed4fc", //有问题?
-      //===========================================================
-      // positive color
-      // Use when you want to indicate sometime positive (success, completion of something...)
-      //===========================================================
-      "positive-color": colors.success,//#00ca72
-      "positive-color-hover": "#00a25b",
-      "positive-color-selected": "#bbdbc9",
-      "positive-color-selected-hover": "#b5cec0",
-
-      //===========================================================
-      // negative color
-      // Use when you want to indicate sometime negative (error, failure of something...)
-      //===========================================================
-      "negative-color": colors.error,//#d83a52
-      "negative-color-hover": "#b63546",
-      "negative-color-selected": "#f4c3cb",
-      "negative-color-selected-hover": "#ecb7bf",
-
-      //===========================================================
-      // warning color
-      // Use when you want to indicate sometime warning (severity, alert, caution...)
-      //===========================================================
-      "warning-color": "#ffcb00",
-      "warning-color-hover": "#eaaa15",
-      "warning-color-selected": "#fceba1",
-      "warning-color-selected-hover": "#f2d973",
-      "dark-color": colors.mudBlack,//#323338
-
-      //===========================================================
-      // background color
-      //===========================================================
-      "background-primary": "#ffffff",
-      "background-hover": "#dcdfec", //Use as hover color for primary background color
-      "background-grey": "#f6f7fb",
-      "background-dark": "#676879", //#323338
-      "background-dark-on-secondary": colors.riverstoneGray,//#f5f6f8
-
-      //ui
-      "background-dialog": colors.snowWhite,
-      "background-modal": colors.snowWhite,
-      "background-main-nav": colors.surface,
-
-      //Inverted background color (opposite of primary background color)
-      "background-inverted": "#323338",
-      "background-disabled": "#ecedf5",
-      "background-color": "#ffffff", ///FIXME:???
-
-
-      //===========================================================
-      // Text color
-      //===========================================================
-      "text-primary": colors.mudBlack, //#323338 //Use for default text color
-      "text-secondary": colors.asphalt, //#676879//Use when you need text with lesser importance
-      "text-disabled": colors.asphalt, //#676879
-      "text-on-inverted": colors.snowWhite,
-      "text-on-primary": colors.snowWhite,
-      "text-secondary-on-secondary": "#676879",
-      "placeholder": colors.asphalt, //#676879
-      "link": colors.linkColor, //#1f76c2
-
-      //===========================================================
-      // icon
-      //===========================================================
-      "icon": colors.asphalt, //#676879
-      "icon-hover": colors.wolfGray,
-
-
-      //===========================================================
-      // border color
-      //===========================================================
-      "ui-border-color": "#c3c6d4", //Border color for ui elements and components (Button, Input...)
-      "layout-border-color": "#d0d4e4",//Border color for general layout and separators (Leftpane, Menu Divider...)
-
-
-
-      //background
-
-
-
-
-      "private-color": colors.private,
-      "shareable-color": colors.purple,
-
-
 
 
     },
@@ -144,15 +53,6 @@ export const collieConfig = _.merge(defaultConfig, {
     },
     letterSpacings: {},
     fontSizes: {
-      1: "12px",
-      2: "14px",
-      3: "16px",
-      4: "18px",
-      5: "20px",
-      6: "22px",
-      7: "28px",
-      8: "36px",
-      9: "60px",
       "xs": "12px",
       "sm": "14px",
       "md": "16px",
@@ -161,27 +61,12 @@ export const collieConfig = _.merge(defaultConfig, {
       "xxl": "30px",
     },
     lineHeights: {
-      "line-height-10": "18px",
-      "line-height-20": "24px",
-      "line-height-30": "24px",
-      "line-height-40": "24px",
-      "line-height-50": "32px",
-      "line-height-60": "42px",
       "sm": 1,
       "md": 1.2,
       "lg": 1.4,
     },
 
     space: {
-      1: "4px",
-      2: "8px",
-      3: "16px",
-      4: "20px",
-      5: "24px",
-      6: "32px",
-      7: "48px",
-      8: "64px",
-      9: "80px",
       xs: "4px",
       sm: "8px",
       md: "16px",
@@ -191,29 +76,24 @@ export const collieConfig = _.merge(defaultConfig, {
       xxxl: "64px",
     },
     sizes: {
-      1: "4px",
-      2: "8px",
-      3: "16px",
-      4: "20px",
-      5: "24px",
-      6: "32px",
-      7: "48px",
-      8: "64px",
-      9: "80px",
+      xs: "4px",
+      sm: "8px",
+      md: "16px",
+      lg: "24px",
+      xl: "32px",
+      xxl: "48px",
+      xxxl: "64px",
     },
 
     //radius
     radii: {
-      1: "4px",
-      2: "6px",
-      3: "8px",
-      4: "12px",
-      round: "50%",
-      pill: "9999px",
-      //=========//
-      sm: "4px",
-      md: "8px",
-      lg: "16px",
+      xs: "4px",
+      sm: "8px",
+      md: "16px",
+      lg: "24px",
+      xl: "32px",
+      xxl: "48px",
+      xxxl: "64px",
     },
     zIndices: {
       1: "100",
