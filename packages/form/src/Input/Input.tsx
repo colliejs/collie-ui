@@ -3,11 +3,11 @@ import { Row } from "@collie-ui/layout";
 import React, { ForwardRefRenderFunction } from "react";
 
 export type InputProps = {
-  prefix?: JSX.Element;
-  suffix?: JSX.Element;
+  prefix: React.ReactNode;
+  suffix: React.ReactNode;
   allowClear?: boolean;
   status?: "warning" | "error" | "success";
-} & JSX.IntrinsicElements["input"];
+} & React.ComponentPropsWithoutRef<"input">;
 
 const __Row = styled(Row, {
   ":where(& > input)": {
@@ -40,7 +40,7 @@ const _Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
   const { prefix, suffix, className, ...restProps } = props;
 
   return (
-    <__Row className={className} disabled={restProps.disabled}>
+    <__Row className={className}>
       {prefix}
       <__Input
         {...restProps}

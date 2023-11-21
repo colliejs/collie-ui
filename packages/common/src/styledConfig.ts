@@ -3,28 +3,6 @@ import _ from "lodash";
 import { CollieConfig } from "@colliejs/react";
 
 
-const colors = {
-  basicBlue: "#0085ff",
-  primary: "#0085ff",
-  primaryHover: "#0071d9",
-  linkColor: "#1f76c2",
-  gainsboro: "#e1e1e1",
-  snowWhite: "#fff",
-  darkBlue: "#0071d9",
-  success: "#00ca72",
-  purple: "#a358df",
-  error: "#e44258",
-  private: "#f65f7c",
-  share: "#a358df",
-  surface: "#292f4c",
-  wolfGray: "#c5c7d0",
-  mudBlack: "#323338",
-  dark: "#323338",
-  riverstoneGray: "#f5f6f8",
-  uiGrey: "#e6e9ef",
-  asphalt: "#676879",
-  higlight: "#dff0ff",
-};
 
 export const collieConfig = _.merge(defaultConfig, {
   theme: {

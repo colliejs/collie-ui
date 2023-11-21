@@ -33,12 +33,5 @@ export const Atomic = styled("div", {
         border: "1px solid red",
       },
     },
-    disabled: {
-      true: {
-        // cursor: "not-allowed",
-        pointerEvents: "none",
-      },
-    },
   },
 });
-
