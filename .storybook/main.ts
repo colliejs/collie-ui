@@ -5,7 +5,7 @@ import { mergeConfig } from "vite";
 import Inspect from "vite-plugin-inspect";
 
 // const xpath = "packages/atomic/src/Image/__tests__/**";
-const xpath = "packages/uikits/ct-tabs/**/__tests__/**";
+const xpath = "packages/layout/**/__tests__/**";
 import yue from "@colliejs/vite";
 import { collieConfig } from "../collie-config.mjs";
 
@@ -39,6 +39,7 @@ const config: StorybookConfig = {
         yue({
           exclude: /(dist\/)/,
           styledConfig: collieConfig,
+          entry: path.resolve(__dirname, "../index.ts"),
         }),
       ],
       externals: ["ethers"],

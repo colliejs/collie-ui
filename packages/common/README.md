@@ -1,6 +1,6 @@
 # `@collie-ui/css`
 
-> TODO: description
+> TODO: 
 
 ## Usage
 
