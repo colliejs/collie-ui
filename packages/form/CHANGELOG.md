@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.24](https://github.com/collie-ui/collie-ui/compare/@collie-ui/form@1.0.23...@collie-ui/form@1.0.24) (2023-11-25)
+
+**Note:** Version bump only for package @collie-ui/form
+
 ## [1.0.23](https://github.com/collie-ui/collie-ui/compare/@collie-ui/form@1.0.22...@collie-ui/form@1.0.23) (2023-11-22)
 
 **Note:** Version bump only for package @collie-ui/form
