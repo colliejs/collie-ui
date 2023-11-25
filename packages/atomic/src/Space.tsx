@@ -12,8 +12,6 @@ declare global {
   }
 }
 
-
-
 export type SpaceProps = {
   size: number;
 };
@@ -30,12 +28,12 @@ export const Space = styled(
         },
       },
       x: {
-        dynamic(x) {
+        dynamic_at(x) {
           return { w: x, height: 1 };
         },
       },
       y: {
-        dynamic(y) {
+        dynamic_at(y) {
           return { w: 1, h: y };
         },
       },
