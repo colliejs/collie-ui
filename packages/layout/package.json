@@ -35,7 +35,6 @@
     "@collie-ui/atomic": "workspace:^",
     "@collie-ui/common": "workspace:^",
     "@collie-ui/css": "workspace:^",
-    "@collie-ui/responsive": "workspace:^",
     "@stitches/react": "^1.2.8",
     "classnames": "^2.3.2"
   },

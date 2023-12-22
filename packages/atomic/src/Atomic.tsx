@@ -30,7 +30,7 @@ export const Atomic = styled("div", {
     },
     dbg: {
       true: {
-        border: "1px solid red",
+        outline: "1px solid red",
       },
     },
   },

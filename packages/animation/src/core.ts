@@ -1,5 +1,4 @@
 import { dbg } from "@c3/dbg";
-import { waitFor } from "@c3/utils";
 import { default as anime, default as _anime } from "animejs";
 //@ts-ignore
 window.__anime = _anime;

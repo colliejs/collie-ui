@@ -1,6 +1,6 @@
-import { makeStyled } from "@colliejs/react";
-import { collieConfig } from "./styledConfig";
-
-export const styled = makeStyled(collieConfig);
-
-export { collieConfig };
+import { makeStyled, defaultConfig } from "@colliejs/react";
+import type { BaseConfig } from "@colliejs/core";
+export const styled = makeStyled({
+  ...defaultConfig,
+  prefix: "co",
+} as const satisfies BaseConfig);
