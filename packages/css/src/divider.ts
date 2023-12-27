@@ -1,17 +1,15 @@
-import { Placement } from "@c3/types";
-import { CSSProperties, CSSPropertiesComplex } from "@colliejs/core";
+import { Side } from "@c3/types";
+import {  CSSObject } from "@colliejs/core";
 import { getPopoverPos } from "./layout";
 
 // //===========================================================
 // // TODO:z
 // //===========================================================
-// export const divider = (
-//   color: CSSProperties["color"]
-// ): CSSPropertiesComplex => ({
-//   "& > :not(:last-child)": {
-//     borderBottom: `1px solid ${color}`,
-//   },
-// });
+export const divider = (color: CSSObject<object>["color"]): CSSObject<object> => ({
+  "& > :not(:last-child)": {
+    borderBottom: `1px solid ${color}`,
+  },
+});
 
 // export const divider_p = (color: string): CSSPropertiesComplex => ({
 //   "& > *:not(:last-child)::after": {
@@ -21,11 +19,8 @@ import { getPopoverPos } from "./layout";
 //   },
 // });
 
-export const dividerAt = (
-  placement: Placement,
-  css: CSSProperties
-): CSSPropertiesComplex => {
-  const geo: CSSProperties = {};
+export const dividerAt = (placement: Side, css: CSSObject<object>): CSSObject<object> => {
+  const geo: CSSObject<object> = {};
   switch (placement) {
     case "top":
     case "bottom":
@@ -38,9 +33,7 @@ export const dividerAt = (
       geo.height = "100%";
       break;
     default:
-      throw new Error(
-        "TypeError:placement must be one of top, bottom, left, right"
-      );
+      throw new Error("TypeError:placement must be one of top, bottom, left, right");
   }
 
   return {

@@ -7,7 +7,7 @@
     "jsx": "react-jsx",
     "types": ["node", "jest"],
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
     "checkJs": false,
@@ -15,10 +15,9 @@
     "outDir": "./dist",
     "incremental": true,
     "sourceMap": true,
-    "baseUrl": "./",
     "lib": ["ESNext", "DOM"],
-    "declaration": true
-    // "declarationMap": true
+    "declaration": true,
+    "declarationMap": true
   },
 
   "exclude": [

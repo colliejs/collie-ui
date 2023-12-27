@@ -1,10 +1,6 @@
-import { CSSProperties, CSSPropertiesComplex } from "@colliejs/core";
+import { CSSProperties, CSSObject } from "@colliejs/core";
 
-export const pseudoElement = (
-  pse: string,
-  properties: CSSProperties = {}
-): any => {
-  //FIXME
+export const pseudoElement = (pse: string, properties: CSSProperties = {}): CSSObject<object> => {
   return {
     [`&::${pse}`]: {
       position: "absolute",

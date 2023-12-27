@@ -1,12 +1,6 @@
 import { styled } from "@collie-ui/common";
-import React, {
-  ClassAttributes,
-  DetailedHTMLProps,
-  ForwardedRef,
-  HTMLAttributes,
-} from "react";
+import React, { ForwardedRef } from "react";
 import { Box } from "./Box";
-import { Debug } from "@c3/types";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace

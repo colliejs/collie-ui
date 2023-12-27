@@ -1,7 +1,7 @@
-import { CSSProperties } from "@colliejs/core";
-import { IPosition, xCenter, xyCenter, yCenter } from "./abs";
+import { CSSObject, CSSProperties } from "@colliejs/core";
+import { Pos, xCenter, xyCenter, yCenter } from "./abs";
 
-export const fixed = (pos: IPosition): CSSProperties => ({
+export const fixed = (pos: Pos): CSSObject<object> => ({
   position: "fixed",
   top: pos.top,
   left: pos.left,

@@ -1,6 +1,6 @@
-import { CSSProperties } from "@colliejs/core";
+import { CSSObject, CSSProperties } from "@colliejs/core";
 
-export const mask: CSSProperties = {
+export const mask = (css: CSSObject<object> = {}): CSSObject<object> => ({
   position: "fixed",
   top: 0,
   left: 0,
@@ -10,4 +10,5 @@ export const mask: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-};
+  ...css,
+});

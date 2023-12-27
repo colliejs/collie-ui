@@ -16,7 +16,6 @@ declare global {
  */
 export const Responsive = styled(Box, {
   display: "flex",
-  // flexDirection: ["column", "row"],
   flexDirection: "row",
   flexWrap: "nowrap",
   "@phone": {
@@ -24,8 +23,7 @@ export const Responsive = styled(Box, {
   },
   variants: {
     fx: {
-      //@ts-ignore
-      dynamic: fx => ({
+      dynamic: (fx) => ({
         justifyContent: fx,
         "@phone": {
           alignItems: fx,
@@ -33,7 +31,6 @@ export const Responsive = styled(Box, {
       }),
     },
     fy: {
-      //@ts-ignore
       dynamic: fy => ({
         alignItems: fy,
         "@phone": {

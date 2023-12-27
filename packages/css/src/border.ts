@@ -1,10 +1,10 @@
-import { CSSProperties, CSSPropertiesComplex } from "@colliejs/core";
+import {  CSSObject } from "@colliejs/core";
 import { HVDirection } from "@c3/types";
 
 export const borderRadiusForGroup = (
-  borderRadius: CSSProperties["borderRadius"],
+  borderRadius: CSSObject<object>["borderRadius"],
   direction: HVDirection
-): CSSPropertiesComplex => {
+): CSSObject<object> => {
   const isVertical = direction === "vertical";
   const firstElementProp = isVertical
     ? {
@@ -30,10 +30,7 @@ export const borderRadiusForGroup = (
   };
 };
 
-export const gradientRoundedBorder = (
-  bgColor: string,
-  gradient: string
-): CSSProperties => {
+export const gradientRoundedBorder = (bgColor: string, gradient: string): CSSObject<object> => {
   return {
     border: "1px solid transparent",
     backgroundImage: `linear-gradient(${bgColor}, ${bgColor}),${gradient}`,
@@ -46,7 +43,7 @@ export const roundBorderValue = (height: number) => {
   return height / 2;
 };
 
-export const gradientBorder = (gradient: string): CSSProperties => ({
+export const gradientBorder = (gradient: string): CSSObject<object> => ({
   borderStyle: "solid",
   borderImageWidth: "1px",
   borderImageSlice: 1,

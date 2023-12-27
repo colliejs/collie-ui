@@ -1,5 +1,6 @@
 import { styled } from "@collie-ui/common";
 import { Box } from "./Box";
+import { StyledObject } from "@colliejs/react";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -20,8 +21,9 @@ export const Col = styled(
     variants: {
       gap: {
         dynamic: value => ({
-          gap: value,
+          gapx: value,
         }),
+        a: { overflowX: 2 },
       },
       fx: {
         dynamic: fx => ({

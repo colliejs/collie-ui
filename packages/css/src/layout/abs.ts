@@ -1,56 +1,57 @@
-import { CSSProperties } from "@colliejs/core";
+import type { CSSObject, CSSProperties } from "@colliejs/core";
 
-export interface IYPosition {
-  top?: CSSProperties["top"];
-  bottom?: CSSProperties["bottom"];
+export interface YPos {
+  top?: CSSObject<object>["top"];
+  bottom?: CSSObject<object>["bottom"];
 }
-export interface IXPosition {
-  left?: CSSProperties["left"];
-  right?: CSSProperties["right"];
+export interface XPos {
+  left?: CSSObject<object>["left"];
+  right?: CSSObject<object>["right"];
 }
-export type IAbsPosition = "fixed" | "absolute";
+export type FixedOrAbs = "fixed" | "absolute";
 
-export interface IPosition extends IXPosition, IYPosition {}
+export interface Pos extends XPos, YPos {}
 
-//FIXME: SSR
-export const supportIndivideTransform = globalThis?.CSS?.supports?.(
-  "translate",
-  "0px"
-);
+export const xCenter =
+  (position: FixedOrAbs) =>
+  (ypos: YPos = {}): CSSObject<object> => {
+    return {
+      ...(ypos.top ? { top: ypos.top } : {}),
+      ...(ypos.bottom ? { bottom: ypos.bottom } : {}),
+      left: "50%",
+      position,
+      transform: "translateX(-50%)",
+      "@supports (translate: -50% 0%)": {
+        translate: "-50% 0%",
+      },
+    };
+  };
 
-export const xCenter = (position: IAbsPosition) => (ypos?: IYPosition) => {
+export const yCenter =
+  (postion: FixedOrAbs) =>
+  (xpos: XPos = {}): CSSObject<object> => {
+    return {
+      ...(xpos.left ? { left: xpos.left } : {}),
+      ...(xpos.right ? { right: xpos.right } : {}),
+      position: postion,
+      top: "50%",
+      transform: "translateY(-50%)",
+      "@supports (translate: 0% -50%)": {
+        translate: "0% -50%",
+      },
+    };
+  };
+
+export const xyCenter = (position: FixedOrAbs) => () => (): CSSObject<object> => {
   return {
-    top: ypos?.top,
-    bottom: ypos?.bottom,
-    left: "50%",
     position,
-    ...(supportIndivideTransform
-      ? { translate: "-50% 0%" } //FIXME: 0% maybe override the original value
-      : { transform: "translateX(-50%)" }),
-  } as CSSProperties;
-};
-
-export const yCenter = (postion: IAbsPosition) => (xpos?: IXPosition) => {
-  return {
-    left: xpos?.left,
-    right: xpos?.right,
-    position: postion,
-    top: "50%",
-    ...(supportIndivideTransform
-      ? { translate: "0% -50%" }
-      : { transform: "translateY(-50%)" }),
-  } as CSSProperties;
-};
-
-export const xyCenter = (position: IAbsPosition) => () => {
-  return {
-    position,
     left: "50%",
     top: "50%",
-    ...(supportIndivideTransform
-      ? { translate: "-50% -50%" }
-      : { transform: "translate(-50%,-50%)" }),
-  } as CSSProperties;
+    transform: "translate(-50%,-50%)",
+    "@supports (translate: -50% -50%)": {
+      translate: "-50% -50%",
+    },
+  };
 };
 
 export const absXCenter = xCenter("absolute");
@@ -59,7 +60,7 @@ export const absYCenter = yCenter("absolute");
 
 export const absXYCenter = xyCenter("absolute");
 
-export const abs = ({ left, top, right, bottom }: IPosition): CSSProperties => {
+export const abs = ({ left, top, right, bottom }: Pos): CSSObject<object> => {
   return { position: "absolute", left, right, top, bottom };
 };
 

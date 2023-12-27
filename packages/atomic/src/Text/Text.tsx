@@ -22,7 +22,7 @@ export const Text = styled("p", {
     },
     gradient: {
       dynamic(color) {
-        return textGradient(color as string);//FIXME
+        return textGradient(color);
       },
     },
     rows: {

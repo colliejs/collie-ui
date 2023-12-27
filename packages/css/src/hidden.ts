@@ -1,13 +1,13 @@
-import { CSSProperties } from "@colliejs/core";
+import { CSSObject, CSSProperties } from "@colliejs/core";
 
-export const toggleDisplay = (show: boolean): CSSProperties => ({
+export const toggleDisplay = (show: boolean): CSSObject<object> => ({
   display: show ? "flex" : "none",
 });
 
-export const hidden: CSSProperties = {
+export const hidden: CSSObject<object> = {
   display: "none",
 };
 
-export const toggleVisibility = (visibility: boolean): CSSProperties => ({
+export const toggleVisibility = (visibility: boolean): CSSObject<object> => ({
   visibility: visibility ? "visible" : "hidden",
 });

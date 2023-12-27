@@ -1,11 +1,9 @@
-import { CSSPropertiesComplex } from "@colliejs/core";
-import { Direction } from "@c3/types";
+import type { BaseConfig, CSSObject } from "@colliejs/core";
+import type { Direction } from "@c3/types";
 import { CSSProperties } from "@colliejs/core";
 import { getPopoverPos } from "./layout/placement";
 
-export const arrow = (
-  direction: "top" | "right" | "bottom" | "left"
-): CSSProperties => {
+export const arrow = (direction: "top" | "right" | "bottom" | "left"): CSSProperties => {
   let polygon;
   switch (direction) {
     case "top":
@@ -21,9 +19,7 @@ export const arrow = (
       polygon = "0% 0%, 0% 100%, 100% 50%";
       break;
     default:
-      throw new Error(
-        "TypeError:direction must be one of top, bottom, left, right"
-      );
+      throw new Error("TypeError:direction must be one of top, bottom, left, right");
   }
   return {
     clipPath: `polygon(${polygon})`,
@@ -34,19 +30,24 @@ export const arrow = (
 // pseudoArrow:
 // color of border of arrow is same as the border color of parent element
 //=====================================================================================================
+//TODO: FIXME. about the returnType of pseudoArrow , it should be CSSObject<Config>
 
 export const pseudoArrow = (
   direction: Direction,
   width: number,
   height: number,
-  css?: CSSProperties
-): CSSPropertiesComplex => {
+  css?: CSSObject<object>
+): CSSObject<object> => {
   const { border, ...restCss } = css || {};
   if (!border) {
     return {
-      _before: {
-        w: width,
-        h: height,
+      "&": {
+        postion: "relative",
+      },
+      "&::before": {
+        postion: "absolute",
+        width: width,
+        height: height,
         ...getPopoverPos(direction),
         ...arrow(direction),
         background: "inherit",
@@ -55,9 +56,7 @@ export const pseudoArrow = (
     };
   }
 
-  const res = (border as string).match(
-    /(?<size>\d+?)p?x? (?<type>\w+?) (?<color>.+)/
-  );
+  const res = (border as string).match(/(?<size>\d+?)p?x? (?<type>\w+?) (?<color>.+)/);
   // only support solid
   if (!res) {
     throw new Error(`invalid border: ${border}`);
@@ -67,7 +66,11 @@ export const pseudoArrow = (
   const w = width - +size - 1;
   const h = height - +size - 1;
   return {
-    _before: {
+    "&": {
+      position: "relative",
+    },
+    "&::before": {
+      positon: "absolute",
       w: width,
       h: height,
       ...getPopoverPos(direction),
@@ -75,7 +78,7 @@ export const pseudoArrow = (
       background: color,
       ...restCss,
     },
-    _after: {
+    "&::after": {
       w: w,
       h: h,
       ...getPopoverPos(direction),

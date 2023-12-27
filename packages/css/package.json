@@ -31,14 +31,6 @@
   },
   "homepage": "https://github.com/collie-ui/collie-ui#readme",
   "gitHead": "a080b5bb295baccb3f8477e15c372d7091a6a1cb",
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^21.1.0",
-    "@rollup/plugin-typescript": "^8.5.0",
-    "@types/js-beautify": "^1.13.3",
-    "rollup-plugin-typescript2": "^0.31.2",
-    "tslib": "^2.5.0",
-    "typescript": "^4.9.5"
-  },
   "type": "module",
   "exports": {
     ".": {
@@ -46,10 +38,13 @@
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     },
-    "./css": "./dist/index.css",
-    "./theme": "./dist/theme.css"
+    "./css": "./dist/index.css"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@c3/types": "^1.1.12",
+    "@collie-ui/common": "workspace:^"
   }
 }
