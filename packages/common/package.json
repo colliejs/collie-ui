@@ -1,6 +1,6 @@
 {
   "name": "@collie-ui/common",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Unstyled UI CSS",
   "keywords": [],
   "author": "collie <colliedog1001@gmail.com>",
@@ -31,7 +31,6 @@
   },
   "homepage": "https://github.com/collie-ui/collie-ui#readme",
   "gitHead": "a080b5bb295baccb3f8477e15c372d7091a6a1cb",
-  "devDependencies": {},
   "type": "module",
   "exports": {
     ".": {
@@ -44,6 +43,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {}
+  }
 }

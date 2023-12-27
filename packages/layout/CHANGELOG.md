@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.25](https://github.com/collie-ui/collie-ui/compare/@collie-ui/layout@1.0.24...@collie-ui/layout@1.0.25) (2023-12-27)
+
+### Features
+
+- remove some packages ([b90496e](https://github.com/collie-ui/collie-ui/commit/b90496e59c4122cf5459055715ceac9206b9eb8f))
+
 ## [1.0.24](https://github.com/collie-ui/collie-ui/compare/@collie-ui/layout@1.0.23...@collie-ui/layout@1.0.24) (2023-11-25)
 
 **Note:** Version bump only for package @collie-ui/layout
