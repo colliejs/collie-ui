@@ -20,9 +20,11 @@ export const xCenter =
       ...(ypos.bottom ? { bottom: ypos.bottom } : {}),
       left: "50%",
       position,
-      transform: "translateX(-50%)",
       "@supports (translate: -50% 0%)": {
         translate: "-50% 0%",
+      },
+      "@supports not (translate: -50% 0%)": {
+        transform: "translateX(-50%)",
       },
     };
   };
@@ -35,9 +37,11 @@ export const yCenter =
       ...(xpos.right ? { right: xpos.right } : {}),
       position: postion,
       top: "50%",
-      transform: "translateY(-50%)",
       "@supports (translate: 0% -50%)": {
         translate: "0% -50%",
+      },
+      "@supports not (translate: 0% -50%)": {
+        transform: "translateY(-50%)",
       },
     };
   };

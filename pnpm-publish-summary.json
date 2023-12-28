@@ -2,27 +2,27 @@
 	"publishedPackages": [
 		{
 			"name": "@collie-ui/common",
-			"version": "1.0.12"
+			"version": "1.0.13"
 		},
 		{
 			"name": "@collie-ui/css",
-			"version": "1.0.14"
+			"version": "1.0.15"
 		},
 		{
 			"name": "@collie-ui/animation",
-			"version": "1.0.21"
+			"version": "1.0.22"
 		},
 		{
 			"name": "@collie-ui/atomic",
-			"version": "1.0.23"
+			"version": "1.0.24"
 		},
 		{
 			"name": "@collie-ui/layout",
-			"version": "1.0.25"
+			"version": "1.0.26"
 		},
 		{
 			"name": "@collie-ui/form",
-			"version": "1.0.25"
+			"version": "1.0.26"
 		}
 	]
 }
