@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.16](https://github.com/collie-ui/collie-ui/compare/@collie-ui/css@1.0.15...@collie-ui/css@1.0.16) (2023-12-28)
+
+### Bug Fixes
+
+- [@supports](https://github.com/supports) sytanx for abs ([136b4dd](https://github.com/collie-ui/collie-ui/commit/136b4ddf8e38c9e5396659ce6436651dfe6e82fe))
+
 ## [1.0.15](https://github.com/collie-ui/collie-ui/compare/@collie-ui/css@1.0.14...@collie-ui/css@1.0.15) (2023-12-28)
 
 **Note:** Version bump only for package @collie-ui/css
