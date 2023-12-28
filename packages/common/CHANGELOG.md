@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/collie-ui/collie-ui/compare/@collie-ui/common@1.0.12...@collie-ui/common@1.0.13) (2023-12-28)
+
+### Bug Fixes
+
+- update colliejs and grid bug fix ([d52d7eb](https://github.com/collie-ui/collie-ui/commit/d52d7eba56323439c4a4d3bc5017d173b713197a))
+
 ## [1.0.12](https://github.com/collie-ui/collie-ui/compare/@collie-ui/common@1.0.11...@collie-ui/common@1.0.12) (2023-12-27)
 
 ### Features
