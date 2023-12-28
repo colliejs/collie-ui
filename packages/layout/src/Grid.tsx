@@ -1,11 +1,6 @@
 import { styled } from "@collie-ui/common";
 import React, { useState } from "react";
-import {
-  ListItemType,
-  List,
-  ListPropsWithoutRef,
-  useList,
-} from "./List";
+import { ListItemType, List, ListPropsWithoutRef, useList } from "./List";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -43,7 +38,7 @@ export const StyledGrid = styled(
     },
   },
   { as: "co-grid" }
-) as any; //TODO:
+);
 
 //===========================================================
 // useGrid
@@ -55,7 +50,10 @@ export const useGrid = (initialData: ListItemType[]) => {
 //===========================================================
 // Grid
 //===========================================================
-export type GridProps<T extends ListItemType> = ListPropsWithoutRef<T>;
+export type GridProps<T extends ListItemType> = {
+  data: T[];
+  renderItem?(props: T): React.ReactNode;
+} & React.ComponentPropsWithoutRef<typeof StyledGrid>;
 export const Grid = <T extends ListItemType>(props: GridProps<T>) => {
   return <StyledGrid {...props}></StyledGrid>;
 };

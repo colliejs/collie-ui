@@ -1,11 +1,5 @@
-import { LoadingOutlined } from "@ant-design/icons";
 import _ from "lodash";
-import React, {
-  ElementRef,
-  ForwardedRef,
-  useCallback,
-  useMemo,
-} from "react";
+import React, { useCallback, useMemo } from "react";
 import { Atomic } from "../Atomic";
 import { styled } from "@collie-ui/common";
 
@@ -77,8 +71,7 @@ export const Button = React.forwardRef(
         ref={ref}
         {...restProps}
       >
-        {loading &&
-          (loadingIcon || <LoadingOutlined className="loading-icon" />)}
+        {loading && loadingIcon}
         {children}
       </StyledButton>
     );
