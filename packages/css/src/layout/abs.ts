@@ -1,4 +1,5 @@
 import type { CSSObject, CSSProperties } from "@colliejs/core";
+import { propAssign } from "@c3/css";
 
 export interface YPos {
   top?: CSSObject<object>["top"];
@@ -16,8 +17,8 @@ export const xCenter =
   (position: FixedOrAbs) =>
   (ypos: YPos = {}): CSSObject<object> => {
     return {
-      ...(ypos.top ? { top: ypos.top } : {}),
-      ...(ypos.bottom ? { bottom: ypos.bottom } : {}),
+      ...propAssign("top", ypos.top),
+      ...propAssign("bottom", ypos.bottom),
       left: "50%",
       position,
       "@supports (translate: -50% 0%)": {
@@ -33,8 +34,8 @@ export const yCenter =
   (postion: FixedOrAbs) =>
   (xpos: XPos = {}): CSSObject<object> => {
     return {
-      ...(xpos.left ? { left: xpos.left } : {}),
-      ...(xpos.right ? { right: xpos.right } : {}),
+      ...propAssign("left", xpos.left),
+      ...propAssign("right", xpos.right),
       position: postion,
       top: "50%",
       "@supports (translate: 0% -50%)": {
