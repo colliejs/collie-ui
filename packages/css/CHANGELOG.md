@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.17](https://github.com/collie-ui/collie-ui/compare/@collie-ui/css@1.0.16...@collie-ui/css@1.0.17) (2023-12-29)
+
+### Bug Fixes
+
+- xCenter/yCenter assign prop isNull check ([4bfdb3e](https://github.com/collie-ui/collie-ui/commit/4bfdb3e00ba9d46fab4d8e95b620bea8ad644364))
+
 ## [1.0.16](https://github.com/collie-ui/collie-ui/compare/@collie-ui/css@1.0.15...@collie-ui/css@1.0.16) (2023-12-28)
 
 ### Bug Fixes
