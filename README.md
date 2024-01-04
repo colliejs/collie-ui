@@ -1,4 +1,4 @@
-# unstyled-ui
+# collie-ui
 
 一个提供原子方法和工具方法的 unstyled UI 库
 
