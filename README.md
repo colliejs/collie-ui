@@ -9,8 +9,6 @@
 | @collie-ui/atomic | 包括 text/icon/button/link 等常用基础组件。 |
 | @collie-ui/animation | 基于 animejs 的常用动画封装。 |
 | @collie-ui/responsive | 响应式相关的工具函数。 |
-| @collie-ui/form | 表单相关组件。 |
-| @collie-ui/uikits | 其他一些常用组件。 |
 
 
 TODO:
