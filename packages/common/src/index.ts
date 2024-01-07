@@ -1,6 +1,7 @@
 import { makeStyled } from "@colliejs/react";
-import  { type BaseConfig, defaultConfig } from "@colliejs/core";
+import { type BaseConfig } from "@colliejs/core";
+import { defaultConfig } from "@colliejs/config";
 export const styled = makeStyled({
+  ...defaultConfig,
   prefix: "co",
-  themeMap:defaultConfig.themeMap,
 } as const satisfies BaseConfig);

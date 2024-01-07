@@ -14,5 +14,5 @@ export const Link = styled(
       },
     },
   },
-  { as: "a", attrs: { target: "_blank" } }
+  { as: "a", target: "_blank" }
 );
