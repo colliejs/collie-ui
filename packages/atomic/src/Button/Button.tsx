@@ -22,8 +22,9 @@ export const StyledButton = styled(
       cursor: "not-allowed",
     },
   },
-  { as: "button" }
+  { as: "button" ,}
 );
+
 
 export const Button = React.forwardRef(
   (props: ButtonProps, ref: React.ForwardedRef<HTMLButtonElement>) => {
