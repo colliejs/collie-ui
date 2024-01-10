@@ -28,12 +28,12 @@ export const Space = styled(
         },
       },
       x: {
-        dynamic_at(x) {
+        dynamic(x) {
           return { w: x, height: 1 };
         },
       },
       y: {
-        dynamic_at(y) {
+        dynamic(y) {
           return { w: 1, h: y };
         },
       },
