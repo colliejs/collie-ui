@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.28](https://github.com/collie-ui/collie-ui/compare/@collie-ui/atomic@1.0.27...@collie-ui/atomic@1.0.28) (2024-01-10)
+
+### Bug Fixes
+
+- remove dynamic_at ([fedefa5](https://github.com/collie-ui/collie-ui/commit/fedefa5418cbb57d4a8a3bf4c3d424f80164eb88))
+
 ## [1.0.27](https://github.com/collie-ui/collie-ui/compare/@collie-ui/atomic@1.0.26...@collie-ui/atomic@1.0.27) (2024-01-07)
 
 **Note:** Version bump only for package @collie-ui/atomic
