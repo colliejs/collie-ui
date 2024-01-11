@@ -1,38 +1,31 @@
 # Change Log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.0.36](https://github.com/collie-ui/collie-ui/compare/@collie-ui/form@1.0.32...@collie-ui/form@1.0.36) (2024-01-11)
+
+### Features
+
+- type atomic ([5b84a49](https://github.com/collie-ui/collie-ui/commit/5b84a4904e0f5472709b67195e0b45cbfa425eb0))
+- type atomic ([2df1512](https://github.com/collie-ui/collie-ui/commit/2df15120fc666588f660acce756e7395b3f49daa))
+- type atomic ([808a629](https://github.com/collie-ui/collie-ui/commit/808a6291713e86b5d0d4b5b1920b5a669a7813bd))
 
 ## [1.0.35](https://github.com/collie-ui/collie-ui/compare/@collie-ui/form@1.0.32...@collie-ui/form@1.0.35) (2024-01-11)
 
-
 ### Features
 
-* type atomic ([2df1512](https://github.com/collie-ui/collie-ui/commit/2df15120fc666588f660acce756e7395b3f49daa))
-* type atomic ([808a629](https://github.com/collie-ui/collie-ui/commit/808a6291713e86b5d0d4b5b1920b5a669a7813bd))
-
-
-
-
+- type atomic ([2df1512](https://github.com/collie-ui/collie-ui/commit/2df15120fc666588f660acce756e7395b3f49daa))
+- type atomic ([808a629](https://github.com/collie-ui/collie-ui/commit/808a6291713e86b5d0d4b5b1920b5a669a7813bd))
 
 ## [1.0.34](https://github.com/collie-ui/collie-ui/compare/@collie-ui/form@1.0.32...@collie-ui/form@1.0.34) (2024-01-11)
 
-
 ### Features
 
-* type atomic ([808a629](https://github.com/collie-ui/collie-ui/commit/808a6291713e86b5d0d4b5b1920b5a669a7813bd))
-
-
-
-
+- type atomic ([808a629](https://github.com/collie-ui/collie-ui/commit/808a6291713e86b5d0d4b5b1920b5a669a7813bd))
 
 ## [1.0.33](https://github.com/collie-ui/collie-ui/compare/@collie-ui/form@1.0.32...@collie-ui/form@1.0.33) (2024-01-11)
 
 **Note:** Version bump only for package @collie-ui/form
-
-
-
-
 
 ## [1.0.32](https://github.com/collie-ui/collie-ui/compare/@collie-ui/form@1.0.31...@collie-ui/form@1.0.32) (2024-01-11)
 

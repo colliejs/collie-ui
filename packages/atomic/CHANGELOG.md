@@ -1,43 +1,36 @@
 # Change Log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.0.33](https://github.com/collie-ui/collie-ui/compare/@collie-ui/atomic@1.0.29...@collie-ui/atomic@1.0.33) (2024-01-11)
+
+### Features
+
+- type atomic ([5b84a49](https://github.com/collie-ui/collie-ui/commit/5b84a4904e0f5472709b67195e0b45cbfa425eb0))
+- type atomic ([2df1512](https://github.com/collie-ui/collie-ui/commit/2df15120fc666588f660acce756e7395b3f49daa))
+- type atomic ([808a629](https://github.com/collie-ui/collie-ui/commit/808a6291713e86b5d0d4b5b1920b5a669a7813bd))
+- type atomic ([d6ff951](https://github.com/collie-ui/collie-ui/commit/d6ff95199a0c79c9c985e18265ead1671a9fb89c))
 
 ## [1.0.32](https://github.com/collie-ui/collie-ui/compare/@collie-ui/atomic@1.0.29...@collie-ui/atomic@1.0.32) (2024-01-11)
 
-
 ### Features
 
-* type atomic ([2df1512](https://github.com/collie-ui/collie-ui/commit/2df15120fc666588f660acce756e7395b3f49daa))
-* type atomic ([808a629](https://github.com/collie-ui/collie-ui/commit/808a6291713e86b5d0d4b5b1920b5a669a7813bd))
-* type atomic ([d6ff951](https://github.com/collie-ui/collie-ui/commit/d6ff95199a0c79c9c985e18265ead1671a9fb89c))
-
-
-
-
+- type atomic ([2df1512](https://github.com/collie-ui/collie-ui/commit/2df15120fc666588f660acce756e7395b3f49daa))
+- type atomic ([808a629](https://github.com/collie-ui/collie-ui/commit/808a6291713e86b5d0d4b5b1920b5a669a7813bd))
+- type atomic ([d6ff951](https://github.com/collie-ui/collie-ui/commit/d6ff95199a0c79c9c985e18265ead1671a9fb89c))
 
 ## [1.0.31](https://github.com/collie-ui/collie-ui/compare/@collie-ui/atomic@1.0.29...@collie-ui/atomic@1.0.31) (2024-01-11)
 
-
 ### Features
 
-* type atomic ([808a629](https://github.com/collie-ui/collie-ui/commit/808a6291713e86b5d0d4b5b1920b5a669a7813bd))
-* type atomic ([d6ff951](https://github.com/collie-ui/collie-ui/commit/d6ff95199a0c79c9c985e18265ead1671a9fb89c))
-
-
-
-
+- type atomic ([808a629](https://github.com/collie-ui/collie-ui/commit/808a6291713e86b5d0d4b5b1920b5a669a7813bd))
+- type atomic ([d6ff951](https://github.com/collie-ui/collie-ui/commit/d6ff95199a0c79c9c985e18265ead1671a9fb89c))
 
 ## [1.0.30](https://github.com/collie-ui/collie-ui/compare/@collie-ui/atomic@1.0.29...@collie-ui/atomic@1.0.30) (2024-01-11)
 
-
 ### Features
 
-* type atomic ([d6ff951](https://github.com/collie-ui/collie-ui/commit/d6ff95199a0c79c9c985e18265ead1671a9fb89c))
-
-
-
-
+- type atomic ([d6ff951](https://github.com/collie-ui/collie-ui/commit/d6ff95199a0c79c9c985e18265ead1671a9fb89c))
 
 ## [1.0.29](https://github.com/collie-ui/collie-ui/compare/@collie-ui/atomic@1.0.28...@collie-ui/atomic@1.0.29) (2024-01-11)
 
