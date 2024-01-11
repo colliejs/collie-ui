@@ -23,21 +23,15 @@ export const Space = styled(
     flexShrink: 0,
     variants: {
       size: {
-        dynamic(size) {
-          return { width: size, height: size };
-        },
+        dynamic: size => ({ w: size, h: size }),
       },
-      x: {
-        dynamic(x) {
-          return { w: x, height: 1 };
-        },
+      w: {
+        dynamic: x => ({ w: x, h: 1 }),
       },
-      y: {
-        dynamic(y) {
-          return { w: 1, h: y };
-        },
+      h: {
+        dynamic: y => ({ h: y, w: 1 }),
       },
     },
   },
-  { as: "co-space" }
+  { as: "co-space" },
 );

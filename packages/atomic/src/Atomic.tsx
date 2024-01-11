@@ -6,15 +6,11 @@ export const Atomic = styled("div", {
   m: 0,
   variants: {
     w: {
-      dynamic(x) {
-        return {
-          width: x,
-        };
-      },
+      dynamic: x => ({ width: x }),
     },
     circle: {
       true: {
-        borderRadius: "100000px",
+        borderRadius: 99999,
         aspectRatio: 1,
       },
     },
@@ -23,9 +19,9 @@ export const Atomic = styled("div", {
         aspectRatio: 1,
       },
     },
-    round: {
+    pill: {
       true: {
-        borderRadius: "100000px",
+        borderRadius: 99999,
       },
     },
     dbg: {

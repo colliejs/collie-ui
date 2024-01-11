@@ -103,7 +103,7 @@
     "lint-staged": "^13.3.0",
     "organize-imports-cli": "^0.10.0",
     "pkgs-graph": "^7.0.2",
-    "prettier": "2.6.1",
+    "prettier": "^3.1.1",
     "prop-types": "^15.8.1",
     "react-test-renderer": "^18.2.0",
     "semver": "^7.5.4",
