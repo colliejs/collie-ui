@@ -1,6 +1,18 @@
 # Change Log
 
-All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.0.30](https://github.com/collie-ui/collie-ui/compare/@collie-ui/atomic@1.0.29...@collie-ui/atomic@1.0.30) (2024-01-11)
+
+
+### Features
+
+* type atomic ([d6ff951](https://github.com/collie-ui/collie-ui/commit/d6ff95199a0c79c9c985e18265ead1671a9fb89c))
+
+
+
+
 
 ## [1.0.29](https://github.com/collie-ui/collie-ui/compare/@collie-ui/atomic@1.0.28...@collie-ui/atomic@1.0.29) (2024-01-11)
 
