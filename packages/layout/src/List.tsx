@@ -38,10 +38,10 @@ export const StyledList = styled(
 // useList
 //============================================================================
 
-export const useList = <T extends ListItemType>(intialData: T[]) => {
-  const [data, setData] = useState(intialData);
-  const onClick = useCallback((item: T) => {
-    setData(data =>
+export const useList = <T extends ListItemType>(intialListData: T[]) => {
+  const [listData, setListData] = useState(intialListData);
+  const updateItem = useCallback((item: T) => {
+    setListData(data =>
       data.map(e => {
         if (e.id === item.id) {
           return { ...e, active: true };
@@ -50,7 +50,14 @@ export const useList = <T extends ListItemType>(intialData: T[]) => {
       })
     );
   }, []);
-  return [data, onClick] as const;
+  const updateList = useCallback((data: T[]) => {
+    setListData(data);
+  }, []);
+  return {
+    listData,
+    updateItem,
+    updateList,
+  } as const;
 };
 
 //============================================================================
