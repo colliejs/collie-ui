@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.15](https://github.com/collie-ui/collie-ui/compare/@collie-ui/common@1.0.14...@collie-ui/common@1.0.15) (2024-01-11)
+
+### Features
+
+- type fix ([c3369fa](https://github.com/collie-ui/collie-ui/commit/c3369fa2e50fa568cda22b9e9bc2b6c1109a4b37))
+
 ## [1.0.14](https://github.com/collie-ui/collie-ui/compare/@collie-ui/common@1.0.13...@collie-ui/common@1.0.14) (2024-01-07)
 
 **Note:** Version bump only for package @collie-ui/common

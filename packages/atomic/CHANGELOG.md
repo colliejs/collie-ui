@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.29](https://github.com/collie-ui/collie-ui/compare/@collie-ui/atomic@1.0.28...@collie-ui/atomic@1.0.29) (2024-01-11)
+
+**Note:** Version bump only for package @collie-ui/atomic
+
 ## [1.0.28](https://github.com/collie-ui/collie-ui/compare/@collie-ui/atomic@1.0.27...@collie-ui/atomic@1.0.28) (2024-01-10)
 
 ### Bug Fixes
