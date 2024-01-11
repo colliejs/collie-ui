@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.34](https://github.com/collie-ui/collie-ui/compare/@collie-ui/form@1.0.32...@collie-ui/form@1.0.34) (2024-01-11)
+
+
+### Features
+
+* type atomic ([808a629](https://github.com/collie-ui/collie-ui/commit/808a6291713e86b5d0d4b5b1920b5a669a7813bd))
+
+
+
+
+
 ## [1.0.33](https://github.com/collie-ui/collie-ui/compare/@collie-ui/form@1.0.32...@collie-ui/form@1.0.33) (2024-01-11)
 
 **Note:** Version bump only for package @collie-ui/form
