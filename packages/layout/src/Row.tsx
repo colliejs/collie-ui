@@ -1,7 +1,7 @@
 import { styled } from "@collie-ui/common";
 import { Box } from "./Box";
 import { gapX } from "@collie-ui/css";
-import { CSSObject } from "@colliejs/core";
+import { BaseConfig, CSSObject } from "@colliejs/core";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -21,7 +21,7 @@ export const Row = styled(
     justifyContent: "flex-start",
     variants: {
       gap: {
-        dynamic: gap => ({ ...gapX(gap) } as CSSObject<object>),
+        dynamic: (gap): CSSObject<BaseConfig> => ({ ...gapX(gap) }),
       },
       fx: {
         dynamic: fx => ({
@@ -35,5 +35,5 @@ export const Row = styled(
       },
     },
   },
-  { as: "co-row" }
+  { as: "co-row" },
 );

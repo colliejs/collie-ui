@@ -1,6 +1,8 @@
-import { CSSObject, CSSProperties } from "@colliejs/core";
+import { BaseConfig, CSSObject } from "@colliejs/core";
 
-export const mask = (css: CSSObject<object> = {}): CSSObject<object> => ({
+export const mask = <Config extends BaseConfig>(
+  css: CSSObject<Config> = {} as CSSObject<Config>,
+): CSSObject<Config> => ({
   position: "fixed",
   top: 0,
   left: 0,

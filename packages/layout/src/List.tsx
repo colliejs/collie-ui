@@ -1,5 +1,5 @@
 import { styled } from "@collie-ui/common";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Box as _Box } from "./Box";
 
 declare global {
@@ -31,7 +31,7 @@ export const StyledList = styled(
       },
     },
   },
-  { as: "co-ul" }
+  { as: "co-ul" },
 );
 
 //============================================================================
@@ -40,6 +40,10 @@ export const StyledList = styled(
 
 export const useList = <T extends ListItemType>(intialListData: T[]) => {
   const [listData, setListData] = useState(intialListData);
+  useEffect(() => {
+    setListData(intialListData);
+  }, [intialListData]);
+
   const updateItem = useCallback((item: T) => {
     setListData(data =>
       data.map(e => {
@@ -47,17 +51,11 @@ export const useList = <T extends ListItemType>(intialListData: T[]) => {
           return { ...e, active: true };
         }
         return { ...e, active: false };
-      })
+      }),
     );
   }, []);
-  const updateList = useCallback((data: T[]) => {
-    setListData(data);
-  }, []);
-  return {
-    listData,
-    updateItem,
-    updateList,
-  } as const;
+
+  return [listData, updateItem] as const;
 };
 
 //============================================================================
@@ -76,7 +74,7 @@ export type ListPropsWithoutRef<T extends ListItemType> = {
 } & React.ComponentProps<typeof StyledList>;
 
 export const List = <T extends ListItemType>(
-  props: ListPropsWithoutRef<T>
+  props: ListPropsWithoutRef<T>,
 ) => {
   const { data, renderItem, direction = "column", ...restProps } = props;
   return (
