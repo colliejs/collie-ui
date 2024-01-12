@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.34](https://github.com/collie-ui/collie-ui/compare/@collie-ui/atomic@1.0.33...@collie-ui/atomic@1.0.34) (2024-01-12)
+
+### Features
+
+- useList ([5520751](https://github.com/collie-ui/collie-ui/commit/552075186af766b5a7c4693f87cc9f1ade3eb521))
+
 ## [1.0.33](https://github.com/collie-ui/collie-ui/compare/@collie-ui/atomic@1.0.29...@collie-ui/atomic@1.0.33) (2024-01-11)
 
 ### Features
