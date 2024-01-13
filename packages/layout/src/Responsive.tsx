@@ -14,18 +14,21 @@ declare global {
  * Responsive
  * column on mobile, row on desktop
  */
+//TODO: fixme for the hardcode media query 768px
 export const Responsive = styled(Box, {
   display: "flex",
   flexDirection: "row",
   flexWrap: "nowrap",
-  "@phone": {
+  "@media (max-width: 768px)": {
+    //TODO:fixme
     flexDirection: "column",
   },
+
   variants: {
     fx: {
-      dynamic: (fx) => ({
+      dynamic: fx => ({
         justifyContent: fx,
-        "@phone": {
+        "@media (max-width: 768px)": {
           alignItems: fx,
         },
       }),
@@ -33,7 +36,7 @@ export const Responsive = styled(Box, {
     fy: {
       dynamic: fy => ({
         alignItems: fy,
-        "@phone": {
+        "@media (max-width: 768px)": {
           justifyContent: fy,
         },
       }),
