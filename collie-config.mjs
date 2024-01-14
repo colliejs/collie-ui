@@ -4,4 +4,5 @@ export const collieConfig = {
   ...defaultConfig,
   breakpoints: [0, 768],
   prefix: "co",
+  layername: "collie-ui",
 };

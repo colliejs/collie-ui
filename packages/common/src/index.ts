@@ -8,6 +8,7 @@ export const styled = makeStyled({
   ...defaultConfig,
   breakpoints: [0, 768],
   prefix: "co",
+  layername: "collie-ui",
   // utils: {
   //   ...defaultConfig.utils,
   //   "@phone": (css: CSSProperties) => {

@@ -6,7 +6,7 @@ declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace JSX {
     interface IntrinsicElements {
-      "co-ul": JSX.IntrinsicElements["ul"];
+      "co-list": JSX.IntrinsicElements["ul"];
     }
   }
 }
@@ -31,7 +31,7 @@ export const StyledList = styled(
       },
     },
   },
-  { as: "co-ul" },
+  { as: "co-list" },
 );
 
 //============================================================================
