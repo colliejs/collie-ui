@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.39](https://github.com/collie-ui/collie-ui/compare/@collie-ui/layout@1.0.38...@collie-ui/layout@1.0.39) (2024-01-14)
+
+### Bug Fixes
+
+- add layername ([ac12578](https://github.com/collie-ui/collie-ui/commit/ac12578b3f907315f3a3fde1f38db52e8e380157))
+
 ## [1.0.38](https://github.com/collie-ui/collie-ui/compare/@collie-ui/layout@1.0.37...@collie-ui/layout@1.0.38) (2024-01-13)
 
 **Note:** Version bump only for package @collie-ui/layout

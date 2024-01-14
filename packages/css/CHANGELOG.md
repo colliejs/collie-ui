@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.23](https://github.com/collie-ui/collie-ui/compare/@collie-ui/css@1.0.22...@collie-ui/css@1.0.23) (2024-01-14)
+
+**Note:** Version bump only for package @collie-ui/css
+
 ## [1.0.22](https://github.com/collie-ui/collie-ui/compare/@collie-ui/css@1.0.21...@collie-ui/css@1.0.22) (2024-01-13)
 
 **Note:** Version bump only for package @collie-ui/css
