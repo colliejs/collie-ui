@@ -1,13 +1,29 @@
 import { URL } from "@c3/types";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 export const useImageLoadingStatus = (src: URL) => {
   const [status, setStatus] = useState<"loading" | "error" | "loaded">("loading");
+
+  const isMounted = useRef(false);
+
+  useEffect(() => {
+    isMounted.current = true;
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
+
+
   const onLoad = () => {
-    setStatus("loaded");
+    if (isMounted.current) {
+      setStatus("loaded");
+    }
   };
+
   const onError = () => {
-    setStatus("error");
+    if (isMounted.current) {
+      setStatus("error");
+    }
   };
 
   useEffect(() => {
@@ -16,10 +32,11 @@ export const useImageLoadingStatus = (src: URL) => {
     img.onerror = onError;
     img.src = src;
     return () => {
-      img.removeEventListener("load", onLoad);
-      img.removeEventListener("error", onError);
+      img.onload = null;
+      img.onerror = null;
     };
   }, [src]);
 
   return status;
 };
+
