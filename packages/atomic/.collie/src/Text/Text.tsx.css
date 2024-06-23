@@ -1,0 +1,13 @@
+
+@layer collie-ui.TextTsx-Text-1cvraiz {.baseStyle-row83y{line-height:var(--co-lineHeights-sm);font-family:var(--co-fonts-font-family)}.variants-italic-true-81001m{font-style:italic}
+.variants-underline-true-1tsysip{text-decoration:underline}
+.variants-delete-true-3cchql{text-decoration:line-through}
+@media (min-width:320px){.variants-gradient-dynamic-1909dlk{background-image:var(--variants-gradient-at320)}}
+@media (min-width:768px){.variants-gradient-dynamic-1909dlk{background-image:var(--variants-gradient-at768)}}
+.variants-gradient-dynamic-1909dlk{-webkit-background-clip:text;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.variants-rows-dynamic-7v40ke{display:-webkit-box}
+@media (min-width:320px){.variants-rows-dynamic-7v40ke{-webkit-line-clamp:var(--variants-rows-at320)}}
+@media (min-width:768px){.variants-rows-dynamic-7v40ke{-webkit-line-clamp:var(--variants-rows-at768)}}
+.variants-rows-dynamic-7v40ke{-webkit-box-orient:vertical;overflow:hidden}
+}
+

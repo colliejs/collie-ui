@@ -1,0 +1,14 @@
+
+
+      @layer collie-ui.indexCjs-Atomic-jqa35i,collie-ui.BoxTsx-Box-k37f7x, collie-ui.ColTsx-Col-wzmuyb;
+      @layer collie-ui.ColTsx-Col-wzmuyb {
+        .baseStyle-11k77ep{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start}@media (min-width:320px){.variants-gap-dynamic-1q93cx6{gapx:var(--variants-gap-at320)}}
+@media (min-width:768px){.variants-gap-dynamic-1q93cx6{gapx:var(--variants-gap-at768)}}
+.variants-gap-a-m2smhe{overflow-x:2}
+@media (min-width:320px){.variants-fx-dynamic-1r25jn{align-items:var(--variants-fx-at320)}}
+@media (min-width:768px){.variants-fx-dynamic-1r25jn{align-items:var(--variants-fx-at768)}}
+@media (min-width:320px){.variants-fy-dynamic-19u5ywx{justify-content:var(--variants-fy-at320)}}
+@media (min-width:768px){.variants-fy-dynamic-19u5ywx{justify-content:var(--variants-fy-at768)}}
+
+      }
+

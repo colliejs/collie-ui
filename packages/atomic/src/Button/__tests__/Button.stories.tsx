@@ -1,4 +1,4 @@
-import { wait } from "@c3/utils";
+import { wait } from "@collie-ui/common";
 import { Text } from "../../../src/Text";
 import { Button } from "../Button";
 import { useButton } from "../useButton";
@@ -62,7 +62,7 @@ export const TestUseButton = () => {
     </Button>,
     {
       useLoading: true,
-    }
+    },
   );
 };
 
@@ -84,6 +84,6 @@ export const LoadingButton = () => {
     </Button>,
     {
       useLoading: true,
-    }
+    },
   );
 };

@@ -1,5 +1,5 @@
 import type { CSSObject, CSSProperties } from "@colliejs/core";
-import { propAssign } from "@c3/css";
+import { propAssign } from "@collie-ui/common";
 
 export interface YPos {
   top?: CSSObject<object>["top"];

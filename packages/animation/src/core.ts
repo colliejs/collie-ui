@@ -1,4 +1,4 @@
-import { dbg } from "@c3/dbg";
+import { dbg } from "@collie-ui/common";
 import { default as anime, default as _anime } from "animejs";
 //@ts-ignore
 window.__anime = _anime;

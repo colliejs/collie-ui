@@ -1,0 +1,8 @@
+
+
+      @layer collie-ui.indexCjs-Atomic-jqa35i,collie-ui.BoxTsx-Box-k37f7x, collie-ui.StackTsx-StyledStack-1y6pnn4;
+      @layer collie-ui.StackTsx-StyledStack-1y6pnn4 {
+        .baseStyle-1s3aqxg{position:relative;display:inline-block;overflow:hidden;width:max-content}
+.baseStyle-1s3aqxg > :not(:first-child){left:0;top:0;position:absolute}
+      }
+

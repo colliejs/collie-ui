@@ -1,0 +1,15 @@
+
+
+      @layer collie-ui.AtomicTsx-Atomic-128klr0, collie-ui.SpaceTsx-Space-uoct6n;
+      @layer collie-ui.SpaceTsx-Space-uoct6n {
+        .baseStyle-vz3yqf{display:flex;flex-shrink:0}@media (min-width:320px){.variants-size-dynamic-1368ycn{width:var(--variants-size-at320);height:var(--variants-size-at320)}}
+@media (min-width:768px){.variants-size-dynamic-1368ycn{width:var(--variants-size-at768);height:var(--variants-size-at768)}}
+@media (min-width:320px){.variants-w-dynamic-14zafg{width:var(--variants-w-at320)}}
+@media (min-width:768px){.variants-w-dynamic-14zafg{width:var(--variants-w-at768)}}
+.variants-w-dynamic-14zafg{height:1px}
+@media (min-width:320px){.variants-h-dynamic-15tmcby{height:var(--variants-h-at320)}}
+@media (min-width:768px){.variants-h-dynamic-15tmcby{height:var(--variants-h-at768)}}
+.variants-h-dynamic-15tmcby{width:1px}
+
+      }
+

@@ -4,6 +4,7 @@
     "experimentalDecorators": true,
     "target": "es6",
     "module": "esnext",
+    "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
     "types": ["node", "jest"],
     "esModuleInterop": true,

@@ -2,6 +2,7 @@ import { styled } from "@collie-ui/common";
 import React from "react";
 import { Atomic } from "../Atomic";
 import { useImageLoadingStatus } from "./useImageLoadingStatus";
+import type { URL } from "@collie-ui/common";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -71,7 +72,7 @@ export const Image = React.forwardRef(
       src = "",
       ...restProps
     } = props;
-    const status = useImageLoadingStatus(src);
+    const status = useImageLoadingStatus(src as URL);
 
     const child =
       status === "loading" && loadingNode ? (

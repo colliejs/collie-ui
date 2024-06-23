@@ -1,5 +1,5 @@
 import {  CSSObject } from "@colliejs/core";
-import { HVDirection } from "@c3/types";
+import { HVDirection } from "@collie-ui/common";
 
 export const borderRadiusForGroup = (
   borderRadius: CSSObject<object>["borderRadius"],

@@ -1,5 +1,4 @@
-import { Placement } from "@c3/types";
-import { anti, placements } from "@c3/utils";
+import { Placement, anti, placements } from "@collie-ui/common";
 import { animate, AnimateParams } from "./core";
 
 //TODO: zoom type optimization

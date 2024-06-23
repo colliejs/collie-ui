@@ -13,7 +13,7 @@
     "storybook": "storybook dev -p 7000",
     "test:pw:ct": "playwright test -c playwright-ct.config.ts",
     "test:pw:e2e": "playwright test -c playwright.config.ts",
-    "release": "./scripts/cli.mjs release",
+    "release": "tsx ./scripts/cli.ts release",
     "test:jest": "jest --changedSince=main"
   },
   "engines": {
@@ -27,21 +27,22 @@
     "react-dom": "^18.0.0"
   },
   "dependencies": {
-    "@c3/css": "^2.0.3",
-    "@c3/dbg": "^1.1.9",
-    "@c3/react": "^1.1.25",
-    "@c3/test": "^1.3.17",
-    "@c3/utils": "^1.3.27",
-    "@colliejs/config": "^1.0.3",
-    "@colliejs/core": "^1.0.32",
-    "@colliejs/rollup": "^1.0.90",
-    "@colliejs/transform": "^1.0.56",
+    "@colliejs/cli": "^1.2.4",
+    "@colliejs/config": "^1.2.0",
+    "@colliejs/core": "^1.2.0",
+    "@colliejs/rollup": "^1.1.1",
+    "@colliejs/shared": "^1.2.0",
+    "@colliejs/transform": "^1.2.3",
     "@colliejs/vite": "^1.0.94",
     "csstype": "^3.1.3",
     "dayjs": "^1.11.10",
     "lodash": "^4.17.21",
+    "postcss": "^8.4.38",
+    "postcss-import": "^16.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rollup": "^4.18.0",
+    "rollup-plugin-postcss": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
@@ -49,8 +50,7 @@
     "@babel/preset-env": "^7.23.8",
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
-    "@c3/types": "^1.1.13",
-    "@colliejs/react": "^1.0.86",
+    "@colliejs/react": "^1.2.4",
     "@jest/types": "^28.1.3",
     "@playwright/experimental-ct-react": "^1.40.1",
     "@pnpm/filter-workspace-packages": "^7.2.10",

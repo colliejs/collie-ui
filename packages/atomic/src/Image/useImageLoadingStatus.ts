@@ -1,4 +1,4 @@
-import { URL } from "@c3/types";
+import { URL } from "@collie-ui/common";
 import React, { useEffect, useState } from "react";
 
 export const useImageLoadingStatus = (src: URL) => {

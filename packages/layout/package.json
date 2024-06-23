@@ -19,8 +19,10 @@
   },
   "scripts": {
     "test": "jest --config ../../jest.config.js --rootDir .",
-    "build": "rollup -c && pnpm type",
+    "build": "pnpm cssgen && rollup -c && pnpm type",
     "buildOnly": "vite build",
+    "watch": "npx collie watch --config ../../collie.config.ts",
+    "cssgen": "npx collie cssgen --config ../../collie.config.ts",
     "clean": "rm -rf dist  ",
     "reset": "pnpm clean && rm -rf node_modules && pnpm install",
     "type": "tsc --project . --paths null --emitDeclarationOnly --declaration",
@@ -31,7 +33,6 @@
   },
   "homepage": "https://github.com/collie-ui/collie-ui#readme",
   "dependencies": {
-    "@c3/types": "^1.1.13",
     "@collie-ui/atomic": "workspace:^",
     "@collie-ui/common": "workspace:^",
     "@collie-ui/css": "workspace:^",

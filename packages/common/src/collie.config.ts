@@ -1,0 +1,1 @@
+../../../collie.config.ts

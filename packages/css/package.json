@@ -23,6 +23,8 @@
     "buildOnly": "vite build",
     "clean": "rm -rf dist  ",
     "reset": "pnpm clean && rm -rf node_modules && pnpm install",
+    "watch": "npx collie watch --config ../../collie.config.ts",
+    "cssgen": "npx collie cssgen --config ../../collie.config.ts",
     "type": "tsc --project . --paths null --emitDeclarationOnly --declaration",
     "watchtype": "tsc --noEmit --project . --watch"
   },
@@ -44,7 +46,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@c3/types": "^1.1.12",
     "@collie-ui/common": "workspace:^"
   }
 }

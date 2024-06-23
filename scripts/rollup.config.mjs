@@ -6,8 +6,8 @@ import replace from "@rollup/plugin-replace";
 import strip from "@rollup/plugin-strip";
 import path from "path";
 import { fileURLToPath } from "url";
-import collieRollup from "@colliejs/rollup";
-import { collieConfig } from "../collie-config.mjs";
+import postcss from "rollup-plugin-postcss";
+import postcssImport from "postcss-import";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -37,16 +37,20 @@ const config = {
   plugins: [
     replace({
       preventAssignment: true,
-      __buildDate__: () => JSON.stringify(new Date()),
-      __buildVersion: 15,
       __DEV__: process.env.NODE_ENV === "development",
+    }),
+    postcss({
+      extract: "index.css", // Extract all CSS to this file
+      minimize: true, // Minify the CSS
+      plugins: [
+        postcssImport(), // Handle @import in CSS files
+      ],
     }),
 
     resolve({
       jsnext: true,
       extensions: extensions,
     }),
-    collieRollup({ include: /src\/*/, styledConfig: collieConfig }),
     commonjs(),
     json(),
     babelPlugin,
@@ -65,17 +69,13 @@ const config = {
     "resolve",
     "dayjs",
     "ethers",
-    "@metamask/detect-provider",
     /@colliejs\//,
-    /@c3\//,
     /@babel\//,
     /@rollup\//,
     /@collie-ui\//,
 
     /node:*/,
-    "ethers",
     "react",
-    "@stitches/react",
     "playwright",
     "@playwright/test",
   ],
