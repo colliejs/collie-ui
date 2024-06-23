@@ -1,16 +1,22 @@
 import React from "react";
 import { Col } from "../src/Col";
 import { mock, showtip } from "@c3/test";
+import { css } from "@colliejs/core";
 export default { title: "layout/Col" };
 const baseStyle1 = {
   border: "1px solid lightgrey",
   ...showtip({ whiteSpace: "nowrap" }, "top"),
 };
 
-const MyCol = (props) => {
+const MyCol = props => {
   const { ...restprops } = props;
   return (
-    <Col {...restprops} dbg css={{ ...baseStyle1 }} data-tip={props.fy}>
+    <Col
+      {...restprops}
+      dbg
+      className={css({ ...baseStyle1 })}
+      data-tip={props.fy}
+    >
       {mock.getRandElements({ wMax: 2 })}
     </Col>
   );

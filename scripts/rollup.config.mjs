@@ -68,7 +68,6 @@ const config = {
     "npmlog",
     "resolve",
     "dayjs",
-    "ethers",
     /@colliejs\//,
     /@babel\//,
     /@rollup\//,

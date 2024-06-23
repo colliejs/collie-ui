@@ -3,8 +3,6 @@ import { Image } from "../Image";
 import React from "react";
 import { styled } from "@collie-ui/common";
 const Row = styled("div", { display: "flex" });
-import "../../../../../dist/styledComponent.css";
-import "../../../../../dist/styledElement.css";
 
 export default {
   component: Image,

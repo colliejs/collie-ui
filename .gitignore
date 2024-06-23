@@ -18,3 +18,5 @@ playwright-report/
 playwright/.cache/
 **/.cache/
 **/collie-generated.css
+
+*storybook.log

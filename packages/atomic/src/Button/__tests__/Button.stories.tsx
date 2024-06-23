@@ -1,7 +1,7 @@
 import { wait } from "@collie-ui/common";
 import { Text } from "../../../src/Text";
 import { Button } from "../Button";
-import { useButton } from "../useButton";
+import { useLoadingButton } from "../useButton";
 import React from "react";
 export default {
   title: "atomic/Button",
@@ -50,7 +50,7 @@ export const ButtonAsLink = () => (
   </Button>
 );
 export const TestUseButton = () => {
-  return useButton(
+  return useLoadingButton(
     <Button
       css={{
         w: 100,
@@ -67,7 +67,7 @@ export const TestUseButton = () => {
 };
 
 export const LoadingButton = () => {
-  return useButton(
+  return useLoadingButton(
     <Button
       onClick={async () => {
         console.log("222");

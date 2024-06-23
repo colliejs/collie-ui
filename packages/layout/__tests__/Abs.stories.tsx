@@ -1,6 +1,6 @@
 import React from "react";
 import { Abs } from "../src/Abs";
-
+import { css } from "@colliejs/core";
 export default { component: Abs, title: "layout/abs" };
 
 export const Basic = () => {
@@ -13,7 +13,9 @@ export const Basic = () => {
         position: "relative",
       }}
     >
-      <Abs css={{ top: 100, left: 100, border: "1px solid green" }}>
+      <Abs
+        className={css({ top: 100, left: 100, border: "1px solid green" })}
+      >
         here...
       </Abs>
     </div>
