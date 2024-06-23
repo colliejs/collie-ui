@@ -1,4 +1,3 @@
-#!/usr/bin/env tsx
 import { run } from "@colliejs/shared";
 import { $ } from "zx";
 import { createTheme } from "@colliejs/core";
