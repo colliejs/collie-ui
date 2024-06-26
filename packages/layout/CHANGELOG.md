@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1-beta.0](https://github.com/collie-ui/collie-ui/compare/@collie-ui/layout@1.0.40...@collie-ui/layout@1.1.1-beta.0) (2024-06-26)
+
+### Features
+
+- deps ([f589814](https://github.com/collie-ui/collie-ui/commit/f589814cc0e8450dbb9dcee91b59fa87450ed1df))
+- deps ([69fda1a](https://github.com/collie-ui/collie-ui/commit/69fda1a865ba66df88066311eef9055beefcce1a))
+
 ## [1.0.40](https://github.com/collie-ui/collie-ui/compare/@collie-ui/layout@1.0.39...@collie-ui/layout@1.0.40) (2024-06-23)
 
 ### Bug Fixes
