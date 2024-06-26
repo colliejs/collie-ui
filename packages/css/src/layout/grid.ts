@@ -1,4 +1,4 @@
-import { toArray } from "@c3/utils";
+import { arrayify } from "@collie-ui/common";
 import { CSSObject, CSSProperties,  } from "@colliejs/core";
 export const nCol = (
   _num: number | number[],
@@ -7,8 +7,8 @@ export const nCol = (
   rowGap: CSSObject<object>["rowGap"] = 0,
   columnGap: CSSObject<object>["columnGap"] = 0
 ): CSSObject<object> => {
-  const nums = toArray(_num);
-  const cellWidths = toArray(_cellWidth);
+  const nums = arrayify(_num);
+  const cellWidths = arrayify(_cellWidth);
   if (nums.length !== cellWidths.length) {
     throw new Error("must have same length");
   }
@@ -23,3 +23,4 @@ export const nCol = (
     columnGap,
   };
 };
+

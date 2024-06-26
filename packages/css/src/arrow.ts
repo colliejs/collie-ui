@@ -1,5 +1,5 @@
 import type { BaseConfig, CSSObject } from "@colliejs/core";
-import type { Direction } from "@c3/types";
+import type { Direction } from "@collie-ui/common";
 import { CSSProperties } from "@colliejs/core";
 import { getPopoverPos } from "./layout/placement";
 

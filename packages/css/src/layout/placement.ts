@@ -1,4 +1,4 @@
-import { Placement } from "@c3/types";
+import { Placement } from "@collie-ui/common";
 import { absXCenter, absYCenter } from "./abs";
 /**
  * NOTE: the parent element must be relative
@@ -11,7 +11,7 @@ import { absXCenter, absYCenter } from "./abs";
 export const getPopoverPos = (
   placement: Placement,
   parentBoxW: number | string = "100%",
-  parentBoxH: number | string = "100%"
+  parentBoxH: number | string = "100%",
 ) => {
   switch (placement) {
     case "bottom":
@@ -23,8 +23,6 @@ export const getPopoverPos = (
     case "right":
       return absYCenter({ left: parentBoxW });
     default:
-      throw new Error(
-        "TypeError:placement must be one of top, bottom, left, right"
-      );
+      throw new Error("TypeError:placement must be one of top, bottom, left, right");
   }
 };

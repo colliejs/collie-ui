@@ -1,4 +1,4 @@
-import { Side } from "@c3/types";
+import { Side } from "@collie-ui/common";
 import {  CSSObject } from "@colliejs/core";
 import { getPopoverPos } from "./layout";
 

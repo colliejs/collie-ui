@@ -6,8 +6,6 @@ import Inspect from "vite-plugin-inspect";
 
 // const xpath = "packages/atomic/src/Image/__tests__/**";
 const xpath = "packages/layout/**/__tests__/**";
-import yue from "@colliejs/vite";
-import { collieConfig } from "../collie-config.mjs";
 
 const getStories = () =>
   glob.sync(`${xpath}/*.stories.@(js|jsx|ts|tsx|mdx)`, {
@@ -36,11 +34,6 @@ const config: StorybookConfig = {
       // root: root,
       plugins: [
         Inspect(),
-        yue({
-          exclude: /(dist\/)/,
-          styledConfig: collieConfig,
-          entry: path.resolve(__dirname, "../index.ts"),
-        }),
       ],
       externals: ["ethers"],
     });

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.31](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.30...@collie-ui/animation@1.0.31) (2024-06-23)
+
+### Bug Fixes
+
+- fix module not found error ([62a35ba](https://github.com/collie-ui/collie-ui/commit/62a35ba29f83d3afe54657ce4f3f17c6c7e92126))
+
 ## [1.0.30](https://github.com/collie-ui/collie-ui/compare/@collie-ui/animation@1.0.29...@collie-ui/animation@1.0.30) (2024-01-14)
 
 **Note:** Version bump only for package @collie-ui/animation

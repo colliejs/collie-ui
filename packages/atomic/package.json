@@ -19,9 +19,11 @@
   },
   "scripts": {
     "test": "jest --config ../../jest.config.ts --rootDir .",
-    "build": "rollup -c && pnpm type",
+    "build": "pnpm cssgen && rollup -c && pnpm type",
     "buildOnly": "vite build",
     "clean": "rm -rf dist  ",
+    "watch": "npx collie watch --config ../../collie.config.ts",
+    "cssgen": "npx collie cssgen --config ../../collie.config.ts",
     "reset": "pnpm clean && rm -rf node_modules && pnpm install",
     "type": "tsc --project . --paths null --emitDeclarationOnly --declaration",
     "watchtype": "tsc --project . --watch"
@@ -32,7 +34,6 @@
   "homepage": "https://github.com/collie-ui/collie-ui#readme",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
-    "@c3/dom": "^1.2.6",
     "@collie-ui/animation": "workspace:^",
     "@collie-ui/common": "workspace:^",
     "@collie-ui/css": "workspace:^",
@@ -55,8 +56,8 @@
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     },
-    "./css": "./dist/index.css",
-    "./theme": "./dist/theme.css"
+  "./index.css": "./dist/index.css",
+    "./theme.css": "./dist/theme.css"
   },
   "publishConfig": {
     "access": "public"

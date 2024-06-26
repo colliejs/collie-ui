@@ -6,14 +6,15 @@ node_modules/
 coverage/
 .yarn/
 # .vscode/
-*/**/.DS_Store
-**/**/.rollup.cache/
+**/.DS_Store
+**/.rollup.cache/
 src/frontend/Javascript/library/block-chain-stuff/ethereum/deploy-local-server/node0*
-**/**/private
-**/**/*.log
+**/private
+**/*.log
 .eslintcache
 tsconfig.tsbuildinfo
 packages/**/log.txt
 playwright-report/
 playwright/.cache/
-*/**/.cache/
+**/.cache/
+**/collie-generated.css

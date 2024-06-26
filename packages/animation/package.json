@@ -51,8 +51,8 @@
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     },
-    "./css": "./dist/index.css",
-    "./theme": "./dist/theme.css"
+   "./index.css": "./dist/index.css",
+    "./theme.css": "./dist/theme.css"
   },
   "publishConfig": {
     "access": "public"
