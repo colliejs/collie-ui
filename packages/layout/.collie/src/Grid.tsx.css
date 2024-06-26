@@ -1,0 +1,10 @@
+
+
+      @layer collie-ui.ListTsx-List-a5j5a3, collie-ui.GridTsx-StyledGrid-miyey2;
+      @layer collie-ui.GridTsx-StyledGrid-miyey2 {
+        .baseStyle-dao3jn{display:grid;place-content:center;place-items:center}.variants-cols-dynamic-17y3s51{grid-template-columns:repeat(var(--variants-cols-at320),var(--variants-cols-at768),max-content)}
+@media (min-width:320px){.variants-h-dynamic-1bksb7p{grid-template-rows:var(--variants-h-at320)}}
+@media (min-width:768px){.variants-h-dynamic-1bksb7p{grid-template-rows:var(--variants-h-at768)}}
+
+      }
+

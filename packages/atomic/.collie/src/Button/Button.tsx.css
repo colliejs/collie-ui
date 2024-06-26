@@ -1,0 +1,8 @@
+
+
+      @layer collie-ui.AtomicTsx-Atomic-128klr0, collie-ui.ButtonTsx-StyledButton-1rfqgrn;
+      @layer collie-ui.ButtonTsx-StyledButton-1rfqgrn {
+        .baseStyle-1almdjw{display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.baseStyle-1almdjw[disabled]{cursor:not-allowed}
+      }
+

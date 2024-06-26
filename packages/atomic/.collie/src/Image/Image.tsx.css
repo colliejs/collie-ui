@@ -1,0 +1,17 @@
+
+
+      @layer collie-ui.AtomicTsx-Atomic-128klr0, collie-ui.ImageTsx-StyledImage-1llnoci;
+      @layer collie-ui.ImageTsx-StyledImage-1llnoci {
+        .baseStyle-tbet19{object-position:center;object-fit:cover;width:100%;height:100%;flex-shrink:0;max-width:100%}.variants-cover-true-18jqwvn{object-fit:cover}
+.variants-contain-true-b15bbk{object-fit:contain}
+.variants-fill-true-1lr3ffh{object-fit:fill}
+.variants-blur-dynamic-17o92mu{filter:blur(var(--variants-blur-at320),var(--variants-blur-at768))}
+
+      }
+
+
+      @layer collie-ui.AtomicTsx-Atomic-128klr0, collie-ui.ImageTsx-StyledImageContainer-t9b82n;
+      @layer collie-ui.ImageTsx-StyledImageContainer-t9b82n {
+        .baseStyle-8ez7rx{display:inline-block;overflow:hidden}
+      }
+

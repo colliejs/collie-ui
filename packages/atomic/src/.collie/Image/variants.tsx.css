@@ -1,0 +1,19 @@
+
+
+      @layer collie-ui.ImageTsx-Image-1mazmu2, collie-ui.variantsTsx-Icon-4sryb2;
+      @layer collie-ui.variantsTsx-Icon-4sryb2 {
+        .baseStyle-b15bbk{object-fit:contain}
+      }
+
+
+      @layer collie-ui.ImageTsx-Image-1mazmu2, collie-ui.variantsTsx-Avatar-1qotnv2;
+      @layer collie-ui.variantsTsx-Avatar-1qotnv2 {
+        .baseStyle-1flv49g{round:true;object-fit:contain}
+      }
+
+
+      @layer collie-ui.ImageTsx-Image-1mazmu2, collie-ui.variantsTsx-Banner-1qujs9t;
+      @layer collie-ui.variantsTsx-Banner-1qujs9t {
+        .baseStyle-18jqwvn{object-fit:cover}
+      }
+
