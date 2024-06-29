@@ -1,4 +1,4 @@
-import { CSSObject, CSSProperties } from "@colliejs/core";
+import { CSSObject } from "@colliejs/core";
 
 export const textGradient = (gradientColor: string | string[]): CSSObject<object> => ({
   backgroundImage: gradientColor,

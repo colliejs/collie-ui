@@ -9,3 +9,4 @@ export * from "./mask";
 export * from "./pseudo";
 export * from "./layout";
 export * from "./text";
+export * from "./debug";
