@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2-beta.0](https://github.com/collie-ui/collie-ui/compare/@collie-ui/layout@1.1.1-beta.0...@collie-ui/layout@1.1.2-beta.0) (2024-06-29)
+
+**Note:** Version bump only for package @collie-ui/layout
+
 ## [1.1.1-beta.0](https://github.com/collie-ui/collie-ui/compare/@collie-ui/layout@1.0.40...@collie-ui/layout@1.1.1-beta.0) (2024-06-26)
 
 ### Features

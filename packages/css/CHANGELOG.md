@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2-beta.0](https://github.com/collie-ui/collie-ui/compare/@collie-ui/css@1.1.1-beta.0...@collie-ui/css@1.1.2-beta.0) (2024-06-29)
+
+### Bug Fixes
+
+- fix ([5ea191e](https://github.com/collie-ui/collie-ui/commit/5ea191eb3fec17c376f8d505a7bfff7bccb03bc3))
+
 ## [1.1.1-beta.0](https://github.com/collie-ui/collie-ui/compare/@collie-ui/css@1.0.24...@collie-ui/css@1.1.1-beta.0) (2024-06-26)
 
 ### Features
